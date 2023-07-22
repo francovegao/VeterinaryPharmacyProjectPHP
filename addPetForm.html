@@ -1,0 +1,132 @@
+<!-- Start the page 'header' -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pharma-Vet</title>
+        <!-- Add Bootstrap CSS -->   
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
+        <link href="css/petFormStyles.css" rel="stylesheet">
+    </head>
+    <body>
+
+          <!-- Navbar -->
+  <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="#">
+      <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Pharma-Vet</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Place Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">How it Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-info" href="#">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-info" href="#">Register</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+                        
+            <section class="main">
+                <!-- Start the page's form -->
+                <div class="form">
+                    <form  class="addPetForm" action="" method="post">
+                        <fieldset id="fieldsetForm">
+                            <legend class="formTitle">Add your pets</legend>
+                            <form>
+                                <div class="form-group">
+                                    <form>
+                                        <div class="form-group">
+                                          <label for="formGroupExampleInput">Pet's Name</label>
+                                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nice Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Pet's Type</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                              <option>Dog</option>
+                                              <option>Cat</option>
+                                              <option>Piglet</option>
+                                              <option>Horse</option>
+                                              <option>Bird</option>
+                                              <option>Fish</option>
+                                              <option>Rabbit</option>
+                                              <option>Rodent</option>
+                                              <option>Sheep</option>
+                                              <option>Goat</option>
+                                              <option>Cow</option>
+                                              <option>Chicken</option>
+                                              <option>Turkey</option>
+                                              <option>Other</option>
+                                            </select>
+                                          </div>
+                                          <div class="form-group">
+                                            <label for="exampleFormControlFile1">Pet's image</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                          </div>
+                                      </form>
+                                <button type="submit" class="btn btn-info">Submit</button>
+                              </form>
+                            
+                        </fieldset>
+                    </form>
+                </div>
+            </section> 
+            
+            <section class="sidebar">
+                <!-- Start the page's error notification -->
+                <div class="highlight">
+                    <p>Please fix the following errors:</p>
+                    <ul>
+                        <li>Error 1</li>
+                        <li>Error 2</li>
+                    </ul>                                        
+                </div>
+                
+                <!-- Start the page's thank you notification -->
+                <div class="highlight">
+                    <h2>
+                        Your pet's info has been saved.<br>
+                        
+                    </h2>
+                                                           
+                </div>
+                
+                <!-- Start the page's display submitted data -->
+                <div class="data">
+                    <b>Entered data is:</b>
+                    <table>
+                        
+                        <tr>
+                            <th>Pet's Name</th>
+                            <td>Name entry</td>
+                        </tr>
+                        <tr>
+                            <th>Pet's Type</th>
+                            <td>Type entry</td>
+                        </tr>
+                        <tr>
+                            <th>Pet's Picture</th>
+                            <td>Picture</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            
+        <!-- Start the page's footer -->            
+        
+    </body>
+
+</html>
