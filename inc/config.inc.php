@@ -5,8 +5,8 @@
 define("DB_HOST", "localhost");  
 define("DB_USER", "root");  
 define("DB_PASS", "");  
-define("DB_NAME", "vetmed");  
-define("DB_PORT", "");
+define("DB_NAME", "vetpharmacy");  
+define("DB_PORT", 3306);
 
 // definition for log file
 define('LOGFILE','log/error_log.txt');
