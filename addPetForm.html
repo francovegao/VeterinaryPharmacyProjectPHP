@@ -50,12 +50,12 @@
                                 <div class="form-group">
                                     <form>
                                         <div class="form-group">
-                                          <label for="formGroupExampleInput">Pet's Name</label>
-                                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nice Name">
+                                          <label for="petName">Pet's Name</label>
+                                          <input type="text" class="form-control" name="petName" id="petName" placeholder="Nice Name">
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleFormControlSelect1">Pet's Type</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
+                                            <label for="petType">Pet's Type</label>
+                                            <select class="form-control" name="petType" id="petType">
                                               <option>Dog</option>
                                               <option>Cat</option>
                                               <option>Piglet</option>
@@ -73,11 +73,12 @@
                                             </select>
                                           </div>
                                           <div class="form-group">
-                                            <label for="exampleFormControlFile1">Pet's image</label>
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                            <label for="petImage">Pet's image</label>
+                                            <input type="file" class="form-control-file" name="petImage" id="petImage">
                                           </div>
                                       </form>
-                                <button type="submit" class="btn btn-info">Submit</button>
+                                      <input type="hidden" name="action" value="addPet">
+                                      <button type="submit" class="btn btn-info" value="addMascot">Submit</button>
                               </form>
                             
                         </fieldset>
