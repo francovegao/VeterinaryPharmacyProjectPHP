@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;   
+    margin:0; 
+}
+  h1, p{
+    color: #721B72;
+  }
+  .navbar{
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+  }
+  .navbar-brand, .navbar-nav .nav-link {
+    color: #721B72;
+    font-weight: bold;
+  }
+  .navbar-toggler-icon{
+    background-image: url("../images/list-fill.svg");
+  }
+
+  .btn-primary {
+    margin-right: 10px;
+  }
+
+  .btn{
+    margin: 5px;
+  }
+
+  
+  .searchInput {
+    background-image: url('../images/search.svg'); 
+    background-position: 10px 12px; 
+    background-repeat: no-repeat; 
+    width: 100%; 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd; 
+    margin-bottom: 12px; 
+  }

@@ -60,6 +60,7 @@ CREATE TABLE `Ordered_Meds` (
   `Medicine_Id` integer NOT NULL,
   `Concentration` char(20) NOT NULL,
   `Presentation` char(50) NOT NULL,
+  `Size`  char(20) NOT NULL,
   `Flavor` char(30),
   `Quantity` integer NOT NULL,
   `SumPrice` float(6,2),
@@ -173,6 +174,6 @@ INSERT INTO `User` VALUES
 (1, CURRENT_TIMESTAMP(), null, null, null, 1);
 
     INSERT INTO `Ordered_Meds` VALUES
-(1, 1, '0.5mg/ml', 'oil suspension', 'chicken', 1, 50.50);
+(1, 1, '0.5mg/ml', 'oil suspension','100ml', 'chicken', 1, 50.50);
 
 

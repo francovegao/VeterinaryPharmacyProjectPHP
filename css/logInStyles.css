@@ -22,7 +22,7 @@ body{
     font-weight: bold;
   }
   .navbar-toggler-icon{
-    background-image: url("./images/list-fill.svg");
+    background-image: url("../images/list-fill.svg");
   }
 
   .btn-primary {
