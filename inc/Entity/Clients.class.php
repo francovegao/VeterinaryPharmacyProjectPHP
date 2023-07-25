@@ -16,7 +16,7 @@ MariaDB [vetpharmacy]> desc clients;
 | Phone      | char(15)     | YES  |     | NULL    |                |
 | user_id    | int(11)      | NO   | MUL | NULL    |                |
 +------------+--------------+------+-----+---------+----------------+
-10 rows in set (0.022 sec)
+10 rows in set (0.024 sec)
 */
 
 class Clients{

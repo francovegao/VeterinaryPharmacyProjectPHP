@@ -11,7 +11,7 @@ MariaDB [vetpharmacy]> desc pet;
 | PetPicture | mediumblob | YES  |     | NULL    |                |
 | Clients_Id | int(11)    | NO   | MUL | NULL    |                |
 +------------+------------+------+-----+---------+----------------+
-5 rows in set (0.046 sec)
+5 rows in set (0.026 sec)
 */
 
 class Pet{

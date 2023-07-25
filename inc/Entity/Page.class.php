@@ -8,66 +8,55 @@ class Page  {
     public static $studentID = "";
     public static $studentName ="Luiz and Oliver";
     public static $member;
+    public static $concentrations=["5 mg/ml","10 mg/ml","15 mg/ml","20 mg/ml", "25 mg/ml", "50 mg/ml", "100 mg/ml"];
+    public static $presentations=["Oil suspension","Liquid Aqueous","In Lipoderm Cream","In Versabase Cream", "Ointment", "Injection", "Topic Solution"];
+    public static $sizes=["15 ml","30 ml","60 ml","100 ml", "120 ml", "150 ml", "250 ml", "500 ml", "1000 ml"];
+    public static $flavors=["no flavor","chicken","bacon","beef", "fish", "salmon", "liver"];
 
+
+    
     static function displayHeader() {
         ?>
-       <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pharma-Vet</title>
-  <!-- Add Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="css/mainPageStyles.css" rel="stylesheet">
+                  <!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="UTF-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Pharma-Vet</title>
+              <!-- Add Bootstrap CSS -->
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+              <link href="css/medsTableStyles.css" rel="stylesheet">
 
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md">
-    <a class="navbar-brand" href="#">
-      <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Pharma-Vet</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Place Order</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">How it Works</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-info" href="#">Log In</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-info" href="#">Register</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Header / Jumbotron -->
-  <div class="hero-image">
-  <div class="jumbotron text-center">
-    <h1 class="display-4">Welcome to Pharma-Vet!</h1>
-    <p class="lead">Order your pets medicine and receive it at your house in 3 simple steps:</p>
-    <p>1. Log In</p>
-    <p>2. Place your order</p>
-    <p>3. Receive your order</p>
-    <br>
-    <p>
-      <a href="#" class="btn btn-info btn-lg">Login</a>
-      <a href="#" class="btn btn-outline-info btn-lg">Register</a>
-    </p>
-  </div>
-  </div>
-
+            </head>
+            <body>
+              <!-- Navbar -->
+              <nav class="navbar navbar-expand-md">
+                <a class="navbar-brand" href="#">
+                  <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                  Pharma-Vet</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Place Order</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn btn-info" href="#">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn btn-outline-info" href="#">Register</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
         <?php
         
      }
@@ -82,53 +71,31 @@ class Page  {
         <?php  
         }
 
+//Home page
+      static function displayHomePage()    {
+          ?>
+          <!-- Jumbotron -->
+          <div class="hero-image">
+          <div class="jumbotron text-center">
+            <h1 class="display-4">Welcome to Pharma-Vet!</h1>
+            <p class="lead">Order your pets medicine and receive it at your house in 3 simple steps:</p>
+            <p>1. Log In</p>
+            <p>2. Place your order</p>
+            <p>3. Receive your order</p>
+            <br>
+            <p>
+              <a href="#" class="btn btn-info btn-lg">Login</a>
+              <a href="#" class="btn btn-outline-info btn-lg">Register</a>
+            </p>
+          </div>
+          </div>
+  
+          <?php  
+          }
+
+          //Add pet
         static function addPetForm()    {
             ?>
-       <!-- Form to add pets to the user profile -->
-<!-- (Pets will be added to the PET table in the database) -->
-
-<!-- Start the page 'header' -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pharma-Vet</title>
-        <!-- Add Bootstrap CSS -->   
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
-        <link href="css/petFormStyles.css" rel="stylesheet">
-    </head>
-    <body>
-
-          <!-- Navbar -->
-  <nav class="navbar navbar-expand-md">
-    <a class="navbar-brand" href="#">
-      <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Pharma-Vet</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Place Order</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">How it Works</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-info" href="#">Log In</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-info" href="#">Register</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-                        
             <section class="main">
                 <!-- Start the page's form -->
                 <div class="form">
@@ -174,28 +141,28 @@ class Page  {
                     </form>
                 </div>
             </section> 
-            
-            <section class="sidebar">
-                <!-- Start the page's error notification -->
-                <div class="highlight">
-                    <p>Please fix the following errors:</p>
-                    <ul>
-                        <li>Error 1</li>
-                        <li>Error 2</li>
-                    </ul>                                        
-                </div>
-                
-                <!-- Start the page's thank you notification -->
-                <div class="highlight">
-                    <h2>
-                        Your pet's info has been saved.<br>
-                        
-                    </h2>
-                                                           
-                </div>
-                
-                <!-- Start the page's display submitted data -->
-                <div class="data">
+    
+            <?php  
+            }
+
+    static function petFormNotifications(){
+      ?>
+      <section class="sidebar">
+      <!-- Start the page's error notification -->
+      <div class="highlight">
+          <p>Please fix the following errors:</p>
+          <ul>
+              <li>Error 1</li>
+              <li>Error 2</li>
+          </ul>                                        
+      </div>
+      <?php  
+    }
+
+    static function petFormSuccesful(){
+      ?>
+                      <!-- Start the page's display submitted data -->
+                      <div class="data">
                     <b>Entered data is:</b>
                     <table>
                         
@@ -214,27 +181,22 @@ class Page  {
                     </table>
                 </div>
             </section>
-            
-        <!-- Start the page's footer -->            
-          <!--Footer: Add Bootstrap JS and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body>
 
-</html>
-    
-            <?php  
-            }
+      <?php
+    }
     
 
         
 
-    static function displayTable(/*Array $laptops*/) {?>
+    static function displayMedicinesTable(Array $medicines) {
+      ?>
 
-    <!-- main section: table -->
-    <div class="p-5">
+  <!-- Medicines table -->
+  <br>
+    <div class="p-5 table-responsive">
         <input type="text" class="searchInput" placeholder="Search active drugs">
         <input type="text" class="searchInput" placeholder="Search Category">
+
 
         <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -246,12 +208,68 @@ class Page  {
                 <th scope="col">Size</th>
                 <th scope="col">Flavor</th>
                 <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
+                <th scope="col">Price per unit</th>
                 <th scope="col">Add to order</th>
             </tr>
             </thead>
             <tbody>
-            <tr>
+              <?php
+              //List the medicines
+              foreach($medicines as $medicine){
+                echo "<tr>";
+                echo "<form action=\"{$_SERVER["PHP_SELF"]}\" method=\"post\">";
+                echo "<input type=\"hidden\" name=\"id\" value=\"{$medicine->getMedicineId()}\">";
+                echo "<input type=\"hidden\" name=\"medicine\" id=\"medicine\" value=\"{$medicine->getActiveDrug()}\">";
+                echo "<th scope=\"row\">{$medicine->getActiveDrug()}</th>";
+                echo "<td>{$medicine->getCategory()}</td>";
+                echo "<td><select name=\"concentration\">";
+                    $count=1;
+                    foreach(self::$concentrations as $concentration){
+                      echo "<option value=\"{$concentration}\">{$concentration}</option>";
+                      $count++;
+                    }
+                echo "</td>";
+                echo "<td><select name=\"presentation\">";
+                    $count=1;
+                    foreach(self::$presentations as $presentation){
+                      echo "<option value=\"{$presentation}\">{$presentation}</option>";
+                      $count++;
+                    }
+                echo "</td>";
+                echo "<td><select name=\"size\">";
+                    $count=1;
+                    foreach(self::$sizes as $size){
+                      echo "<option value=\"{$size}\">{$size}</option>";
+                      $count++;
+                    }
+                echo "</td>";
+                echo "<td><select name=\"flavor\">";
+                    $count=1;
+                    foreach(self::$flavors as $flavor){
+                      echo "<option value=\"{$flavor}\">{$flavor}</option>";
+                      $count++;
+                    }
+                echo "</td>";
+                echo "</td>";
+                echo "<td><select name=\"quantity\">";
+                    $count=1;
+                    while($count<11){
+                      echo "<option value=\"{$count}\">{$count}</option>";
+                      $count++;
+                    }
+                echo "</td>";
+                $price="$".number_format($medicine->getUnitPrice(),2,".",",");
+                echo "<td>{$price}</td>";
+                echo "<input type=\"hidden\" name=\"price\" value=\"{$medicine->getUnitPrice()}\">";
+                echo "<input type=\"hidden\" name=\"action\" value=\"addMedicine\">";
+                echo "<td><input class=\"btn-info btn-sm\" type=\"submit\" value=\"Add Medicine\"></td>";
+                //echo "<td><a href=\"?action=add&id={$medicine->getMedicineId()}\">Add to order</a></td>";
+                echo "</form>";
+                echo "</tr>";
+              }
+
+              ?>
+<!--             <tr>
                 <th scope="row">Medetomidine</th>
                 <td>Anaesthetic, analgesic, and sedative drugs</td>
                 <td>choose from select</td>
@@ -261,29 +279,7 @@ class Page  {
                 <td>choose from select</td>
                 <td>$45.50</td>
                 <td><a href="?action=add&id=1">Add to order</a></td>
-            </tr>
-            <tr>
-                <th scope="row">Dexmedetomidine</th>
-                <td>Anaesthetic, analgesic, and sedative drugs</td>
-                <td>choose from select</td>
-                <td>choose from select </td>
-                <td>choose from select</td>
-                <td>choose from select</td>
-                <td>choose from select</td>
-                <td>$45.50</td>
-                <td><a href="?action=add&id=1">Add to order</a></td>
-            </tr>
-            <tr>
-                <th scope="row">Lidocaine</th>
-                <td>Anaesthetic, analgesic, and sedative drugs</td>
-                <td>choose from select</td>
-                <td>choose from select </td>
-                <td>choose from select</td>
-                <td>choose from select</td>
-                <td>choose from select</td>
-                <td>$45.50</td>
-                <td><a href="?action=add&id=1">Add to order</a></td>
-            </tr>
+            </tr> -->
             </tbody>
         </table>
 
@@ -291,56 +287,197 @@ class Page  {
    <?php
     }
 
-    static function displayOrdersDetails(/*Laptop $laptop*/) {?>
-    <!-- detail section -->
-    <div class="p-5">
+    static function orderConfirmation(){
+      ?>
+        <!-- Order confirmation table -->
+  <div class="p-5">
+    <h4 class="text-center">Order confirmation: </h4>
+    <div class="container">
+      <div class="p-5 table-responsive">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Active Drug</th>
+                <th scope="col">Concentration</th>
+                <th scope="col">Presentation</th>
+                <th scope="col">Size</th>
+                <th scope="col">Flavor</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+              //List the medicines
+              foreach($medicines as $medicine){
+                echo "<tr>";
+                ?>
+            <tr>
+                <th scope="row">1</th>
+                <td>Buprenorphine</td>
+                <td>2mg/ml</td>
+                <td>Oil suspension </td>
+                <td>100ml</td>
+                <td>Chicken</td>
+                <td>2</td>
+                <td>$35.50</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
-<table class="table table-striped table-bordered table-hover">
-    <thead>
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">Date</th>
-        <th scope="col">PST</th>
-        <th scope="col">GST</th>
-        <th scope="col">Total</th>
-        <th scope="col">Details</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td>Jul-24-2023</td>
-        <td>$7.00</td>
-        <td>$5.00 </td>
-        <td>$55.50</td>
-        <td><a href="?action=details&id=1">Details</a></td>
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td>Jul-22-2023</td>
-        <td>$14.00</td>
-        <td>$10.00 </td>
-        <td>$110.50</td>
-        <td><a href="?action=details&id=1">Details</a></td>
-    </tr>
-    <tr>
-        <th scope="row">1</th>
-        <td>Jul-21-2023</td>
-        <td>$9.50</td>
-        <td>$7.00 </td>
-        <td>$64.69</td>
-        <td><a href="?action=details&id=1">Details</a></td>
-    </tr>
-    </tbody>
-</table>
-
+      <div class="row">
+        <div class="col">
+        </div>
+        <div class="col text-right">
+          Subtotal: <strong>$35.50</strong><br>
+          PST: <strong>$2.50</strong><br>
+          GST: <strong>$1.78</strong><br>
+          Total: <strong>$ 39.78</strong><br>
+        </div>
+      </div>  
+      <h5>*Add more products from the table below, confirm your order or cancel.</h5>
+      <div class="row">
+        <div class="col">
+          <input class="btn-danger btn-lg btn-block" type="submit" value="Cancel Order">
+        </div>
+        <div class="col text-center">
+      <input class="btn-success btn-lg btn-block" type="submit" value="Confirm Order">
+        </div>
+      </div>
 </div>
-                
-    <?php  }
 
+      <?php
+    }
+
+
+//Past orders page
+    static function displayOrdersTable(/*Laptop $laptop*/) {
+      ?>
+          <!-- Past orders table -->
+    <div class="p-5">
+        <h1>[Username] past orders: </h1>
+        <br>
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Order #</th>
+                <th scope="col">Date</th>
+                <th scope="col">PST</th>
+                <th scope="col">GST</th>
+                <th scope="col">Total</th>
+                <th scope="col">Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>10255</td>
+                <td>Jul-24-2023</td>
+                <td>$7.00</td>
+                <td>$5.00 </td>
+                <td>$55.50</td>
+                <td><a href="?action=details&id=1">Details</a></td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>10234</td>
+                <td>Jul-22-2023</td>
+                <td>$14.00</td>
+                <td>$10.00 </td>
+                <td>$110.50</td>
+                <td><a href="?action=details&id=1">Details</a></td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>10123</td>
+                <td>Jul-21-2023</td>
+                <td>$9.50</td>
+                <td>$7.00 </td>
+                <td>$64.69</td>
+                <td><a href="?action=details&id=1">Details</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+                
+    <?php 
+     }
+
+      static function displayOrderDetails(){
+        ?>
+
+              <!-- Selected order details -->
+      <div class="p-5">
+        <a href="?action=details&id=1">Hide details</a><br>
+        <h4 class="text-center">Order # [number]: </h4>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              First Name: <strong>name</strong><br>
+              Last Name: <strong>name</strong><br>
+              Email: <strong>email</strong><br>
+              Phone: <strong>phone</strong><br>
+              Order Date: <strong>date</strong><br>
+            </div>
+            <div class="col text-right">
+              Address: <strong>address</strong><br>
+              City: <strong>city</strong><br>
+              Postal Code: <strong>PC</strong><br>
+              Province: <strong>province</strong><br>
+            </div>
+          </div>
+
+          <div class="p-5">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Active Drug</th>
+                    <th scope="col">Concentration</th>
+                    <th scope="col">Presentation</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Flavor</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Buprenorphine</td>
+                    <td>2mg/ml</td>
+                    <td>Oil suspension </td>
+                    <td>100ml</td>
+                    <td>Chicken</td>
+                    <td>2</td>
+                    <td>$35.50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+          <div class="row">
+            <div class="col">
+            </div>
+            <div class="col text-right">
+              Subtotal: <strong>$35.50</strong><br>
+              PST: <strong>$2.50</strong><br>
+              GST: <strong>$1.78</strong><br>
+              Total: <strong>$ 39.78</strong><br>
+            </div>
+          </div>  
+    </div>
+        <?php
+      }
+
+//Login page
     static function displayLoginForm(){?>
-    <!-- login section -->
-    <section class="vh-100 gradient-custom">
+  <!-- LogIn Form -->
+  <section class="vh-100 gradient-custom">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -395,9 +532,11 @@ class Page  {
         </section>
     <?php }
 
+
+
 static function displayRegisterForm(){?>
-    <!-- Regiater section -->
-    <section class="vh-100 gradient-custom">
+      <!--Register form-->
+<section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">

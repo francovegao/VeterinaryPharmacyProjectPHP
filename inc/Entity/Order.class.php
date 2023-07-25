@@ -12,7 +12,7 @@ MariaDB [vetpharmacy]> desc `order`;
 | TotalPrice | float(6,2) | YES  |     | NULL                |                               |
 | Clients_Id | int(11)    | NO   | MUL | NULL                |                               |
 +------------+------------+------+-----+---------------------+-------------------------------+
-6 rows in set (0.029 sec)
+6 rows in set (0.047 sec)
 */
 
 class Order{
@@ -32,17 +32,37 @@ class Order{
     function getOrderDate(): string{
         return $this->OrderDate;
     }
-    function getPST(): string{
+    function getPST(): float{
         return $this->PST;
     }
-    function getGST(): string{
+    function getGST(): float{
         return $this->GST;
     }
-    function getTotalPrice(): string{
+    function getTotalPrice(): float{
         return $this->TotalPrice;
     }
-    function getClients_Id(): string{
+    function getClients_Id(): int{
         return $this->Clients_Id;
+    }
+
+    //Setter
+    function setOrderId(int $OrderId) {
+        $this->OrderId=$OrderId;
+    }
+    function setOrderDate(string $OrderDate){
+        $this->OrderDate=$OrderDate;
+    }
+    function setPST(float $PST){
+        $this->PST=$PST;
+    }
+    function setGST(float $GST){
+        $this->GST=$GST;
+    }
+    function setTotalPrice(float $TotalPrice){
+        $this->TotalPrice=$TotalPrice;
+    }
+    function setClients_Id(int $Clients_Id){
+        $this->Clients_Id=$Clients_Id;
     }
 }
 

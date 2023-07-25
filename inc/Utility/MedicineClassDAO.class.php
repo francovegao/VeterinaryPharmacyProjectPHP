@@ -1,8 +1,15 @@
 <?php
 /*
-+----+------------+--------------+------------+
-| ID | TicketCode | TicketDetail | TicketCost |
-+----+------------+--------------+------------+
+MariaDB [vetpharmacy]> desc medicine;
++------------+------------+------+-----+---------+----------------+
+| Field      | Type       | Null | Key | Default | Extra          |
++------------+------------+------+-----+---------+----------------+
+| MedicineID | int(11)    | NO   | PRI | NULL    | auto_increment |
+| ActiveDrug | char(50)   | NO   |     | NULL    |                |
+| Category   | char(30)   | YES  |     | NULL    |                |
+| UnitPrice  | float(6,2) | YES  |     | NULL    |                |
++------------+------------+------+-----+---------+----------------+
+4 rows in set (0.030 sec)
 */
 class MedicineClassDAO  {
 
@@ -14,16 +21,15 @@ class MedicineClassDAO  {
         self::$db = new PDOService($className);
     }
 
-    //Get all the Ticket Class
-    static function getTicketClass(): array {
+    //Get the medicine list
+    static function getMedicineClass(): array {
         // SELECT statement
-        $selectAll = "SELECT * FROM ticketclass";
+        $selectAll = "SELECT * FROM medicine";
         self::$db->query($selectAll);
         //execute the query
         self::$db->execute();
         //Return results
-        return self::$db->resultSet();
-      
+        return self::$db->resultSet(); 
     }
 }
 
