@@ -91,6 +91,36 @@ class Page  {
   </div>
   </div>
 
+            </head>
+            <body>
+              <!-- Navbar -->
+              <nav class="navbar navbar-expand-md">
+                <a class="navbar-brand" href="#">
+                  <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                  Pharma-Vet</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Place Order</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">How it Works</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn btn-info" href="#">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn btn-outline-info" href="#">Register</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
         <?php
         
      }
