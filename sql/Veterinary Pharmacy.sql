@@ -70,6 +70,8 @@ CREATE TABLE `Ordered_Meds` (
   FOREIGN KEY (`Medicine_Id`) REFERENCES `Medicine` (`MedicineID`) 
 )ENGINE=InnoDB;
 
+ALTER TABLE `Order`AUTO_INCREMENT=10001;
+
 INSERT INTO `User` VALUES
   (1, 'admin', ''),
   (2, 'test1', ''),
@@ -170,10 +172,10 @@ INSERT INTO `User` VALUES
   (85, 'Calcium gluconate', 'Reproduction', 12.50),
   (86, 'Finasteride', 'Reproduction', 12.50);
  
-    INSERT INTO `Order` VALUES
-(1, CURRENT_TIMESTAMP(), null, null, null, 1);
+    INSERT INTO `Order` VALUES 
+(10001, CURRENT_TIMESTAMP(), null, null, null, 1);
 
     INSERT INTO `Ordered_Meds` VALUES
-(1, 1, '0.5mg/ml', 'oil suspension','100ml', 'chicken', 1, 50.50);
+(10001, 1, '0.5mg/ml', 'oil suspension','100ml', 'chicken', 1, 50.50);
 
 

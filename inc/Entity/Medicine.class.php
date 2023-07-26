@@ -10,20 +10,20 @@ MariaDB [vetpharmacy]> desc medicine;
 | Category   | char(30)   | YES  |     | NULL    |                |
 | UnitPrice  | float(6,2) | YES  |     | NULL    |                |
 +------------+------------+------+-----+---------+----------------+
-4 rows in set (0.030 sec)
+4 rows in set (0.027 sec)
 */
 
 class Medicine{
 
     // attributes
-    private $MedicineId = 0;
+    private $MedicineID = 0;
     private $ActiveDrug ="";
     private $Category= "";
     private $UnitPrice= "";
 
     // getter
     function getMedicineId() : int{
-        return $this->MedicineId;
+        return $this->MedicineID;
     }
     function getActiveDrug(): string{
         return $this->ActiveDrug;

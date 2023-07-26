@@ -42,14 +42,17 @@
     </div>
   </nav>
   <br>
-  <!-- Medicines table -->
 
+
+  <!-- Past orders table -->
     <div class="p-5">
-
+        <h1>[Username] past orders: </h1>
+        <br>
         <table class="table table-striped table-bordered table-hover">
             <thead>
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Order #</th>
                 <th scope="col">Date</th>
                 <th scope="col">PST</th>
                 <th scope="col">GST</th>
@@ -60,6 +63,7 @@
             <tbody>
             <tr>
                 <th scope="row">1</th>
+                <td>10255</td>
                 <td>Jul-24-2023</td>
                 <td>$7.00</td>
                 <td>$5.00 </td>
@@ -68,6 +72,7 @@
             </tr>
             <tr>
                 <th scope="row">1</th>
+                <td>10234</td>
                 <td>Jul-22-2023</td>
                 <td>$14.00</td>
                 <td>$10.00 </td>
@@ -76,6 +81,7 @@
             </tr>
             <tr>
                 <th scope="row">1</th>
+                <td>10123</td>
                 <td>Jul-21-2023</td>
                 <td>$9.50</td>
                 <td>$7.00 </td>
@@ -84,7 +90,69 @@
             </tr>
             </tbody>
         </table>
+    </div>
 
+      <!-- Selected order details -->
+      <div class="p-5">
+        <a href="?action=details&id=1">Hide details</a><br>
+        <h4 class="text-center">Order # [number]: </h4>
+        <br>
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              First Name: <strong>name</strong><br>
+              Last Name: <strong>name</strong><br>
+              Email: <strong>email</strong><br>
+              Phone: <strong>phone</strong><br>
+              Order Date: <strong>date</strong><br>
+            </div>
+            <div class="col text-right">
+              Address: <strong>address</strong><br>
+              City: <strong>city</strong><br>
+              Postal Code: <strong>PC</strong><br>
+              Province: <strong>province</strong><br>
+            </div>
+          </div>
+
+          <div class="p-5">
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Active Drug</th>
+                    <th scope="col">Concentration</th>
+                    <th scope="col">Presentation</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Flavor</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Buprenorphine</td>
+                    <td>2mg/ml</td>
+                    <td>Oil suspension </td>
+                    <td>100ml</td>
+                    <td>Chicken</td>
+                    <td>2</td>
+                    <td>$35.50</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+          <div class="row">
+            <div class="col">
+            </div>
+            <div class="col text-right">
+              Subtotal: <strong>$35.50</strong><br>
+              PST: <strong>$2.50</strong><br>
+              GST: <strong>$1.78</strong><br>
+              Total: <strong>$ 39.78</strong><br>
+            </div>
+          </div>  
     </div>
                         
             

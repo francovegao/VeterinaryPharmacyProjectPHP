@@ -9,7 +9,7 @@ MariaDB [vetpharmacy]> desc user;
 | Username | varchar(255) | NO   | UNI | NULL    |                |
 | Password | varchar(255) | NO   |     | NULL    |                |
 +----------+--------------+------+-----+---------+----------------+
-3 rows in set (0.032 sec)
+3 rows in set (0.024 sec)
 */
 
 class User{

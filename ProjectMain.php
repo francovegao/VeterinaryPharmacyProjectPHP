@@ -9,12 +9,14 @@ require_once("inc/Entity/Pet.class.php");
 require_once("inc/Entity/User.class.php");
 
 Page::displayHeader();
+
+
 Page::displayFooter();
 //Page::displayLoginForm();
 //Page::displayRegisterForm();
 //Page::addPetForm();
 //Page::displayTable();
-//Page::displayOrdersDetails();
+Page::displayOrderDetails();
 
 
 ?>
