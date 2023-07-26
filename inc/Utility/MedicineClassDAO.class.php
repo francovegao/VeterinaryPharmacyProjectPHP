@@ -16,9 +16,9 @@ class MedicineClassDAO  {
     // Declare static DB member to store the database
     private static $db; 
     //Initialize the RoomsTypeDAO
-    static function initialize(Medicine $medicine)    {
+    static function initialize(string $className)    {
         //Remember to send in the class name for this DAO
-        self::$db = new PDOService(get_class($medicine));
+        self::$db = new PDOService($className);
     }
 
     //Get the medicine list

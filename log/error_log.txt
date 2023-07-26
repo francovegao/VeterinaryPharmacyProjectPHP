@@ -531,3 +531,9 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php on line 41
+[27-Jul-2023 01:35:13 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "displayOrdersTable", expecting "(" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 432
+[27-Jul-2023 01:39:12 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "displayOrdersTable", expecting "(" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 432
+[26-Jul-2023 16:43:04 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 16:43:04 America/Vancouver] PHP Warning:  Undefined array key "price" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 49
+[26-Jul-2023 16:43:08 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 16:43:08 America/Vancouver] PHP Warning:  Undefined array key "price" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 49

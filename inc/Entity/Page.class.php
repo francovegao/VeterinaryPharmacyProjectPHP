@@ -15,23 +15,6 @@ class Page  {
 
 
     
-    static function displayHeader2(){
-      ?>
- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pharma-Vet</title>
-  <!-- Add Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="css/mainPageStyles.css" rel="stylesheet">
-
-</head>
-<body>
-      <?php
-    }
-
     static function displayHeader() {
         ?>
                   <!DOCTYPE html>
@@ -43,53 +26,6 @@ class Page  {
               <!-- Add Bootstrap CSS -->
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
               <link href="css/medsTableStyles.css" rel="stylesheet">
-
-</head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md">
-    <a class="navbar-brand" href="#">
-      <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Pharma-Vet</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Place Order</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">How it Works</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-info" href="logInForm.html">Log In</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-outline-info" href="#">Register</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Header / Jumbotron -->
-  <div class="hero-image">
-  <div class="jumbotron text-center">
-    <h1 class="display-4">Welcome to Pharma-Vet!</h1>
-    <p class="lead">Order your pets medicine and receive it at your house in 3 simple steps:</p>
-    <p>1. Log In</p>
-    <p>2. Place your order</p>
-    <p>3. Receive your order</p>
-    <br>
-    <p>
-      <a href="ProjectMainBackup.php" class="btn btn-info btn-lg">Login</a>
-      <a href="#" class="btn btn-outline-info btn-lg">Register</a>
-    </p>
-  </div>
-  </div>
 
             </head>
             <body>
@@ -124,6 +60,38 @@ class Page  {
         <?php
         
      }
+
+    static function displayFooter()    {
+        ?>
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+        <?php  
+        }
+
+//Home page
+      static function displayHomePage()    {
+          ?>
+          <!-- Jumbotron -->
+          <div class="hero-image">
+          <div class="jumbotron text-center">
+            <h1 class="display-4">Welcome to Pharma-Vet!</h1>
+            <p class="lead">Order your pets medicine and receive it at your house in 3 simple steps:</p>
+            <p>1. Log In</p>
+            <p>2. Place your order</p>
+            <p>3. Receive your order</p>
+            <br>
+            <p>
+              <a href="#" class="btn btn-info btn-lg">Login</a>
+              <a href="#" class="btn btn-outline-info btn-lg">Register</a>
+            </p>
+          </div>
+          </div>
+  
+          <?php  
+          }
 
           //Add pet
         static function addPetForm()    {
@@ -424,8 +392,7 @@ class Page  {
     </div>
 
       <?php
-              }
-            }
+    }
 
 
 //Past orders page
@@ -549,7 +516,6 @@ class Page  {
     </div>
         <?php
       }
-    
 
 //Login page
     static function displayLoginForm(){?>
@@ -596,7 +562,7 @@ class Page  {
   </section>
     <?php  }
 
-    static function displayLogoutForm(/*Member $m*/){?>
+    static function displayLogoutForm(Member $m){?>
     <!-- logout section -->
     <section class="logout">
             <h2>Login Details</h2>
@@ -710,15 +676,5 @@ static function displayRegisterForm(){?>
   
     <?php }
 
-    static function displayFooter(){
-      ?>
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
-      <?php
 
-    }
-
-
-    }
+}
