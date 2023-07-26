@@ -9,6 +9,23 @@ class Page  {
     public static $studentName ="Luiz and Oliver";
     public static $member;
 
+    static function displayHeader2(){
+      ?>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharma-Vet</title>
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="css/mainPageStyles.css" rel="stylesheet">
+
+</head>
+<body>
+      <?php
+    }
+
     static function displayHeader() {
         ?>
        <!DOCTYPE html>
@@ -43,7 +60,7 @@ class Page  {
           <a class="nav-link" href="#">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-info" href="#">Log In</a>
+          <a class="btn btn-info" href="logInForm.html">Log In</a>
         </li>
         <li class="nav-item">
           <a class="btn btn-outline-info" href="#">Register</a>
@@ -62,7 +79,7 @@ class Page  {
     <p>3. Receive your order</p>
     <br>
     <p>
-      <a href="#" class="btn btn-info btn-lg">Login</a>
+      <a href="ProjectMainBackup.php" class="btn btn-info btn-lg">Login</a>
       <a href="#" class="btn btn-outline-info btn-lg">Register</a>
     </p>
   </div>
@@ -382,7 +399,7 @@ class Page  {
   </section>
     <?php  }
 
-    static function displayLogoutForm(Member $m){?>
+    static function displayLogoutForm(/*Member $m*/){?>
     <!-- logout section -->
     <section class="logout">
             <h2>Login Details</h2>

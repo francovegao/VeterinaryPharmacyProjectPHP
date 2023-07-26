@@ -13,7 +13,7 @@ class ReservationDAO  {
     private static $db;  
 
 
-    static function initialize(string $className)    {
+    static function init(string $className)    {
         //Remember to send in the class name for this DAO
         self::$db = new PDOService($className);
     }
