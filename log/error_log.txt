@@ -686,3 +686,5 @@ Stack trace:
 #0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(66): Page::orderConfirmation(Array)
 #1 {main}
   thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 295
+[26-Jul-2023 15:28:24 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 15:28:24 America/Vancouver] PHP Warning:  Undefined array key "price" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 49

@@ -73,9 +73,9 @@ CREATE TABLE `Ordered_Meds` (
 ALTER TABLE `Order`AUTO_INCREMENT=10001;
 
 INSERT INTO `User` VALUES
-  (1, 'admin', ''),
-  (2, 'test1', ''),
-  (3, 'username', '');
+  (1, 'admin', '$2y$10$IaiaFeb9HqSaormm/2VPPuudp6cL0csmmjQrzTgYtMJbHehsLxex.'),
+  (2, 'test1', '$2y$10$Ooq.IeCY0.di76ncG5I8i.JjgJXoW1Wwq15TZ81UEcO1dCjpZfOpKm'),
+  (3, 'username', '$2y$10$2sxKf0Pl/oZNPDZgBQofVOHdMD3BCfhUxAJZAGglkpQf2Ghrf.Xwu');
 
   INSERT INTO `Clients` VALUES
   (1, 'Admin', 'One', '700 Royal Ave', 'New Westminster', 'BC', 'V3M 5Z5', 'admin@douglascollege.ca', '2368335240', 1);
