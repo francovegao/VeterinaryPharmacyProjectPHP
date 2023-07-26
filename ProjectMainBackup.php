@@ -42,7 +42,7 @@ else{
     Page::displayLoginForm();
     //Page::displayFooter();
     //Page::displayOrdersDetails();
-    
+    print("hello");
 }
 
 
