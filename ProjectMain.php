@@ -1,9 +1,7 @@
 <?php
-//Config
-require_once('inc/config.inc.php');
-
-//Entities
+require_once("inc/config.inc.php");
 require_once("inc/Entity/Page.class.php");
+require_once("inc/Entity/Clients.class.php");
 require_once("inc/Entity/Medicine.class.php");
 require_once("inc/Entity/Order.class.php");
 require_once("inc/Entity/Ordered_Meds.class.php");
@@ -61,14 +59,16 @@ $medicines=MedicineClassDAO::getMedicineClass();
 
 //Display the page
 Page::displayHeader();
-if(isset($_POST['action']) && ($_POST['action']=="addMedicine")){   
-    //$preOrder=OrderCLassDAO::getPreOrder($id);
-    $preOrder=OrderCLassDAO::getPreOrder(10001);
-    Page::orderConfirmation($preOrder);
-    Page::displayMedicinesTable($medicines, $preOrder);
+if(!empty($_GET) && ($_GET['action']=="addMedicine")){
+    Page::orderConfirmation();
 }
 Page::displayMedicinesTable($medicines);
 Page::displayFooter();
+//Page::displayLoginForm();
+//Page::displayRegisterForm();
+//Page::addPetForm();
+//Page::displayTable();
+Page::displayOrderDetails();
 
 
 ?>
