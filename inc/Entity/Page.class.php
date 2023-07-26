@@ -218,7 +218,7 @@ class Page  {
               foreach($medicines as $medicine){
                 echo "<tr>";
                 echo "<form action=\"{$_SERVER["PHP_SELF"]}\" method=\"post\">";
-                echo "<input type=\"hidden\" name=\"id\" value=\"{$medicine->getMedicineId()}\">";
+                echo "<input type=\"hidden\" name=\"medicineid\" value=\"{$medicine->getMedicineId()}\">";
                 echo "<input type=\"hidden\" name=\"medicine\" id=\"medicine\" value=\"{$medicine->getActiveDrug()}\">";
                 echo "<th scope=\"row\">{$medicine->getActiveDrug()}</th>";
                 echo "<td>{$medicine->getCategory()}</td>";
@@ -287,11 +287,13 @@ class Page  {
    <?php
     }
 
-    static function orderConfirmation(){
+    //receives array with ordered_meds and order info
+    static function orderConfirmation($preOrder){
       ?>
         <!-- Order confirmation table -->
   <div class="p-5">
-    <h4 class="text-center">Order confirmation: </h4>
+  <form action="<?=$_SERVER["PHP_SELF"]?>" method="post">
+    <h4 class="text-center">Order # <?= $preOrder["0"]->getOrderId();?> confirmation: </h4>
     <div class="container">
       <div class="p-5 table-responsive">
         <table class="table table-striped table-bordered table-hover">
@@ -308,12 +310,37 @@ class Page  {
             </tr>
             </thead>
             <tbody>
+            
             <?php
               //List the medicines
-              foreach($medicines as $medicine){
-                echo "<tr>";
+              $count=1;
+              $subtotal=0;
+              echo "<input type=\"hidden\" name=\"orderId\" value=\"{$preOrder["0"]->getOrderId()}\">";
+              echo "<input type=\"hidden\" name=\"orderDate\" value=\"{$preOrder["0"]->getOrderDate()}\">";
+              foreach($preOrder as $orderItem){
+                    echo "<tr>";
+                    echo "<input type=\"hidden\" name=\"medicineId\" value=\"{$orderItem->Medicine_Id}\">"; //add the count number at name know how many we have
+                    echo "<input type=\"hidden\" name=\"concentration\" value=\"{$orderItem->Concentration}\">";
+                    echo "<input type=\"hidden\" name=\"presentation\" value=\"{$orderItem->Presentation}\">";
+                    echo "<input type=\"hidden\" name=\"size\" value=\"{$orderItem->Size}\">";
+                    echo "<input type=\"hidden\" name=\"flavor\" value=\"{$orderItem->Flavor}\">";
+                    echo "<input type=\"hidden\" name=\"quantity\" value=\"{$orderItem->Quantity}\">";
+                    echo "<input type=\"hidden\" name=\"sumPrice\" value=\"{$orderItem->SumPrice}\">";
+                    echo "<th scope=\"row\">{$count}</th>";
+                    echo "<td>{$orderItem->ActiveDrug}</td>";
+                    echo "<td>{$orderItem->Concentration}</td>";
+                    echo "<td>{$orderItem->Presentation}</td>";
+                    echo "<td>{$orderItem->Size}</td>";
+                    echo "<td>{$orderItem->Flavor}</td>";
+                    echo "<td>{$orderItem->Quantity}</td>";
+                    $price="$".number_format($orderItem->SumPrice,2,".",",");
+                    echo "<td>{$price}</td>";
+                    echo "</tr>";
+                    $count++;
+                    $subtotal+=$orderItem->SumPrice;
+              }
                 ?>
-            <tr>
+<!--             <tr>
                 <th scope="row">1</th>
                 <td>Buprenorphine</td>
                 <td>2mg/ml</td>
@@ -322,31 +349,47 @@ class Page  {
                 <td>Chicken</td>
                 <td>2</td>
                 <td>$35.50</td>
-            </tr>
+            </tr> -->
             </tbody>
         </table>
+      </form>
     </div>
 
       <div class="row">
         <div class="col">
         </div>
         <div class="col text-right">
-          Subtotal: <strong>$35.50</strong><br>
+          <?php
+          $formatPrice="$".number_format($subtotal,2,".",",");
+          echo "Subtotal: <strong>{$formatPrice}</strong><br>";
+          echo "PST 0%: <strong>$0.00</strong><br>";
+          $gst=$subtotal*0.05;
+          $formatPrice="$".number_format($gst,2,".",",");
+          echo "GST 5%: <strong>{$formatPrice}</strong><br>";
+          $total=$gst+$subtotal;
+          $formatPrice="$".number_format($total,2,".",",");
+          echo "Total: <strong>{$formatPrice}</strong><br>";
+          ?>
+
+          <strong>*Medications exempt PST in BC</strong>
+<!--           Subtotal: <strong>$35.50</strong><br>
           PST: <strong>$2.50</strong><br>
           GST: <strong>$1.78</strong><br>
-          Total: <strong>$ 39.78</strong><br>
+          Total: <strong>$ 39.78</strong><br> -->
         </div>
       </div>  
       <h5>*Add more products from the table below, confirm your order or cancel.</h5>
       <div class="row">
         <div class="col">
-          <input class="btn-danger btn-lg btn-block" type="submit" value="Cancel Order">
+          <input type="hidden" name="action" value="cancelOrder">
+          <input class="btn-danger btn-lg btn-block" type="submit" value="CancelOrder">
         </div>
         <div class="col text-center">
-      <input class="btn-success btn-lg btn-block" type="submit" value="Confirm Order">
+        <input type="hidden" name="action" value="confirmOrder">
+        <input class="btn-success btn-lg btn-block" type="submit" value="ConfirmOrder">
         </div>
       </div>
-</div>
+    </div>
 
       <?php
     }

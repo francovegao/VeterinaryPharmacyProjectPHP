@@ -32,7 +32,7 @@ class OrderCLassDAO  {
     static function createOrder(Order $newOrder) : int {
         // QUERY BIND EXECUTE 
         // You may want to return the last inserted id
-        $insertOrder = "INSERT INTO order (OrderDate, PST, GST, TotalPrice, Clients_Id)";
+        $insertOrder = "INSERT INTO `order` (OrderDate, PST, GST, TotalPrice, Clients_Id)";
         $insertOrder .= "VALUES (:date, :pst, :gst, :totalPrice, :clientId)";
         
         self::$db->query($insertOrder);
@@ -46,24 +46,22 @@ class OrderCLassDAO  {
     }
     
     // GET = READ = SELECT
-    // This is for a single result.... when do I need it huh?  
-    static function getReservation(string $ReservationId): Reservation  {
+    // This is for a single result 
+    static function getOrder(string $OrderId): Order  {
        //QUERY, BIND, EXECUTE, RETURN (the single result)
-       $selectReservation = "SELECT * FROM reservation WHERE ReservationID = :reservationid";
-       self::$db->query($selectReservation);
-       self::$db->bind(":reservationid", $ReservationId);
+       $selectOrder = "SELECT * FROM `order` WHERE OrderId = :orderid";
+       self::$db->query($selectOrder);
+       self::$db->bind(":orderid", $OrderId);
        self::$db->execute();
        return self::$db->singleResult();
     }
 
     // GET = READ = SELECT ALLL
-    // This is to get all purchases, do I even need this function? 
-    static function getReservations() : array {
-
-        // I don't need any parameter here, do I need to bind?
+    // This is to get all orders
+    static function getOrders() : array {
         
         //Prepare the Query
-        $selectAll = "SELECT * FROM reservation";
+        $selectAll = "SELECT * FROM `order`";
         self::$db->query($selectAll);
         //execute the query
         self::$db->execute();
@@ -72,41 +70,41 @@ class OrderCLassDAO  {
     }
 
     // UPDATE means update   
-    static function updateReservation (Reservation $ReservationToUpdate) {
+    static function updateOrder (Order $OrderToUpdate) {
 
         // QUERY, BIND, EXECUTE
         // You may want to return the rowCount
          // You may want to return the last inserted id
-         $updateReservation = "UPDATE reservation SET Email=:email, Amount=:amount, TicketClassID=:ticketclassid ";
-         $updateReservation .= "WHERE ReservationID=:reservationid";
-         $reservationID = $ReservationToUpdate->getReservationID();
+         $updateOrder = "UPDATE `order` SET OrderDate=:orderdate, PST=:pst, GST=:gst, TotalPrice=:totalprice ";
+         $updateOrder .= "WHERE OrderId=:orderid";
+         $OrderId = $OrderToUpdate->getOrderId();
          
-         self::$db->query($updateReservation);
-         self::$db->bind(":reservationid", $ReservationToUpdate->getReservationID());
-         self::$db->bind(":email", $ReservationToUpdate->getEmail());
-         self::$db->bind(":amount", $ReservationToUpdate->getAmount());
-         self::$db->bind(":ticketclassid", $ReservationToUpdate->getTicketClassID());
+         self::$db->query($updateOrder);
+         self::$db->bind(":orderid", $OrderToUpdate->getOrderId());
+         self::$db->bind(":orderdate", $OrderToUpdate->getOrderDate());
+         self::$db->bind(":pst", $OrderToUpdate->getPST());
+         self::$db->bind(":gst", $OrderToUpdate->getGST());
+         self::$db->bind(":totalprice", $OrderToUpdate->getTotalPrice());
 
          self::$db->execute();
          
          $rowCount = self::$db->rowCount();
 
-         return array('rowCount' => $rowCount, 'lastInsertedId' => $reservationID);
+         return array('rowCount' => $rowCount, 'lastInsertedId' => $OrderId);
 
     }
     
     // Sorry, I need to DELETE your record 
-    static function deleteReservation(string $ReservationId) {
+    static function deleteOrder(string $OrderId) {
 
-        // Yea...yea... it is a drill like the one before
-        $deleteReservation = "DELETE FROM reservation WHERE ReservationId = :reservationid";
+        $deleteOrder = "DELETE FROM `order` WHERE OrderId = :orderid";
         try{
-        self::$db->query($deleteReservation);
-        self::$db->bind(":reservationid", $ReservationId);
+        self::$db->query($deleteOrder);
+        self::$db->bind(":orderid", $OrderId);
         self::$db->execute();
 
         if(self::$db->rowCount()!=1){
-        throw new Exception("Problem in deleting the reservation");
+        throw new Exception("Problem in deleting the order");
          }
 
         }catch(Exception $ex) {
@@ -117,25 +115,30 @@ class OrderCLassDAO  {
 
     }
 
-    // WE NEED TO USE JOIN HERE
+   // WE NEED TO USE JOIN HERE
+    /*
+MariaDB [vetpharmacy]> select * from `order` join ordered_meds on OrderId = Order_Id join medicine on MedicineId=medicine_id where OrderId=10001;
++---------+---------------------+------+------+------------+------------+----------+-------------+---------------+----------------+-------+-----------+----------+----------+------------+------------+--------------------------------+-----------+
+| OrderId | OrderDate           | PST  | GST  | TotalPrice | Clients_Id | Order_Id | Medicine_Id | Concentration | Presentation   | Size  | Flavor    | Quantity | SumPrice | MedicineID | ActiveDrug | Category                       | UnitPrice |
++---------+---------------------+------+------+------------+------------+----------+-------------+---------------+----------------+-------+-----------+----------+----------+------------+------------+--------------------------------+-----------+
+|   10001 | 2023-07-26 14:12:53 | NULL | NULL |       NULL |          1 |    10001 |           1 | 15mg/ml       | oil suspension | 100ml | chicken   |        1 |    50.50 |          1 | Xylazine   | Anaesthetic, analgesic, and se |     27.50 |
+|   10001 | 2023-07-26 14:12:53 | NULL | NULL |       NULL |          1 |    10001 |           5 | 25mg/ml       | ointment       | 30ml  | no flavor |        3 |    27.85 |          5 | Tolazoline | Anaesthetic, analgesic, and se |     27.50 |
++---------+---------------------+------+------+------------+------------+----------+-------------+---------------+----------------+-------+-----------+----------+----------+------------+------------+--------------------------------+-----------+
+2 rows in set (0.001 sec)
+    */
     // Make sure to select from both tables joined at the correct column
     // You may need to also query some columns from the RoomsType class/table. 
     // Those columns are needed for cost calculation and display the rooms type detail in the main page
-    static function getReservationList() {
+     static function getPreOrder(string $OrderId) {
         
-        //Prepare the Query
-        //execute the query
+        $selectAll= "SELECT * FROM `order` JOIN ordered_meds ON OrderId = Order_Id join medicine on MedicineId=medicine_id WHERE OrderId=:orderid";
+        self::$db->query($selectAll);
+
+        self::$db->bind(":orderid", $OrderId);
+        self::$db->execute();
         //Return row results
-        $selectReservations = "SELECT r.ReservationID, r.Email, r.Amount, t.TicketClassID, t.TicketDetail, t.TicketCost
-                       FROM Reservation r
-                       INNER JOIN TicketClass t ON r.TicketClassID = t.ID";
-self::$db->query($selectReservations);
-// Execute the query
-self::$db->execute();
-// Return row results
-return self::$db->resultSet();
-    
-    }
+        return self::$db->resultSet();
+        }
 
 }
 

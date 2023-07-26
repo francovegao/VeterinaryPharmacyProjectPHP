@@ -170,3 +170,519 @@
 [25-Jul-2023 07:04:41 Europe/Berlin] PHP Warning:  Undefined property: Medicine::$getUnitPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 257
 [25-Jul-2023 07:04:41 Europe/Berlin] PHP Warning:  Undefined property: Medicine::$getUnitPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 257
 [25-Jul-2023 07:04:41 Europe/Berlin] PHP Warning:  Undefined property: Medicine::$getUnitPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 257
+[26-Jul-2023 18:45:17 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "displayOrdersTable", expecting "(" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 356
+[26-Jul-2023 18:45:49 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "displayOrdersTable", expecting "(" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 356
+[26-Jul-2023 18:49:02 Europe/Berlin] PHP Warning:  Undefined variable $medicines in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 313
+[26-Jul-2023 18:49:02 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 313
+[26-Jul-2023 18:56:31 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Ordered_MedsClassDAO::getOrdered_Meds(), 0 passed in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 22 and exactly 1 expected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php:67
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(22): Ordered_MedsClassDAO::getOrdered_Meds()
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php on line 67
+[26-Jul-2023 10:31:53 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 10:31:53 America/Vancouver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`vetpharmacy`.`ordered_meds`, CONSTRAINT `ordered_meds_ibfk_1` FOREIGN KEY (`Order_Id`) REFERENCES `order` (`OrderId`)) in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php(49): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(55): Ordered_MedsClassDAO::createOrdered_Meds(Object(Ordered_Meds))
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[26-Jul-2023 10:35:37 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 42
+[26-Jul-2023 10:35:37 America/Vancouver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`vetpharmacy`.`ordered_meds`, CONSTRAINT `ordered_meds_ibfk_1` FOREIGN KEY (`Order_Id`) REFERENCES `order` (`OrderId`)) in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php(49): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(54): Ordered_MedsClassDAO::createOrdered_Meds(Object(Ordered_Meds))
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[26-Jul-2023 10:36:11 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 10:36:11 America/Vancouver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`vetpharmacy`.`ordered_meds`, CONSTRAINT `ordered_meds_ibfk_2` FOREIGN KEY (`Medicine_Id`) REFERENCES `medicine` (`MedicineID`)) in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php(49): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(55): Ordered_MedsClassDAO::createOrdered_Meds(Object(Ordered_Meds))
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[26-Jul-2023 19:48:11 Europe/Berlin] PHP Warning:  Undefined variable $medicines in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 314
+[26-Jul-2023 19:48:11 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 314
+[26-Jul-2023 20:07:32 Europe/Berlin] PHP Warning:  Undefined array key "Concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 318
+[26-Jul-2023 20:14:32 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 78
+[26-Jul-2023 20:19:26 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 79
+[26-Jul-2023 20:19:26 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 316
+[26-Jul-2023 20:19:36 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 79
+[26-Jul-2023 20:19:36 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 316
+[26-Jul-2023 20:19:45 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 79
+[26-Jul-2023 20:19:45 Europe/Berlin] PHP Warning:  foreach() argument must be of type array|object, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 316
+[26-Jul-2023 20:40:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, string given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:77
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(77): array_push('{Self::medicine...', Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 77
+[26-Jul-2023 20:44:43 Europe/Berlin] PHP Notice:  unserialize(): Error at offset 0 of 36 bytes in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 65
+[26-Jul-2023 20:44:43 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, bool given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:77
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(77): array_push(false, Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 77
+[26-Jul-2023 20:48:21 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:77
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(77): array_push(NULL, Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 77
+[26-Jul-2023 20:48:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:77
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(77): array_push(NULL, Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 77
+[26-Jul-2023 20:48:56 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:77
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(77): array_push(NULL, Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 77
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:49:40 Europe/Berlin] PHP Warning:  Undefined variable $medicinesSelected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 266
+[26-Jul-2023 20:50:14 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:77
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(77): array_push(NULL, Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 77
+[26-Jul-2023 20:50:33 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:77
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(77): array_push(NULL, Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 77
+[26-Jul-2023 20:51:49 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:79
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(79): array_push(NULL, Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 79
+[26-Jul-2023 21:00:55 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:79
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(79): array_push(NULL, Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 79
+[26-Jul-2023 21:04:51 Europe/Berlin] PHP Warning:  Undefined array key "ActiveDrug" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 322
+[26-Jul-2023 21:04:51 Europe/Berlin] PHP Warning:  Undefined array key "Concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 323
+[26-Jul-2023 21:04:51 Europe/Berlin] PHP Warning:  Undefined array key "Presentation" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 324
+[26-Jul-2023 21:04:51 Europe/Berlin] PHP Warning:  Undefined array key "Size" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:04:51 Europe/Berlin] PHP Warning:  Undefined array key "Flavor" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 326
+[26-Jul-2023 21:04:51 Europe/Berlin] PHP Warning:  Undefined array key "Quantity" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 327
+[26-Jul-2023 21:04:51 Europe/Berlin] PHP Warning:  Undefined array key "TotalPrice" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 328
+[26-Jul-2023 21:06:52 Europe/Berlin] PHP Warning:  Undefined array key "ActiveDrug" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 322
+[26-Jul-2023 21:06:52 Europe/Berlin] PHP Warning:  Undefined array key "Concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 323
+[26-Jul-2023 21:06:52 Europe/Berlin] PHP Warning:  Undefined array key "Presentation" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 324
+[26-Jul-2023 21:06:52 Europe/Berlin] PHP Warning:  Undefined array key "Size" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:06:52 Europe/Berlin] PHP Warning:  Undefined array key "Flavor" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 326
+[26-Jul-2023 21:06:52 Europe/Berlin] PHP Warning:  Undefined array key "Quantity" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 327
+[26-Jul-2023 21:06:52 Europe/Berlin] PHP Warning:  Undefined array key "TotalPrice" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 328
+[26-Jul-2023 21:06:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 322
+[26-Jul-2023 21:06:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 323
+[26-Jul-2023 21:06:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 324
+[26-Jul-2023 21:06:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:06:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 326
+[26-Jul-2023 21:06:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 327
+[26-Jul-2023 21:06:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 328
+[26-Jul-2023 21:07:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 322
+[26-Jul-2023 21:07:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 323
+[26-Jul-2023 21:07:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 324
+[26-Jul-2023 21:07:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:07:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 326
+[26-Jul-2023 21:07:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 327
+[26-Jul-2023 21:07:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 328
+[26-Jul-2023 21:08:03 Europe/Berlin] PHP Warning:  Undefined array key "ActiveDrug" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 323
+[26-Jul-2023 21:08:03 Europe/Berlin] PHP Warning:  Undefined array key "Concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 324
+[26-Jul-2023 21:08:03 Europe/Berlin] PHP Warning:  Undefined array key "Presentation" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:08:03 Europe/Berlin] PHP Warning:  Undefined array key "Size" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 326
+[26-Jul-2023 21:08:03 Europe/Berlin] PHP Warning:  Undefined array key "Flavor" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 327
+[26-Jul-2023 21:08:03 Europe/Berlin] PHP Warning:  Undefined array key "Quantity" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 328
+[26-Jul-2023 21:08:03 Europe/Berlin] PHP Warning:  Undefined array key "TotalPrice" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 329
+[26-Jul-2023 21:08:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 323
+[26-Jul-2023 21:08:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 324
+[26-Jul-2023 21:08:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:08:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 326
+[26-Jul-2023 21:08:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 327
+[26-Jul-2023 21:08:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 328
+[26-Jul-2023 21:08:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 329
+[26-Jul-2023 21:08:17 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 323
+[26-Jul-2023 21:08:17 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 324
+[26-Jul-2023 21:08:17 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:08:17 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 326
+[26-Jul-2023 21:08:17 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 327
+[26-Jul-2023 21:08:17 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 328
+[26-Jul-2023 21:08:17 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 329
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Undefined array key "preorder" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 65
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 326
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 327
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 328
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 329
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 330
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 331
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:11:12 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:19 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 268
+[26-Jul-2023 21:12:26 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:325
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(81): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 325
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:14:31 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 267
+[26-Jul-2023 21:16:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:324
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(81): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 324
+[26-Jul-2023 23:23:42 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 61
+[26-Jul-2023 23:23:42 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: OrderCLassDAO::getPreOrder(): Argument #1 ($OrderId) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 61 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:131
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(61): OrderCLassDAO::getPreOrder(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 131
+[26-Jul-2023 14:27:43 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on array in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:295
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(66): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 295
+[26-Jul-2023 14:32:14 America/Vancouver] PHP Fatal error:  Uncaught Error: Object of class Order could not be converted to string in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:295
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(66): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 295

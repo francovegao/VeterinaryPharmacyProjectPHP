@@ -176,6 +176,6 @@ INSERT INTO `User` VALUES
 (10001, CURRENT_TIMESTAMP(), null, null, null, 1);
 
     INSERT INTO `Ordered_Meds` VALUES
-(10001, 1, '0.5mg/ml', 'oil suspension','100ml', 'chicken', 1, 50.50);
-
+(10001, 1, '15mg/ml', 'oil suspension','100ml', 'chicken', 1, 50.50),
+(10001, 5, '25mg/ml', 'ointment','30ml', 'no flavor', 3, 27.85);
 
