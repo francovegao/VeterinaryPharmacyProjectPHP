@@ -516,3 +516,18 @@ Stack trace:
   thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 295
 [26-Jul-2023 15:28:24 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
 [26-Jul-2023 15:28:24 America/Vancouver] PHP Warning:  Undefined array key "price" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 49
+[27-Jul-2023 01:02:12 Europe/Berlin] PHP Parse error:  syntax error, unexpected identifier "displayOrdersTable", expecting "(" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 432
+[27-Jul-2023 01:05:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: MedicineClassDAO::initialize(): Argument #1 ($className) must be of type string, Medicine given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php on line 19 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\MedicineClassDAO.class.php:19
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php(19): MedicineClassDAO::initialize(Object(Medicine))
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\MedicineClassDAO.class.php on line 19
+[27-Jul-2023 01:11:17 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: MedicineClassDAO::initialize(): Argument #1 ($className) must be of type string, Medicine given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php on line 19 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\MedicineClassDAO.class.php:19
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php(19): MedicineClassDAO::initialize(Object(Medicine))
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\MedicineClassDAO.class.php on line 19
+[27-Jul-2023 01:11:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Page::displayHeader2() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php:41
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php on line 41

@@ -16,7 +16,7 @@ require_once("inc/Utility/UserDAO.class.php");
 
 UserDAO::init();
 $medicine = new Medicine();
-MedicineClassDAO::initialize($medicine);
+MedicineClassDAO::initialize('Medicine');
 
 if(!empty($_POST['username'])){
     $authUser = UserDAO::getUser($_POST['username']);
@@ -38,7 +38,7 @@ if(LoginManager::verifyLogin()){
     exit;
 }
 else{
-    Page::displayHeader2();
+    Page::displayHeader();
     Page::displayLoginForm();
     //Page::displayFooter();
     //Page::displayOrdersDetails();
