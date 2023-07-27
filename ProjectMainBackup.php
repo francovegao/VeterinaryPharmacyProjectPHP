@@ -25,34 +25,34 @@ if(!empty($_POST['username'])){
         session_start();
 
         $_SESSION['loggedin'] = $authUser->getUserName();
+        echo "Login successful!";
     }
 }
 
 if(LoginManager::verifyLogin()){
+   
     $user = UserDAO::getUser($_SESSION['loggedin']);
-
-   header("Location: userProfile.php"); //if you ant to create a user profile page.
+  
+    header("Location: userProfile.php");
+   
  
 
     // after the call to header, make sure to exit
     exit;
 }
-else{
+elseif (isset($_POST['loginBtn'])) {
+    // If the login button is clicked, display the login form
     Page::displayHeader();
     Page::displayLoginForm();
-    //Page::displayFooter();
-    //Page::displayOrdersDetails();
-    print("hello");
+} else {
+    // If login button is not clicked, display the homepage
+    Page::displayHeader();
+    Page::displayHomePage();
 }
 
 
-//Page::displayHeader();
-//Page::displayFooter();
-//Page::displayLoginForm();
-//Page::displayRegisterForm();
-//Page::addPetForm();
-//Page::displayTable();
-//Page::displayOrdersDetails();
+
+
 
 
 ?>

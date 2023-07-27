@@ -15,21 +15,13 @@ require_once("inc/Utility/ReservationDAO.class.php");
 require_once("inc/Utility/UserDAO.class.php");
 
 session_start();
-if(LoginManager::verifyLogin()){
-UserDAO::init();
+unset($_SESSION);
 
-$user = UserDAO::getUser($_SESSION['loggedin']);
+session_destroy();
 Page::displayHeader();
-
-
-Page::showUserDetails($user);
-Page::displayLogoutForm($user);
+echo "<p>Thank you for your visit</p>";
 Page::displayFooter();
+header("Location: ProjectMainBackup.php");
 
-
-
-}else{
-    header("Location: ProjectMainBackup.php");
-}
 
 ?>

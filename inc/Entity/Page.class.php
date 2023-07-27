@@ -83,10 +83,12 @@ class Page  {
             <p>2. Place your order</p>
             <p>3. Receive your order</p>
             <br>
+            <form method="post">
             <p>
-              <a href="#" class="btn btn-info btn-lg">Login</a>
+            <button type="submit" name="loginBtn" class="btn btn-info btn-lg">Login</button>
               <a href="#" class="btn btn-outline-info btn-lg">Register</a>
             </p>
+            </form>
           </div>
           </div>
   
@@ -518,51 +520,52 @@ class Page  {
       }
 
 //Login page
-    static function displayLoginForm(){?>
+static function displayLoginForm() {
+  ?>
   <!-- LogIn Form -->
   <section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card bg-info text-white" style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center">
-  
-              <div class="mb-md-5 mt-md-4 pb-5">
-  
-                <h2 class="fw-bold mb-2 text-uppercase">Log In</h2>
-                <p class="text-white-50 mb-5">Please enter your username and password!</p>
-  
-                <div class="form-outline form-white mb-4">
-                  <input type="email" name="username" id="username" class="form-control form-control-lg" />
-                  <label class="form-label" for="username">Username</label>
-                </div>
-  
-                <div class="form-outline form-white mb-4">
-                  <input type="password" name="password" id="password" class="form-control form-control-lg" />
-                  <label class="form-label" for="password">Password</label>
-                </div>
-  
-                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-                
-                <input type="hidden" name="action" value="logIn">
-                <button class="btn btn-outline-light btn-lg px-5" type="submit" value="log">Login</button>
-  
-              </div>
-  
-              <div>
-                <p class="mb-0 font-weight-bold">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Register</a>
-                </p>
-              </div>
-  
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-    <?php  }
+      <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                  <div class="card bg-info text-white" style="border-radius: 1rem;">
+                      <div class="card-body p-5 text-center">
+                          <div class="mb-md-5 mt-md-4 pb-5">
+                              <h2 class="fw-bold mb-2 text-uppercase">Log In</h2>
+                              <p class="text-white-50 mb-5">Please enter your username and password!</p>
 
-    static function displayLogoutForm(Member $m){?>
+                              <!-- Add the form element -->
+                              <form method="POST">
+                                  <div class="form-outline form-white mb-4">
+                                      <!-- Use the correct name attributes -->
+                                      <input type="text" name="username" id="username" class="form-control form-control-lg" />
+                                      <label class="form-label" for="username">Username</label>
+                                  </div>
+
+                                  <div class="form-outline form-white mb-4">
+                                      <!-- Use the correct name attributes -->
+                                      <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                                      <label class="form-label" for="password">Password</label>
+                                  </div>
+
+                                  <!-- Use a submit button -->
+                                  <input type="hidden" name="action" value="logIn">
+                                  <button class="btn btn-outline-light btn-lg px-5" type="submit" value="log">Login</button>
+                              </form>
+                          </div>
+
+                          <div>
+                              <p class="mb-0 font-weight-bold">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Register</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <?php
+}
+
+    static function displayLogoutForm(User $m){?>
     <!-- logout section -->
     <section class="logout">
             <h2>Login Details</h2>
@@ -675,6 +678,14 @@ static function displayRegisterForm(){?>
 </section>
   
     <?php }
+    static function showUserDetails(User $user){
+      ?>
+      <div>
+    <h1>Welcome, <?php echo $user->getUsername(); ?>!</h1>
+<a href="ProjectMainBackup.php">Home</a>
+</div>
+<?php
+    }
 
 
 }

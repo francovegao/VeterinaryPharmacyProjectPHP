@@ -537,3 +537,28 @@ Stack trace:
 [26-Jul-2023 16:43:04 America/Vancouver] PHP Warning:  Undefined array key "price" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 49
 [26-Jul-2023 16:43:08 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
 [26-Jul-2023 16:43:08 America/Vancouver] PHP Warning:  Undefined array key "price" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 49
+[27-Jul-2023 11:55:28 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Page::displayLogoutForm(): Argument #1 ($m) must be of type Member, User given, called in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php on line 26 and defined in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:568
+Stack trace:
+#0 C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php(26): Page::displayLogoutForm(Object(User))
+#1 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php on line 568
+[27-Jul-2023 11:55:57 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Page::displayLogoutForm(): Argument #1 ($m) must be of type Member, User given, called in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php on line 26 and defined in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:568
+Stack trace:
+#0 C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php(26): Page::displayLogoutForm(Object(User))
+#1 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php on line 568
+[27-Jul-2023 11:55:58 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Page::displayLogoutForm(): Argument #1 ($m) must be of type Member, User given, called in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php on line 26 and defined in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:568
+Stack trace:
+#0 C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php(26): Page::displayLogoutForm(Object(User))
+#1 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php on line 568
+[27-Jul-2023 11:56:00 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Page::displayLogoutForm(): Argument #1 ($m) must be of type Member, User given, called in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php on line 26 and defined in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:568
+Stack trace:
+#0 C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php(26): Page::displayLogoutForm(Object(User))
+#1 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php on line 568
+[27-Jul-2023 11:56:00 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Page::displayLogoutForm(): Argument #1 ($m) must be of type Member, User given, called in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php on line 26 and defined in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:568
+Stack trace:
+#0 C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php(26): Page::displayLogoutForm(Object(User))
+#1 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php on line 568
