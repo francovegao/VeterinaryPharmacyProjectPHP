@@ -95,7 +95,7 @@ if(!empty($_POST)){
 $medicines=MedicineClassDAO::getMedicineClass();
 
 //Display the page
-Page::displayHeader();
+Page::displayHeader("medsTableStyles.css");
 
 if(!empty($_GET) && ($_GET['action']=="searchActiveDrug")){
     $medicines=MedicineClassDAO::searchActiveDrugs($_GET['activeDrug']);

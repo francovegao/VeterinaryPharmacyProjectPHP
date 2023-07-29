@@ -815,3 +815,58 @@ Stack trace:
 [29-Jul-2023 09:01:38 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 217
 [29-Jul-2023 09:02:13 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 205
 [29-Jul-2023 09:02:13 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 217
+[29-Jul-2023 09:11:16 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 205
+[29-Jul-2023 09:11:16 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 217
+[29-Jul-2023 09:21:29 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 206
+[29-Jul-2023 09:21:29 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 218
+[29-Jul-2023 09:21:49 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 206
+[29-Jul-2023 09:21:49 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 218
+[29-Jul-2023 09:22:09 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 206
+[29-Jul-2023 09:22:09 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 218
+[29-Jul-2023 09:22:17 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 206
+[29-Jul-2023 09:22:17 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 218
+[29-Jul-2023 09:23:57 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 206
+[29-Jul-2023 09:23:57 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 218
+[29-Jul-2023 10:02:32 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 208
+[29-Jul-2023 10:02:32 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 220
+[29-Jul-2023 10:02:36 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Page::displayHeader(), 0 passed in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php on line 41 and exactly 1 expected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:18
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMainBackup.php(41): Page::displayHeader()
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 18
+[29-Jul-2023 10:08:52 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 208
+[29-Jul-2023 10:08:52 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 220
+[29-Jul-2023 10:20:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getOrderPST() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:515
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(26): Page::displayOrdersTable(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 515
+[29-Jul-2023 10:21:09 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Order::getPST(): Return value must be of type float, null returned in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php:36
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php(515): Order->getPST()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(26): Page::displayOrdersTable(Array)
+#2 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php on line 36
+[29-Jul-2023 10:21:11 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Order::getPST(): Return value must be of type float, null returned in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php:36
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php(515): Order->getPST()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(26): Page::displayOrdersTable(Array)
+#2 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php on line 36
+[29-Jul-2023 10:41:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot access private property Order::$TotalPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:583
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(27): Page::displayOrderDetails(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 583
+[29-Jul-2023 10:42:53 Europe/Berlin] PHP Warning:  Undefined array key "orderId" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 27
+[29-Jul-2023 10:42:53 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: OrderCLassDAO::getPreOrder(): Argument #1 ($OrderId) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 27 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:132
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(27): OrderCLassDAO::getPreOrder(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 132
+[29-Jul-2023 10:51:14 Europe/Berlin] PHP Warning:  Undefined array key "orderId" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 27
+[29-Jul-2023 10:51:14 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: OrderCLassDAO::getPreOrder(): Argument #1 ($OrderId) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 27 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:132
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(27): OrderCLassDAO::getPreOrder(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 132

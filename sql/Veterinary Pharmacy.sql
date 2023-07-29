@@ -189,7 +189,7 @@ INSERT INTO `User` VALUES
   (86, 'Finasteride', 'Reproduction', 12.50);
  
     INSERT INTO `Order` VALUES 
-(10001, CURRENT_TIMESTAMP(), null, null, null, 1);
+(10001, CURRENT_TIMESTAMP(), 0.0, 0.0, 0.0, 1);
 
     INSERT INTO `Ordered_Meds` VALUES
 (10001, 1, '15mg/ml', 'oil suspension','100ml', 'chicken', 1, 50.50),

@@ -15,7 +15,7 @@ class Page  {
 
 
     
-    static function displayHeader() {
+    static function displayHeader($currentPageStyles) {
         ?>
                   <!DOCTYPE html>
             <html lang="en">
@@ -25,7 +25,7 @@ class Page  {
               <title>Pharma-Vet</title>
               <!-- Add Bootstrap CSS -->
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-              <link href="css/medsTableStyles.css" rel="stylesheet">
+              <link href="css/<?=$currentPageStyles?>" rel="stylesheet">
 
             </head>
             <body>
@@ -43,10 +43,10 @@ class Page  {
                       <a class="nav-link" href="#">Place Order</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">How it Works</a>
+                      <a class="nav-link" href="#">My Orders</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About Us</a>
+                      <a class="nav-link" href="#">Profile</a>
                     </li>
                     <li class="nav-item">
                       <a class="btn btn-info" href="#">Log In</a>
@@ -96,96 +96,99 @@ class Page  {
           //Add pet
         static function addPetForm()    {
             ?>
-            <section class="main">
-                <!-- Start the page's form -->
-                <div class="form">
-                    <form  class="addPetForm" action="" method="post">
-                        <fieldset id="fieldsetForm">
-                            <legend class="formTitle">Add your pets</legend>
-                            <form>
-                                <div class="form-group">
-                                    <form>
-                                        <div class="form-group">
-                                          <label for="petName">Pet's Name</label>
-                                          <input type="text" class="form-control" name="petName" id="petName" placeholder="Nice Name">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="petType">Pet's Type</label>
-                                            <select class="form-control" name="petType" id="petType">
-                                              <option>Dog</option>
-                                              <option>Cat</option>
-                                              <option>Piglet</option>
-                                              <option>Horse</option>
-                                              <option>Bird</option>
-                                              <option>Fish</option>
-                                              <option>Rabbit</option>
-                                              <option>Rodent</option>
-                                              <option>Sheep</option>
-                                              <option>Goat</option>
-                                              <option>Cow</option>
-                                              <option>Chicken</option>
-                                              <option>Turkey</option>
-                                              <option>Other</option>
-                                            </select>
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="petImage">Pet's image</label>
-                                            <input type="file" class="form-control-file" name="petImage" id="petImage">
-                                          </div>
-                                      </form>
-                                      <input type="hidden" name="action" value="addPet">
-                                      <button type="submit" class="btn btn-info" value="addMascot">Submit</button>
-                              </form>
-                            
-                        </fieldset>
-                    </form>
-                </div>
-            </section> 
+            <!-- Add Pet -->
+  <br>
+  <div class="container">
+  <h1 class="text-center">Add your pets</h1>
+  <form class="addPetForm" action="" method="post">
+  <div class="form-group">
+  <label for="Name">Pet's Name</label>
+  <input type="name" class="form-control" id="Name" placeholder="Nice Name">
+  </div>
+  <div class="form-group">
+    <label for="petType">Pet's Type</label>
+    <select class="form-control" name="petType" id="petType">
+      <option>Dog</option>
+      <option>Cat</option>
+      <option>Piglet</option>
+      <option>Horse</option>
+      <option>Bird</option>
+      <option>Fish</option>
+      <option>Rabbit</option>
+      <option>Rodent</option>
+      <option>Sheep</option>
+      <option>Goat</option>
+      <option>Cow</option>
+      <option>Chicken</option>
+      <option>Turkey</option>
+      <option>Other</option>
+    </select>
+  </div> 
+  <div class="form-group">
+    <label for="petImage">Pet's image</label>
+    <input type="file" class="form-control-file" name="petImage" id="petImage">
+   
+  </div>
+  <div class="d-flex justify-content-center">
+  <input type="hidden" name="action" value="addPet">
+  <button type="submit" class="btn btn-info btn-block" value="addMascot">Submit</button>
+</div>
+  </form>
+  </div>
     
             <?php  
             }
 
     static function petFormNotifications(){
       ?>
-      <section class="sidebar">
-      <!-- Start the page's error notification -->
-      <div class="highlight">
-          <p>Please fix the following errors:</p>
-          <ul>
-              <li>Error 1</li>
-              <li>Error 2</li>
-          </ul>                                        
-      </div>
+   <!-- Mascot Errors -->
+   <div class="p-5">
+    <div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Mascot Cannot Be Added!</h4>
+    <hr>
+    <p class="mb-0">Please fix the following errors:</p>
+    <ul>
+      <li>Error 1</li>
+      <li>Error 2</li>
+  </ul>
+  </div>
+  </div>
       <?php  
     }
 
     static function petFormSuccesful(){
       ?>
-                      <!-- Start the page's display submitted data -->
-                      <div class="data">
-                    <b>Entered data is:</b>
-                    <table>
-                        
-                        <tr>
-                            <th>Pet's Name</th>
-                            <td>Name entry</td>
-                        </tr>
-                        <tr>
-                            <th>Pet's Type</th>
-                            <td>Type entry</td>
-                        </tr>
-                        <tr>
-                            <th>Pet's Picture</th>
-                            <td>Picture</td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
+                 <!-- Mascot Added Succesfully -->
+  <div class="p-5">
+    <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Mascot Added Succesfully!</h4>
+    <hr>
+
+    <table class="table table-bordered table-hover">
+      <tbody>
+        <tr>
+          <th scope="row">Name:</th>
+          <td>Pet's Name</td>
+        </tr>
+        <tr>
+          <th scope="row">Type:</th>
+          <td>Pet's Type</td>
+        </tr>
+        <tr>
+          <th scope="row">Image:</th>
+          <td>Pet's Image</td>
+        </tr>
+      </tbody>
+    </table> 
+    <p class="mb-0">Thank you for adding your best friend!</p>
+  </div>
+  </div>
 
       <?php
     }
       
 
+    //Add Order page
     static function displayMedicinesTable(Array $medicines, $action, $preOrder=null) {
       ?>
 
@@ -482,11 +485,11 @@ class Page  {
 
 
 //Past orders page
-    static function displayOrdersTable(/*Laptop $laptop*/) {
+    static function displayOrdersTable(Array $ordersList) {
       ?>
           <!-- Past orders table -->
     <div class="p-5">
-        <h1>[Username] past orders: </h1>
+        <h1>[Username] past orders: </h1>   <!-- CHANGE THIS TO THE USERNAME THAT IS LOGGED IN --> 
         <br>
         <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -501,33 +504,22 @@ class Page  {
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>10255</td>
-                <td>Jul-24-2023</td>
-                <td>$7.00</td>
-                <td>$5.00 </td>
-                <td>$55.50</td>
-                <td><a href="?action=details&id=1">Details</a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>10234</td>
-                <td>Jul-22-2023</td>
-                <td>$14.00</td>
-                <td>$10.00 </td>
-                <td>$110.50</td>
-                <td><a href="?action=details&id=1">Details</a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>10123</td>
-                <td>Jul-21-2023</td>
-                <td>$9.50</td>
-                <td>$7.00 </td>
-                <td>$64.69</td>
-                <td><a href="?action=details&id=1">Details</a></td>
-            </tr>
+              <?php
+              //list orders
+              $count=1;
+              foreach($ordersList as $order){    ///CHECK FOR CLIENTS ID IN SESSION AND COMPARE WITH CLIENTS ID IN ORDER OBJECT TO DISPLAY ONLY THAT CLIENTS ORDERS
+                echo "<tr>";
+                echo "<th scope=\"row\">{$count}</th>";
+                echo "<td>{$order->getOrderId()}</td>";
+                echo "<td>{$order->getOrderDate()}</td>";
+                echo "<td>{$order->getPST()}</td>";
+                echo "<td>{$order->getGST()}</td>";
+                echo "<td>{$order->getTotalPrice()}</td>";
+                ECHO "<td><a href=\"?action=details&orderId={$order->getOrderId()}\">Details</a></td>";
+                echo "</tr>";
+                $count++;
+              }
+              ?>
             </tbody>
         </table>
     </div>
@@ -535,13 +527,13 @@ class Page  {
     <?php 
      }
 
-      static function displayOrderDetails(){
+      static function displayOrderDetails(Array $orderInfo){
         ?>
 
               <!-- Selected order details -->
       <div class="p-5">
-        <a href="?action=details&id=1">Hide details</a><br>
-        <h4 class="text-center">Order # [number]: </h4>
+        <a href="?action=listOrders">Hide details</a><br>
+        <h4 class="text-center">Order #<?=$orderInfo["0"]->getOrderId()?> : </h4>
         <br>
         <div class="container">
           <div class="row">
@@ -575,16 +567,25 @@ class Page  {
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Buprenorphine</td>
-                    <td>2mg/ml</td>
-                    <td>Oil suspension </td>
-                    <td>100ml</td>
-                    <td>Chicken</td>
-                    <td>2</td>
-                    <td>$35.50</td>
-                </tr>
+                  <?php
+                  //Display medicines info
+                  $count=1;
+                  $subtotal=0;
+                  foreach($orderInfo as $item){
+                    echo "<tr>";
+                    echo "<th scope=\"row\">{$count}</th>";
+                    echo "<td>{$item->ActiveDrug}</td>";
+                    echo "<td>{$item->Concentration}</td>";
+                    echo "<td>{$item->Presentation}</td>";
+                    echo "<td>{$item->Size}</td>";
+                    echo "<td>{$item->Flavor}</td>";
+                    echo "<td>{$item->Quantity}</td>";
+                    echo "<td>{$item->SumPrice}</td>";
+                    echo "</tr>";
+                    $count++;
+                    $subtotal+=$item->SumPrice;
+                  }
+                  ?>
                 </tbody>
             </table>
         </div>
@@ -593,15 +594,23 @@ class Page  {
             <div class="col">
             </div>
             <div class="col text-right">
-              Subtotal: <strong>$35.50</strong><br>
-              PST: <strong>$2.50</strong><br>
-              GST: <strong>$1.78</strong><br>
-              Total: <strong>$ 39.78</strong><br>
+            <?php
+          $formatPrice="$".number_format($subtotal,2,".",",");
+          echo "Subtotal: <strong>{$formatPrice}</strong><br>";
+          echo "PST 0%: <strong>{$orderInfo["0"]->getPST()}</strong><br>";
+          $gst=$subtotal*0.05;
+          $formatPrice="$".number_format($gst,2,".",",");
+          echo "GST 5%: <strong>{$orderInfo["0"]->getGST()}</strong><br>";
+          $total=$gst+$subtotal;
+          $formatPrice="$".number_format($total,2,".",",");
+          echo "Total: <strong>{$orderInfo["0"]->getTotalPrice()}</strong><br>";
+          ?>
             </div>
           </div>  
     </div>
         <?php
       }
+
 
 //Login page
     static function displayLoginForm(){?>
@@ -761,6 +770,5 @@ static function displayRegisterForm(){?>
 </section>
   
     <?php }
-
 
 }
