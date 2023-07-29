@@ -36,8 +36,25 @@ class Pet{
     function getPetPicture(): string{
         return $this->PetPicture;
     }
-    function getClients_Id(): string{
+    function getClients_Id(): int{
         return $this->Clients_Id;
+    }
+
+    //setter
+    function setPetId(int $PetId){
+        $this->PetId=$PetId;
+    }
+    function setName(string $name){
+        $this->Name=$name;
+    }
+    function setType(string $type){
+        $this->Type=$type;
+    }
+    function setPetPicture(string $petPicture){
+        $this->PetPicture=$petPicture;
+    }
+    function setClients_Id(int $clients_id){
+        $this->Clients_Id=$clients_id;
     }
 }
 

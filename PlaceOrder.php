@@ -97,9 +97,9 @@ $medicines=MedicineClassDAO::getMedicineClass();
 //Display the page
 Page::displayHeader("medsTableStyles.css");
 
-if(!empty($_GET) && ($_GET['action']=="searchActiveDrug")){
+if(!empty($_GET) && isset($_GET['action']) && ($_GET['action']=="searchActiveDrug")){
     $medicines=MedicineClassDAO::searchActiveDrugs($_GET['activeDrug']);
-}else if(!empty($_GET) && ($_GET['action']=="searchCategory")){
+}else if(!empty($_GET) && isset($_GET['action']) &&  ($_GET['action']=="searchCategory")){
     $medicines=MedicineClassDAO::searchCategory($_GET['category']);
 }
 

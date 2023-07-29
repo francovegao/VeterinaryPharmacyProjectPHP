@@ -80,10 +80,6 @@ class OrderCLassDAO  {
          
          self::$db->query($updateOrder);
          self::$db->bind(":orderid", $OrderToUpdate->getOrderId());
-         var_dump($OrderToUpdate->getOrderId());
-         var_dump($OrderToUpdate->getPST());
-         var_dump($OrderToUpdate->getGST());
-         var_dump($OrderToUpdate->getTotalPrice());
          self::$db->bind(":pst", $OrderToUpdate->getPST());
          self::$db->bind(":gst", $OrderToUpdate->getGST());
          self::$db->bind(":totalprice", $OrderToUpdate->getTotalPrice());

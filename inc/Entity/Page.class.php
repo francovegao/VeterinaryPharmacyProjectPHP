@@ -102,8 +102,8 @@ class Page  {
   <h1 class="text-center">Add your pets</h1>
   <form class="addPetForm" action="" method="post">
   <div class="form-group">
-  <label for="Name">Pet's Name</label>
-  <input type="name" class="form-control" id="Name" placeholder="Nice Name">
+  <label for="petName">Pet's Name</label>
+  <input type="text" class="form-control" name="petName" id="petName" placeholder="Nice Name">
   </div>
   <div class="form-group">
     <label for="petType">Pet's Type</label>
@@ -204,7 +204,7 @@ class Page  {
     <input type="text" name="activeDrug" class="searchInput" placeholder="Search active drugs">
       <div class="d-flex justify-content-around">
         <input type="hidden" name="state" value="<?=$action?>">
-        <?php if($preOrder!=null){$preOrderId= $preOrder["0"]->getOrderId();}?>
+        <?php $preOrderId=0;if($preOrder!=null){$preOrderId= $preOrder["0"]->getOrderId();}?>
         <input type="hidden" name="preOrderId" value="<?=$preOrderId?>">
       <input type="hidden" name="action" value="searchActiveDrug">
         <button class="btn btn-primary" type="submit" value="Search ActiveDrug">Search Active Drugs</button>
@@ -500,6 +500,7 @@ class Page  {
                 <th scope="col">PST</th>
                 <th scope="col">GST</th>
                 <th scope="col">Total</th>
+                <th scope="col">Edit</th>
                 <th scope="col">Details</th>
             </tr>
             </thead>
@@ -512,10 +513,14 @@ class Page  {
                 echo "<th scope=\"row\">{$count}</th>";
                 echo "<td>{$order->getOrderId()}</td>";
                 echo "<td>{$order->getOrderDate()}</td>";
-                echo "<td>{$order->getPST()}</td>";
-                echo "<td>{$order->getGST()}</td>";
-                echo "<td>{$order->getTotalPrice()}</td>";
-                ECHO "<td><a href=\"?action=details&orderId={$order->getOrderId()}\">Details</a></td>";
+                $formatPrice="$".number_format($order->getPST(),2,".",",");
+                echo "<td>{$formatPrice}</td>";
+                $formatPrice="$".number_format($order->getGST(),2,".",",");
+                echo "<td>{$formatPrice}</td>";
+                $formatPrice="$".number_format($order->getTotalPrice(),2,".",",");
+                echo "<td>{$formatPrice}</td>";
+                echo "<td><a href=\"PlaceOrder.php?state=addMedicine&preOrderId={$order->getOrderId()}\">Edit</a></td>";
+                echo "<td><a href=\"?action=details&orderId={$order->getOrderId()}\">Details</a></td>";
                 echo "</tr>";
                 $count++;
               }
@@ -580,7 +585,8 @@ class Page  {
                     echo "<td>{$item->Size}</td>";
                     echo "<td>{$item->Flavor}</td>";
                     echo "<td>{$item->Quantity}</td>";
-                    echo "<td>{$item->SumPrice}</td>";
+                    $formatPrice="$".number_format($item->SumPrice,2,".",",");
+                    echo "<td>{$formatPrice}</td>";
                     echo "</tr>";
                     $count++;
                     $subtotal+=$item->SumPrice;
@@ -597,13 +603,12 @@ class Page  {
             <?php
           $formatPrice="$".number_format($subtotal,2,".",",");
           echo "Subtotal: <strong>{$formatPrice}</strong><br>";
-          echo "PST 0%: <strong>{$orderInfo["0"]->getPST()}</strong><br>";
-          $gst=$subtotal*0.05;
-          $formatPrice="$".number_format($gst,2,".",",");
-          echo "GST 5%: <strong>{$orderInfo["0"]->getGST()}</strong><br>";
-          $total=$gst+$subtotal;
-          $formatPrice="$".number_format($total,2,".",",");
-          echo "Total: <strong>{$orderInfo["0"]->getTotalPrice()}</strong><br>";
+          $formatPrice="$".number_format($orderInfo["0"]->getPST(),2,".",",");
+          echo "PST 0%: <strong>{$formatPrice}</strong><br>";
+          $formatPrice="$".number_format($orderInfo["0"]->getGST(),2,".",",");
+          echo "GST 5%: <strong>{$formatPrice}</strong><br>";
+          $formatPrice="$".number_format($orderInfo["0"]->getTotalPrice(),2,".",",");
+          echo "Total: <strong>{$formatPrice}</strong><br>";
           ?>
             </div>
           </div>  

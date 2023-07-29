@@ -56,7 +56,6 @@ CREATE TABLE `Order` (
 )ENGINE=InnoDB;
 
  CREATE TABLE `Ordered_Meds` (
-  `Ordered_MedsId` integer PRIMARY KEY NOT NULL AUTO_INCREMENT;
   `Order_Id` integer NOT NULL,
   `Medicine_Id` integer NOT NULL,
   `Concentration` char(20) NOT NULL,
