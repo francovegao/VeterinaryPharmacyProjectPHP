@@ -55,7 +55,8 @@ CREATE TABLE `Order` (
   FOREIGN KEY (`Clients_Id`) REFERENCES `Clients` (`ClientsId`)
 )ENGINE=InnoDB;
 
-CREATE TABLE `Ordered_Meds` (
+ CREATE TABLE `Ordered_Meds` (
+  `Ordered_MedsId` integer PRIMARY KEY NOT NULL AUTO_INCREMENT;
   `Order_Id` integer NOT NULL,
   `Medicine_Id` integer NOT NULL,
   `Concentration` char(20) NOT NULL,
@@ -66,9 +67,24 @@ CREATE TABLE `Ordered_Meds` (
   `SumPrice` float(6,2),
   PRIMARY KEY (`Order_Id`, `Medicine_Id`),
 
-  FOREIGN KEY (`Order_Id`) REFERENCES `Order` (`OrderId`),
+  FOREIGN KEY (`Order_Id`) REFERENCES `Order` (`OrderId`) ON DELETE CASCADE,
   FOREIGN KEY (`Medicine_Id`) REFERENCES `Medicine` (`MedicineID`) 
 )ENGINE=InnoDB;
+
+/* CREATE TABLE `Ordered_Meds` (
+  `Order_Id` integer NOT NULL,
+  `Medicine_Id` integer NOT NULL,
+  `Concentration` char(20) NOT NULL,
+  `Presentation` char(50) NOT NULL,
+  `Size`  char(20) NOT NULL,
+  `Flavor` char(30),
+  `Quantity` integer NOT NULL,
+  `SumPrice` float(6,2),
+  PRIMARY KEY (`Order_Id`, `Medicine_Id`),
+
+  FOREIGN KEY (`Order_Id`) REFERENCES `Order` (`OrderId`) ON DELETE CASCADE,
+  FOREIGN KEY (`Medicine_Id`) REFERENCES `Medicine` (`MedicineID`) 
+)ENGINE=InnoDB; */
 
 ALTER TABLE `Order`AUTO_INCREMENT=10001;
 

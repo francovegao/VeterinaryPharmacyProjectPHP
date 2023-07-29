@@ -537,3 +537,281 @@ Stack trace:
 [26-Jul-2023 16:43:04 America/Vancouver] PHP Warning:  Undefined array key "price" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 49
 [26-Jul-2023 16:43:08 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
 [26-Jul-2023 16:43:08 America/Vancouver] PHP Warning:  Undefined array key "price" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 49
+[26-Jul-2023 17:09:45 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 17:09:45 America/Vancouver] PHP Warning:  Undefined array key "concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44
+[26-Jul-2023 17:09:45 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setConcentration(): Argument #1 ($Concentration) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:65
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(44): Ordered_Meds->setConcentration(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 65
+[26-Jul-2023 17:13:57 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 17:13:57 America/Vancouver] PHP Warning:  Undefined array key "concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44
+[26-Jul-2023 17:13:57 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setConcentration(): Argument #1 ($Concentration) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:65
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(44): Ordered_Meds->setConcentration(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 65
+[26-Jul-2023 17:14:15 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 17:14:15 America/Vancouver] PHP Warning:  Undefined array key "concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44
+[26-Jul-2023 17:14:15 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setConcentration(): Argument #1 ($Concentration) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:65
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(44): Ordered_Meds->setConcentration(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 65
+[26-Jul-2023 17:15:48 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 17:15:48 America/Vancouver] PHP Warning:  Undefined array key "concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44
+[26-Jul-2023 17:15:48 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setConcentration(): Argument #1 ($Concentration) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:65
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(44): Ordered_Meds->setConcentration(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 65
+[26-Jul-2023 17:16:04 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 17:16:04 America/Vancouver] PHP Warning:  Undefined array key "concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44
+[26-Jul-2023 17:16:04 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setConcentration(): Argument #1 ($Concentration) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:65
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(44): Ordered_Meds->setConcentration(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 65
+[26-Jul-2023 17:16:18 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 17:16:18 America/Vancouver] PHP Warning:  Undefined array key "concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44
+[26-Jul-2023 17:16:18 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setConcentration(): Argument #1 ($Concentration) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:65
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(44): Ordered_Meds->setConcentration(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 65
+[26-Jul-2023 17:18:03 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 17:18:03 America/Vancouver] PHP Warning:  Undefined array key "concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44
+[26-Jul-2023 17:18:03 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setConcentration(): Argument #1 ($Concentration) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:65
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(44): Ordered_Meds->setConcentration(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 65
+[26-Jul-2023 17:19:34 America/Vancouver] PHP Warning:  Undefined array key "medicineid" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 43
+[26-Jul-2023 17:19:34 America/Vancouver] PHP Warning:  Undefined array key "concentration" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44
+[26-Jul-2023 17:19:34 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setConcentration(): Argument #1 ($Concentration) must be of type string, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 44 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:65
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(44): Ordered_Meds->setConcentration(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 65
+[27-Jul-2023 03:03:17 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Page::displayMedicinesTable(), 2 passed in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 94 and exactly 3 expected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:189
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(94): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 189
+[27-Jul-2023 03:03:21 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Page::displayMedicinesTable(), 2 passed in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 94 and exactly 3 expected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:189
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(94): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 189
+[27-Jul-2023 03:03:48 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Page::displayMedicinesTable(), 2 passed in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 94 and exactly 3 expected in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:189
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(94): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 189
+[26-Jul-2023 18:04:43 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to undefined method Medicine::getPST() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:263
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(91): Page::displayMedicinesTable(Array, 'addMedicine', Object(Order))
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 263
+[26-Jul-2023 18:05:11 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to undefined method Medicine::getPST() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:263
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(91): Page::displayMedicinesTable(Array, 'addMedicine', Object(Order))
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 263
+[27-Jul-2023 03:05:59 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 63
+[27-Jul-2023 03:05:59 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setOrder_Id(): Argument #1 ($Order_Id) must be of type int, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 63 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:59
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(63): Ordered_Meds->setOrder_Id(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 59
+[27-Jul-2023 03:06:20 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 63
+[27-Jul-2023 03:06:20 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setOrder_Id(): Argument #1 ($Order_Id) must be of type int, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 63 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:59
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(63): Ordered_Meds->setOrder_Id(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 59
+[26-Jul-2023 18:18:04 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getOrder_Id() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:273
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(91): Page::displayMedicinesTable(Array, 'addMedicine', Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 273
+[26-Jul-2023 18:18:45 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to undefined method Order::getOrder_Id() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:274
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(91): Page::displayMedicinesTable(Array, 'addMedicine', Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 274
+[27-Jul-2023 03:19:18 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Order::setPST(): Argument #1 ($PST) must be of type float, string given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 56 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php:55
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(56): Order->setPST('{0.0}')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php on line 55
+[27-Jul-2023 03:20:10 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 63
+[27-Jul-2023 03:20:10 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Ordered_Meds::setOrder_Id(): Argument #1 ($Order_Id) must be of type int, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 63 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php:59
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(63): Ordered_Meds->setOrder_Id(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Ordered_Meds.class.php on line 59
+[27-Jul-2023 09:57:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Value of type float is not callable in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(75): OrderCLassDAO::updateOrder(Object(Order))
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 85
+[27-Jul-2023 10:10:46 Europe/Berlin] PHP Warning:  Undefined array key "clientsId" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 84
+[27-Jul-2023 10:10:46 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Order::setClients_Id(): Argument #1 ($Clients_Id) must be of type int, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 84 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php:64
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(84): Order->setClients_Id(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php on line 64
+[27-Jul-2023 10:14:32 Europe/Berlin] PHP Warning:  Undefined array key "clientsId" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 84
+[27-Jul-2023 10:14:32 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Order::setClients_Id(): Argument #1 ($Clients_Id) must be of type int, null given, called in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 84 and defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php:64
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(84): Order->setClients_Id(NULL)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Order.class.php on line 64
+[28-Jul-2023 22:30:14 America/Vancouver] PHP Warning:  Undefined array key "action" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 99
+[28-Jul-2023 22:30:14 America/Vancouver] PHP Warning:  Undefined array key "action" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 101
+[29-Jul-2023 07:49:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:49:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(130): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:49:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:49:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(130): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:49:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:49:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(130): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:50:24 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:50:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(130): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:51:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:51:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(130): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:52:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "asd" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(130): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:52:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Undefined constant "asd" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(130): Page::displayMedicinesTable(Array, 'createPreOrder')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 07:54:07 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 330
+[29-Jul-2023 07:54:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:330
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(125): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 330
+[29-Jul-2023 07:57:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '10014-1' for key 'PRIMARY' in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php(49): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(75): Ordered_MedsClassDAO::createOrdered_Meds(Object(Ordered_Meds))
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[29-Jul-2023 07:58:03 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '10015-1' for key 'PRIMARY' in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php(49): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(75): Ordered_MedsClassDAO::createOrdered_Meds(Object(Ordered_Meds))
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[29-Jul-2023 07:58:44 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '10016-1' for key 'PRIMARY' in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php(49): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(75): Ordered_MedsClassDAO::createOrdered_Meds(Object(Ordered_Meds))
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[29-Jul-2023 08:00:48 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '10017-3' for key 'PRIMARY' in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php(49): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(75): Ordered_MedsClassDAO::createOrdered_Meds(Object(Ordered_Meds))
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[29-Jul-2023 08:11:37 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '10018-2' for key 'PRIMARY' in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\Ordered_MedsClassDAO.class.php(49): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(75): Ordered_MedsClassDAO::createOrdered_Meds(Object(Ordered_Meds))
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[28-Jul-2023 23:26:08 America/Vancouver] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 382
+[29-Jul-2023 08:26:17 Europe/Berlin] PHP Warning:  Array to string conversion in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 382
+[29-Jul-2023 08:34:53 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:34:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:340
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(125): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[28-Jul-2023 23:41:16 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on array in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(111): Page::displayMedicinesTable(Array, 'addMedicine', Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[28-Jul-2023 23:41:21 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on array in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(111): Page::displayMedicinesTable(Array, 'addMedicine', Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 08:42:58 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:42:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:340
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(125): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[28-Jul-2023 23:44:30 America/Vancouver] PHP Warning:  Undefined array key 1 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[28-Jul-2023 23:44:30 America/Vancouver] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:204
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(111): Page::displayMedicinesTable(Array, 'addMedicine', Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 204
+[29-Jul-2023 08:44:34 Europe/Berlin] PHP Warning:  Undefined array key "action" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 100
+[29-Jul-2023 08:44:34 Europe/Berlin] PHP Warning:  Undefined array key "action" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 102
+[29-Jul-2023 08:44:34 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:44:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:340
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(125): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:46:51 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:46:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:340
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(125): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:54:19 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:54:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:340
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(125): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:55:48 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:55:48 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getOrderId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:340
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php(125): Page::orderConfirmation(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 340
+[29-Jul-2023 08:56:58 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 205
+[29-Jul-2023 08:58:05 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 205
+[29-Jul-2023 09:01:35 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 205
+[29-Jul-2023 09:01:35 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 217
+[29-Jul-2023 09:01:38 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 205
+[29-Jul-2023 09:01:38 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 217
+[29-Jul-2023 09:02:13 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 205
+[29-Jul-2023 09:02:13 Europe/Berlin] PHP Warning:  Undefined variable $preOrderId in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 217

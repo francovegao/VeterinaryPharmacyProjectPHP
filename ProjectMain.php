@@ -23,36 +23,71 @@ Ordered_MedsClassDAO::initialize('Ordered_Meds');
 
 //Process any POST data
 if(!empty($_POST)){
-    //create order with DAO if its not already created
-    date_default_timezone_set('America/Vancouver');
-    $newOrder = new Order();
-    $newOrder->setOrderDate(date('m/d/Y h:i:s'));
-    $newOrder->setPST(0.0);  //calculation of PST and GST done when order is confirmed
-    $newOrder->setGST(0.0);
-    $newOrder->setTotalPrice(0.0);
-    $newOrder->setClients_Id(1); //change this later to the userid when is logged in
-
-    $id=OrderCLassDAO::createOrder($newOrder);//ID of new order created
-
-    //If order already exists use that order to pass the order ID to $newOrdered_Med
-
-
-    //create ordered_med with DAO
-    $newOrdered_Med = new Ordered_Meds();
-    $newOrdered_Med->setOrder_Id($id);
-    $newOrdered_Med->setMedicine_Id((int)$_POST['medicineid']);
-    $newOrdered_Med->setConcentration($_POST['concentration']);
-    $newOrdered_Med->setPresentation($_POST['presentation']);
-    $newOrdered_Med->setSize($_POST['size']);
-    $newOrdered_Med->setFlavor($_POST['flavor']);
-    $newOrdered_Med->setQuantity((int)$_POST['quantity']);
-    $price=(float)$_POST['quantity']*(float)$_POST['price'];
-    $newOrdered_Med->setSumPrice($price);
-
-
-    if(isset($_POST['action']) && ($_POST['action']=="addMedicine")){   
+    if(isset($_POST['action']) && ($_POST['action']=="createPreOrder")){   //create pre-order
         //create order if its not already created
+        date_default_timezone_set('America/Vancouver');
+        $newOrder = new Order();
+        //$newOrder->setOrderDate(date('m/d/Y h:i:s'));
+        $newOrder->setPST(0.0); 
+        $newOrder->setGST(0.0);
+        $newOrder->setTotalPrice(0.0);
+        $newOrder->setClients_Id(1); //change this later to the userid when is logged in
+    
+        $id=OrderCLassDAO::createOrder($newOrder);//ID of new order created
+
+        //create ordered_med with DAO
+        $newOrdered_Med = new Ordered_Meds();
+        $newOrdered_Med->setOrder_Id($id);
+        $newOrdered_Med->setMedicine_Id((int)$_POST['medicineid']);
+        $newOrdered_Med->setConcentration($_POST['concentration']);
+        $newOrdered_Med->setPresentation($_POST['presentation']);
+        $newOrdered_Med->setSize($_POST['size']);
+        $newOrdered_Med->setFlavor($_POST['flavor']);
+        $newOrdered_Med->setQuantity((int)$_POST['quantity']);
+        $price=(float)$_POST['quantity']*(float)$_POST['price'];
+        $newOrdered_Med->setSumPrice($price);
+
         Ordered_MedsClassDAO::createOrdered_Meds($newOrdered_Med);
+
+    }else if(isset($_POST['action']) && ($_POST['action']=="addMedicine")){
+        $currentOrder = new Order();
+        $currentOrder->setOrderId($_POST['preOrderId']); 
+        $currentOrder->setPST($_POST['pst']);  
+        $currentOrder->setGST($_POST['gst']);
+        $currentOrder->setTotalPrice($_POST['totalPrice']);
+        $currentOrder->setClients_Id($_POST['clientsId']);
+
+        $id=$_POST['preOrderId'];
+
+        //create ordered_med with DAO
+        $newOrdered_Med = new Ordered_Meds();
+        $newOrdered_Med->setOrder_Id($_POST['preOrderId']);    //get id from the post
+        $newOrdered_Med->setMedicine_Id((int)$_POST['medicineid']);
+        $newOrdered_Med->setConcentration($_POST['concentration']);
+        $newOrdered_Med->setPresentation($_POST['presentation']);
+        $newOrdered_Med->setSize($_POST['size']);
+        $newOrdered_Med->setFlavor($_POST['flavor']);
+        $newOrdered_Med->setQuantity((int)$_POST['quantity']);
+        $price=(float)$_POST['quantity']*(float)$_POST['price'];
+        $newOrdered_Med->setSumPrice($price);
+
+        OrderCLassDAO::updateOrder($currentOrder);
+        Ordered_MedsClassDAO::createOrdered_Meds($newOrdered_Med);
+    }else if(isset($_POST['action']) && ($_POST['action']=="confirmOrder")){
+        //finish order by updating final info 
+        $currentOrder = new Order();
+        $currentOrder->setOrderId($_POST['orderId']); 
+        $currentOrder->setPST($_POST['pst']);  
+        $currentOrder->setGST($_POST['gst']);
+        $currentOrder->setTotalPrice($_POST['grandTotal']);
+        $currentOrder->setClients_Id($_POST['clientsId']);
+
+        $id=$_POST['orderId'];
+
+        OrderCLassDAO::updateOrder($currentOrder); 
+    }else if(isset($_POST['action']) && ($_POST['action']=="cancelOrder")){
+        //delete order
+        OrderCLassDAO::deleteOrder($_POST['orderId']);
     }
 }
 
@@ -61,13 +96,43 @@ $medicines=MedicineClassDAO::getMedicineClass();
 
 //Display the page
 Page::displayHeader();
-if(isset($_POST['action']) && ($_POST['action']=="addMedicine")){   
-    //$preOrder=OrderCLassDAO::getPreOrder($id);
-    $preOrder=OrderCLassDAO::getPreOrder(10001);
-    Page::orderConfirmation($preOrder);
-    Page::displayMedicinesTable($medicines, $preOrder);
+
+if(!empty($_GET) && ($_GET['action']=="searchActiveDrug")){
+    $medicines=MedicineClassDAO::searchActiveDrugs($_GET['activeDrug']);
+}else if(!empty($_GET) && ($_GET['action']=="searchCategory")){
+    $medicines=MedicineClassDAO::searchCategory($_GET['category']);
 }
-Page::displayMedicinesTable($medicines);
+
+if(isset($_POST['action']) && ($_POST['action']=="createPreOrder")){   
+    //$preOrder=OrderCLassDAO::getPreOrder($id);
+    $preOrder=OrderCLassDAO::getPreOrder($id);
+    Page::orderConfirmation($preOrder);
+    $action="addMedicine";
+    Page::displayMedicinesTable($medicines, $action, $preOrder); //display medicines to keep adding
+}else if(isset($_POST['action']) && ($_POST['action']=="addMedicine")){
+    $preOrder=OrderCLassDAO::getPreOrder($id);
+    Page::orderConfirmation($preOrder);
+    $action="addMedicine";
+    Page::displayMedicinesTable($medicines, $action, $preOrder); //display medicines to keep adding
+}else if(isset($_POST['action']) && ($_POST['action']=="confirmOrder")){
+    Page::displaySuccesOrderMessage();
+}else if(isset($_POST['action']) && ($_POST['action']=="cancelOrder")){
+    Page::displayCancelOrderMessage();
+}else{
+    if(!empty($_GET) && $_GET['state']=="addMedicine"){
+        $id=$_GET['preOrderId'];
+        $preOrder=OrderCLassDAO::getPreOrder($id);
+        Page::orderConfirmation($preOrder);
+        $action="addMedicine";
+        Page::displayMedicinesTable($medicines, $action, $preOrder); //display medicines to keep adding
+    }else if(empty($_GET)){
+        $action="createPreOrder";
+        Page::displayMedicinesTable($medicines, $action);
+    }else{
+        $action="createPreOrder";
+        Page::displayMedicinesTable($medicines, $action);
+    }
+}
 Page::displayFooter();
 
 

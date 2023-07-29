@@ -32,11 +32,10 @@ class OrderCLassDAO  {
     static function createOrder(Order $newOrder) : int {
         // QUERY BIND EXECUTE 
         // You may want to return the last inserted id
-        $insertOrder = "INSERT INTO `order` (OrderDate, PST, GST, TotalPrice, Clients_Id)";
-        $insertOrder .= "VALUES (:date, :pst, :gst, :totalPrice, :clientId)";
+        $insertOrder = "INSERT INTO `order` (PST, GST, TotalPrice, Clients_Id)";
+        $insertOrder .= "VALUES (:pst, :gst, :totalPrice, :clientId)";
         
         self::$db->query($insertOrder);
-        self::$db->bind(":date", $newOrder->getOrderDate());
         self::$db->bind(":pst", $newOrder->getPST());
         self::$db->bind(":gst", $newOrder->getGST());
         self::$db->bind(":totalPrice", $newOrder->getTotalPrice());
@@ -75,13 +74,16 @@ class OrderCLassDAO  {
         // QUERY, BIND, EXECUTE
         // You may want to return the rowCount
          // You may want to return the last inserted id
-         $updateOrder = "UPDATE `order` SET OrderDate=:orderdate, PST=:pst, GST=:gst, TotalPrice=:totalprice ";
+         $updateOrder = "UPDATE `order` SET PST=:pst, GST=:gst, TotalPrice=:totalprice ";
          $updateOrder .= "WHERE OrderId=:orderid";
          $OrderId = $OrderToUpdate->getOrderId();
          
          self::$db->query($updateOrder);
          self::$db->bind(":orderid", $OrderToUpdate->getOrderId());
-         self::$db->bind(":orderdate", $OrderToUpdate->getOrderDate());
+         var_dump($OrderToUpdate->getOrderId());
+         var_dump($OrderToUpdate->getPST());
+         var_dump($OrderToUpdate->getGST());
+         var_dump($OrderToUpdate->getTotalPrice());
          self::$db->bind(":pst", $OrderToUpdate->getPST());
          self::$db->bind(":gst", $OrderToUpdate->getGST());
          self::$db->bind(":totalprice", $OrderToUpdate->getTotalPrice());
@@ -89,7 +91,6 @@ class OrderCLassDAO  {
          self::$db->execute();
          
          $rowCount = self::$db->rowCount();
-
          return array('rowCount' => $rowCount, 'lastInsertedId' => $OrderId);
 
     }
@@ -111,7 +112,6 @@ class OrderCLassDAO  {
          return false;
         }
         return true;
-
 
     }
 

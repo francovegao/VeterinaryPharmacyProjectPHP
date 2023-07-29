@@ -31,6 +31,32 @@ class MedicineClassDAO  {
         //Return results
         return self::$db->resultSet(); 
     }
+
+        //Search active drug
+        static function searchActiveDrugs(string $input): array {
+            $input = "%".$input."%";
+            // SELECT statement
+            $search = "SELECT * FROM medicine  WHERE ActiveDrug LIKE :input";
+            self::$db->query($search);
+            self::$db->bind(":input", $input);
+            //execute the query
+            self::$db->execute();
+            //Return results
+            return self::$db->resultSet(); 
+        }
+
+        //Search category
+        static function searchCategory(string $input): array {
+            $input = "%".$input."%";
+            // SELECT statement
+            $search = "SELECT * FROM medicine  WHERE Category LIKE :input";
+            self::$db->query($search);
+            self::$db->bind(":input", $input);
+            //execute the query
+            self::$db->execute();
+            //Return results
+            return self::$db->resultSet(); 
+        }
 }
 
 

@@ -184,21 +184,45 @@ class Page  {
 
       <?php
     }
-    
+      
 
-        
-
-    static function displayMedicinesTable(Array $medicines) {
+    static function displayMedicinesTable(Array $medicines, $action, $preOrder=null) {
       ?>
 
   <!-- Medicines table -->
   <br>
-    <div class="p-5 table-responsive">
-        <input type="text" class="searchInput" placeholder="Search active drugs">
-        <input type="text" class="searchInput" placeholder="Search Category">
 
+    <div class="p-5">
 
-        <table class="table table-striped table-bordered table-hover">
+    <div class="container">
+  <div class="row">
+    <div class="col">
+    <form action="<?=$_SERVER["PHP_SELF"]?>" method="get">
+    <input type="text" name="activeDrug" class="searchInput" placeholder="Search active drugs">
+      <div class="d-flex justify-content-around">
+        <input type="hidden" name="state" value="<?=$action?>">
+        <?php if($preOrder!=null){$preOrderId= $preOrder["0"]->getOrderId();}?>
+        <input type="hidden" name="preOrderId" value="<?=$preOrderId?>">
+      <input type="hidden" name="action" value="searchActiveDrug">
+        <button class="btn btn-primary" type="submit" value="Search ActiveDrug">Search Active Drugs</button>
+        </div>
+    </form>
+    </div>
+    <div class="col">
+    <form action="<?=$_SERVER["PHP_SELF"]?>" method="get">
+    <input type="text" name="category" class="searchInput" placeholder="Search Category">
+    <div class="d-flex justify-content-around">
+    <input type="hidden" name="state" value="<?=$action?>">
+        <?php if($preOrder!=null){$preOrderId= $preOrder["0"]->getOrderId();}?>
+        <input type="hidden" name="preOrderId" value="<?=$preOrderId?>">
+      <input type="hidden" name="action" value="searchCategory">
+        <button class="btn btn-primary" type="submit" value="Search Category">Search Category</button>
+        </div>
+    </form>
+    </div>
+  </div>
+      <br>
+        <table class="table table-striped table-bordered table-hover table-responsive-md">
             <thead>
             <tr>
                 <th scope="col">Active Drug</th>
@@ -214,20 +238,29 @@ class Page  {
             </thead>
             <tbody>
               <?php
+              $containedMedicines=array();
+              if($preOrder!=null){
+                foreach($preOrder as $item){
+                  array_push($containedMedicines, $item->Medicine_Id);
+                }
+              }
               //List the medicines
               foreach($medicines as $medicine){
-                echo "<tr>";
-                echo "<form action=\"{$_SERVER["PHP_SELF"]}\" method=\"post\">";
-                echo "<input type=\"hidden\" name=\"medicineid\" value=\"{$medicine->getMedicineId()}\">";
-                echo "<input type=\"hidden\" name=\"medicine\" id=\"medicine\" value=\"{$medicine->getActiveDrug()}\">";
-                echo "<th scope=\"row\">{$medicine->getActiveDrug()}</th>";
-                echo "<td>{$medicine->getCategory()}</td>";
-                echo "<td><select name=\"concentration\">";
-                    $count=1;
-                    foreach(self::$concentrations as $concentration){
-                      echo "<option value=\"{$concentration}\">{$concentration}</option>";
-                      $count++;
+                if(!in_array($medicine->getMedicineId(),$containedMedicines)){
+                      echo "<tr>";
+                      echo "<form action=\"{$_SERVER["PHP_SELF"]}\" method=\"post\">";
+                      echo "<input type=\"hidden\" name=\"medicineid\" value=\"{$medicine->getMedicineId()}\">";
+                      echo "<input type=\"hidden\" name=\"medicine\" id=\"medicine\" value=\"{$medicine->getActiveDrug()}\">";
+                      echo "<th scope=\"row\">{$medicine->getActiveDrug()}</th>";
+                      echo "<td>{$medicine->getCategory()}</td>";
+                      echo "<td><select name=\"concentration\">";
+                          $count=1;
+                          foreach(self::$concentrations as $concentration){
+                            echo "<option value=\"{$concentration}\">{$concentration}</option>";
+                            $count++;
                     }
+                  
+                    
                 echo "</td>";
                 echo "<td><select name=\"presentation\">";
                     $count=1;
@@ -260,12 +293,27 @@ class Page  {
                 echo "</td>";
                 $price="$".number_format($medicine->getUnitPrice(),2,".",",");
                 echo "<td>{$price}</td>";
+                if($preOrder!=null){
+                  $subtotal=0;
+                  echo "<input type=\"hidden\" name=\"preOrderId\" value=\"{$preOrder["0"]->getOrderId()}\">";
+                  echo "<input type=\"hidden\" name=\"preOrderDate\" value=\"{$preOrder["0"]->getOrderDate()}\">";
+                  echo "<input type=\"hidden\" name=\"pst\" value=\"0.0\">";
+                  foreach($preOrder as $orderItem){
+                    $subtotal+=$orderItem->SumPrice;
+                  }
+                  $gst=$subtotal*0.05;
+                  echo "<input type=\"hidden\" name=\"gst\" value=\"{$gst}\">";
+                  $total=$gst+$subtotal;
+                  echo "<input type=\"hidden\" name=\"totalPrice\" value=\"{$total}\">";
+                  echo "<input type=\"hidden\" name=\"clientsId\" value=\"{$preOrder["0"]->getClients_Id()}\">";
+                }
                 echo "<input type=\"hidden\" name=\"price\" value=\"{$medicine->getUnitPrice()}\">";
-                echo "<input type=\"hidden\" name=\"action\" value=\"addMedicine\">";
+                echo "<input type=\"hidden\" name=\"action\" value=\"{$action}\">";
                 echo "<td><input class=\"btn-info btn-sm\" type=\"submit\" value=\"Add Medicine\"></td>";
                 //echo "<td><a href=\"?action=add&id={$medicine->getMedicineId()}\">Add to order</a></td>";
                 echo "</form>";
                 echo "</tr>";
+              }
               }
 
               ?>
@@ -312,20 +360,20 @@ class Page  {
             <tbody>
             
             <?php
-              //List the medicines
+              //List the medicines in preorder
               $count=1;
               $subtotal=0;
               echo "<input type=\"hidden\" name=\"orderId\" value=\"{$preOrder["0"]->getOrderId()}\">";
               echo "<input type=\"hidden\" name=\"orderDate\" value=\"{$preOrder["0"]->getOrderDate()}\">";
               foreach($preOrder as $orderItem){
                     echo "<tr>";
-                    echo "<input type=\"hidden\" name=\"medicineId\" value=\"{$orderItem->Medicine_Id}\">"; //add the count number at name know how many we have
-                    echo "<input type=\"hidden\" name=\"concentration\" value=\"{$orderItem->Concentration}\">";
-                    echo "<input type=\"hidden\" name=\"presentation\" value=\"{$orderItem->Presentation}\">";
-                    echo "<input type=\"hidden\" name=\"size\" value=\"{$orderItem->Size}\">";
-                    echo "<input type=\"hidden\" name=\"flavor\" value=\"{$orderItem->Flavor}\">";
-                    echo "<input type=\"hidden\" name=\"quantity\" value=\"{$orderItem->Quantity}\">";
-                    echo "<input type=\"hidden\" name=\"sumPrice\" value=\"{$orderItem->SumPrice}\">";
+                    echo "<input type=\"hidden\" name=\"medicineId\" value=\"{$orderItem->Medicine_Id}\">";
+                    echo "<input type=\"hidden\" name=\"concentration{$count}\" value=\"{$orderItem->Concentration}\">";
+                    echo "<input type=\"hidden\" name=\"presentation{$count}\" value=\"{$orderItem->Presentation}\">";
+                    echo "<input type=\"hidden\" name=\"size{$count}\" value=\"{$orderItem->Size}\">";
+                    echo "<input type=\"hidden\" name=\"flavor{$count}\" value=\"{$orderItem->Flavor}\">";
+                    echo "<input type=\"hidden\" name=\"quantity{$count}\" value=\"{$orderItem->Quantity}\">";
+                    echo "<input type=\"hidden\" name=\"sumPrice{$count}\" value=\"{$orderItem->SumPrice}\">";
                     echo "<th scope=\"row\">{$count}</th>";
                     echo "<td>{$orderItem->ActiveDrug}</td>";
                     echo "<td>{$orderItem->Concentration}</td>";
@@ -339,6 +387,8 @@ class Page  {
                     $count++;
                     $subtotal+=$orderItem->SumPrice;
               }
+              $count=$count-1;
+              echo "<input type=\"hidden\" name=\"totalItems\" value=\"{$count}\">";
                 ?>
 <!--             <tr>
                 <th scope="row">1</th>
@@ -352,7 +402,6 @@ class Page  {
             </tr> -->
             </tbody>
         </table>
-      </form>
     </div>
 
       <div class="row">
@@ -362,13 +411,18 @@ class Page  {
           <?php
           $formatPrice="$".number_format($subtotal,2,".",",");
           echo "Subtotal: <strong>{$formatPrice}</strong><br>";
+          echo "<input type=\"hidden\" name=\"subtotal\" value=\"{$subtotal}\">";
           echo "PST 0%: <strong>$0.00</strong><br>";
+          echo "<input type=\"hidden\" name=\"pst\" value=\"0.0\">";
           $gst=$subtotal*0.05;
           $formatPrice="$".number_format($gst,2,".",",");
           echo "GST 5%: <strong>{$formatPrice}</strong><br>";
+          echo "<input type=\"hidden\" name=\"gst\" value=\"{$gst}\">";
           $total=$gst+$subtotal;
           $formatPrice="$".number_format($total,2,".",",");
           echo "Total: <strong>{$formatPrice}</strong><br>";
+          echo "<input type=\"hidden\" name=\"grandTotal\" value=\"{$total}\">";
+          echo "<input type=\"hidden\" name=\"clientsId\" value=\"{$preOrder["0"]->getClients_Id()}\">";
           ?>
 
           <strong>*Medications exempt PST in BC</strong>
@@ -381,16 +435,48 @@ class Page  {
       <h5>*Add more products from the table below, confirm your order or cancel.</h5>
       <div class="row">
         <div class="col">
-          <input type="hidden" name="action" value="cancelOrder">
-          <input class="btn-danger btn-lg btn-block" type="submit" value="CancelOrder">
-        </div>
-        <div class="col text-center">
         <input type="hidden" name="action" value="confirmOrder">
         <input class="btn-success btn-lg btn-block" type="submit" value="ConfirmOrder">
+          </form>
+        </div>
+        <div class="col text-center">
+        <form action="<?=$_SERVER["PHP_SELF"]?>" method="post">
+        <input type="hidden" name="action" value="cancelOrder">
+        <?php
+        echo "<input type=\"hidden\" name=\"clientsId\" value=\"{$preOrder["0"]->getClients_Id()}\">";
+        echo "<input type=\"hidden\" name=\"orderId\" value=\"{$preOrder["0"]->getOrderId()}\">";
+        ?>
+          <input class="btn-danger btn-lg btn-block" type="submit" value="cancelOrder">
+        </form>
         </div>
       </div>
+     
     </div>
 
+      <?php
+    }
+
+    static function displaySuccesOrderMessage(){
+      ?>
+      <div class="p-5">
+        <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Order Created Succesfully!</h4>
+        <hr>
+        <p class="mb-0">Thank you for placing an order, you can see your previous order in your profile</p>
+      </div>
+      </div>
+      <?php
+    }
+
+    static function displayCancelOrderMessage(){
+      ?>
+      <div class="p-5">
+        <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Order Cancelled</h4>
+        <hr>
+        <p class="mb-0">The order was not created!</p>
+      </div>
+      </div>
       <?php
     }
 
