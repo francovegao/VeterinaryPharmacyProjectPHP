@@ -15,10 +15,23 @@ PetClassDAO::initialize('Pet');
 
 if(!empty($_POST)){
     if(isset($_POST['action']) && ($_POST['action']=="addPet")){
+        /* if(!empty($_FILES["image"]["name"])) { 
+            // Get file info 
+            $fileName = basename($_FILES["image"]["name"]); 
+            $fileType = pathinfo($fileName, PATHINFO_EXTENSION); 
+             
+            // Allow certain file formats 
+            $allowTypes = array('jpg','png','jpeg','gif'); 
+            if(in_array($fileType, $allowTypes)){ 
+                $image = $_FILES['image']['tmp_name']; 
+                $imgContent = addslashes(file_get_contents($image)); 
+            }
+        } */
+
         $newPet = new Pet();
         $newPet->setName($_POST['petName']);
         $newPet->setType($_POST['petType']);
-        $newPet->setPetPicture($_POST['petImage']);
+        $newPet->setPetPicture($imgContent);
         $newPet->setClients_Id((int)1);   //CHANGE THIS TO GET THE USER INFO FROM THE SESSION
         
         PetCLassDAO::createPet($newPet);
