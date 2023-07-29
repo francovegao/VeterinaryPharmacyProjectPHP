@@ -100,7 +100,7 @@ class Page  {
   <br>
   <div class="container">
   <h1 class="text-center">Add your pets</h1>
-  <form class="addPetForm" action="" method="post">
+  <form class="addPetForm" action="" method="post" enctype="multipart/form-data">
   <div class="form-group">
   <label for="petName">Pet's Name</label>
   <input type="text" class="form-control" name="petName" id="petName" placeholder="Nice Name">
@@ -108,6 +108,7 @@ class Page  {
   <div class="form-group">
     <label for="petType">Pet's Type</label>
     <select class="form-control" name="petType" id="petType">
+      <option>Select...</option>
       <option>Dog</option>
       <option>Cat</option>
       <option>Piglet</option>
@@ -139,7 +140,7 @@ class Page  {
             <?php  
             }
 
-    static function petFormNotifications(){
+    static function petFormNotifications(array $notifications){
       ?>
    <!-- Mascot Errors -->
    <div class="p-5">
@@ -148,15 +149,20 @@ class Page  {
     <hr>
     <p class="mb-0">Please fix the following errors:</p>
     <ul>
-      <li>Error 1</li>
-      <li>Error 2</li>
+      <?php
+      foreach($notifications as $key => $val){
+        if($key=="status" || $val=="Correct")
+            continue;
+        echo "<li>{$val}</li>";
+    }
+      ?>
   </ul>
   </div>
   </div>
       <?php  
     }
 
-    static function petFormSuccesful(){
+    static function petFormSuccesful(Pet $pet){
       ?>
                  <!-- Mascot Added Succesfully -->
   <div class="p-5">
@@ -164,29 +170,32 @@ class Page  {
     <h4 class="alert-heading">Mascot Added Succesfully!</h4>
     <hr>
 
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover" >
       <tbody>
         <tr>
           <th scope="row">Name:</th>
-          <td>Pet's Name</td>
+          <td><?=$pet->getName()?></td>
         </tr>
         <tr>
           <th scope="row">Type:</th>
-          <td>Pet's Type</td>
+          <td><?=$pet->getType()?></td>
         </tr>
         <tr>
           <th scope="row">Image:</th>
-          <td>Pet's Image</td>
+          <td>
+            <?php
+             echo "<img src=\"./petsImages/{$pet->getPetPicture()}\" class=\"img-thumbnail img-fluis\" width=\"200px\">";
+             ?>
+          </td>
         </tr>
       </tbody>
     </table> 
     <p class="mb-0">Thank you for adding your best friend!</p>
   </div>
   </div>
-
       <?php
     }
-      
+  
 
     //Add Order page
     static function displayMedicinesTable(Array $medicines, $action, $preOrder=null) {

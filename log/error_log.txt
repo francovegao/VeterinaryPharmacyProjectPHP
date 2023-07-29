@@ -1001,3 +1001,120 @@ Stack trace:
 #0 C:\Users\300365472\Documents\BackendWebDev\VeterinaryPharmacyProjectPHP\AddPet.php(34): Pet->setPetPicture(NULL)
 #1 {main}
   thrown in C:\Users\300365472\Documents\BackendWebDev\VeterinaryPharmacyProjectPHP\inc\Entity\Pet.class.php on line 53
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Warning:  Undefined array key "petImage" in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 30
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 30
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Warning:  Undefined array key "petImage" in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 31
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 31
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Warning:  Undefined variable $fileName in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 37
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:41:13 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Pet::setPetPicture(): Argument #1 ($petPicture) must be of type string, null given, called in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 37 and defined in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Entity\Pet.class.php:53
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(37): Pet->setPetPicture(NULL)
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Entity\Pet.class.php on line 53
+[30-Jul-2023 00:42:26 Europe/Berlin] PHP Warning:  Undefined variable $fileName in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 37
+[30-Jul-2023 00:42:26 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:42:26 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:42:26 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Pet::setPetPicture(): Argument #1 ($petPicture) must be of type string, null given, called in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 37 and defined in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Entity\Pet.class.php:53
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(37): Pet->setPetPicture(NULL)
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Entity\Pet.class.php on line 53
+[30-Jul-2023 00:43:02 Europe/Berlin] PHP Warning:  Undefined variable $filename in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 32
+[30-Jul-2023 00:43:02 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:43:02 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:43:21 Europe/Berlin] PHP Warning:  move_uploaded_file(./petsImage/puppy.jpg): Failed to open stream: No such file or directory in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 42
+[30-Jul-2023 00:43:21 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:43:21 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:43:21 Europe/Berlin] PHP   2. move_uploaded_file($from = 'C:\\xampp\\tmp\\phpAAD8.tmp', $to = './petsImage/puppy.jpg') C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:42
+[30-Jul-2023 00:43:21 Europe/Berlin] PHP Warning:  move_uploaded_file(): Unable to move &quot;C:\xampp\tmp\phpAAD8.tmp&quot; to &quot;./petsImage/puppy.jpg&quot; in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 42
+[30-Jul-2023 00:43:21 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:43:21 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:43:21 Europe/Berlin] PHP   2. move_uploaded_file($from = 'C:\\xampp\\tmp\\phpAAD8.tmp', $to = './petsImage/puppy.jpg') C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:42
+[30-Jul-2023 00:54:34 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 56
+[30-Jul-2023 00:54:34 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:54:34 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:54:34 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: PetCLassDAO::getPet(): Argument #1 ($PetId) must be of type string, null given, called in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 56 and defined in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php:57
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(56): PetCLassDAO::getPet(NULL)
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php on line 57
+[30-Jul-2023 00:54:45 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: PetCLassDAO::getPet(): Return value must be of type Order, Pet returned in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php:63
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(56): PetCLassDAO::getPet('5')
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php on line 63
+[30-Jul-2023 00:55:24 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 56
+[30-Jul-2023 00:55:24 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:55:24 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:55:24 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: PetCLassDAO::getPet(): Argument #1 ($PetId) must be of type string, null given, called in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 56 and defined in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php:57
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(56): PetCLassDAO::getPet(NULL)
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php on line 57
+[30-Jul-2023 00:58:35 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 56
+[30-Jul-2023 00:58:35 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:58:35 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:58:35 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: PetCLassDAO::getPet(): Argument #1 ($PetId) must be of type string, null given, called in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 56 and defined in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php:57
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(56): PetCLassDAO::getPet(NULL)
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php on line 57
+[30-Jul-2023 00:59:35 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 56
+[30-Jul-2023 00:59:35 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 00:59:35 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 00:59:35 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: PetCLassDAO::getPet(): Argument #1 ($PetId) must be of type string, null given, called in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 56 and defined in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php:57
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(56): PetCLassDAO::getPet(NULL)
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php on line 57
+[30-Jul-2023 01:47:10 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Page::petFormNotifications(), 0 passed in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 41 and exactly 1 expected in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:142
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(41): Page::petFormNotifications()
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php on line 142
+[30-Jul-2023 01:47:22 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 48
+[30-Jul-2023 01:47:22 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 01:47:22 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 01:47:22 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: PetCLassDAO::getPet(): Argument #1 ($PetId) must be of type string, null given, called in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 48 and defined in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php:57
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(48): PetCLassDAO::getPet(NULL)
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php on line 57
+[30-Jul-2023 01:47:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ValidatePetForm" not found in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:20
+Stack trace:
+#0 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 20
+[30-Jul-2023 01:48:27 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 49
+[30-Jul-2023 01:48:27 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 01:48:27 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 01:48:27 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: PetCLassDAO::getPet(): Argument #1 ($PetId) must be of type string, null given, called in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php on line 49 and defined in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php:57
+Stack trace:
+#0 C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php(49): PetCLassDAO::getPet(NULL)
+#1 {main}
+  thrown in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\PetClassDAO.class.php on line 57
+[30-Jul-2023 01:48:29 Europe/Berlin] PHP Warning:  Undefined array key "petImage" in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\ValidatePetForm.php on line 32
+[30-Jul-2023 01:48:29 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 01:48:29 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 01:48:29 Europe/Berlin] PHP   2. ValidatePetForm::validateForm() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:21
+[30-Jul-2023 01:50:23 Europe/Berlin] PHP Warning:  Undefined array key "petImage" in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\ValidatePetForm.php on line 32
+[30-Jul-2023 01:50:23 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 01:50:23 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 01:50:23 Europe/Berlin] PHP   2. ValidatePetForm::validateForm() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:21
+[30-Jul-2023 01:52:29 Europe/Berlin] PHP Warning:  Undefined array key "petImage" in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\ValidatePetForm.php on line 32
+[30-Jul-2023 01:52:29 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 01:52:29 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 01:52:29 Europe/Berlin] PHP   2. ValidatePetForm::validateForm() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:21
+[30-Jul-2023 01:53:17 Europe/Berlin] PHP Warning:  Undefined array key "petImage" in C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\inc\Utility\ValidatePetForm.php on line 32
+[30-Jul-2023 01:53:17 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 01:53:17 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:0
+[30-Jul-2023 01:53:17 Europe/Berlin] PHP   2. ValidatePetForm::validateForm() C:\Users\300365472\Documents\backendwebdev\VeterinaryPharmacyProjectPHP\AddPet.php:21

@@ -31,7 +31,7 @@ CREATE TABLE `Pet` (
   `PetId` integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `Name` char(50),
   `Type` char(30) COMMENT 'Dog, cat or other',
-  `PetPicture` mediumblob,
+  `PetPicture` varchar(100),
   `Clients_Id` integer NOT NULL,
 
   FOREIGN KEY (`Clients_Id`) REFERENCES `Clients` (`ClientsId`)

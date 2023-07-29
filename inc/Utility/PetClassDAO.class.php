@@ -9,7 +9,7 @@ MariaDB [vetpharmacy]> desc pet;
 | PetId      | int(11)    | NO   | PRI | NULL    | auto_increment |
 | Name       | char(50)   | YES  |     | NULL    |                |
 | Type       | char(30)   | YES  |     | NULL    |                |
-| PetPicture | mediumblob | YES  |     | NULL    |                |
+| PetPicture | varchar(100) | YES  |     | NULL    |                |
 | Clients_Id | int(11)    | NO   | MUL | NULL    |                |
 +------------+------------+------+-----+---------+----------------+
 5 rows in set (0.026 sec)
@@ -53,17 +53,16 @@ class PetCLassDAO  {
         //Return results
         return self::$db->resultSet();
     }
+
+    static function getPet(string $PetId): Pet  {
+        //QUERY, BIND, EXECUTE, RETURN (the single result)
+        $selectPet = "SELECT * FROM pet WHERE PetId = :petid";
+        self::$db->query($selectPet);
+        self::$db->bind(":petid", $PetId);
+        self::$db->execute();
+        return self::$db->singleResult();
+     }
     
-    // GET = READ = SELECT
-    // This is for a single result 
-     /*static function getPet(string $OrderId): Order  {
-       //QUERY, BIND, EXECUTE, RETURN (the single result)
-       $selectOrder = "SELECT * FROM `order` WHERE OrderId = :orderid";
-       self::$db->query($selectOrder);
-       self::$db->bind(":orderid", $OrderId);
-       self::$db->execute();
-       return self::$db->singleResult();
-    }
 
     // GET = READ = SELECT ALLL
     // This is to get all orders
