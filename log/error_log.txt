@@ -701,3 +701,29 @@ Stack trace:
 #2 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(53): ClientCLassDAO::createClient(Object(Clients))
 #3 {main}
   thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[30-Jul-2023 19:44:42 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin' for key 'Username' in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php(45): PDOService->execute()
+#2 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\register.php(40): UserDAO::createUser(Object(User))
+#3 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[30-Jul-2023 20:13:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ValidateRegisterForm" not found in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\register.php:29
+Stack trace:
+#0 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\register.php on line 29
+[30-Jul-2023 20:13:45 Europe/Berlin] PHP Warning:  Undefined array key "usernameRegiser" in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\ValidateRegisterForm.php on line 85
+[30-Jul-2023 20:14:19 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin8888' for key 'Username' in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php(45): PDOService->execute()
+#2 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\register.php(41): UserDAO::createUser(Object(User))
+#3 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[30-Jul-2023 20:14:28 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin4567' for key 'Username' in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php(45): PDOService->execute()
+#2 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\register.php(41): UserDAO::createUser(Object(User))
+#3 {main}
+  thrown in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85

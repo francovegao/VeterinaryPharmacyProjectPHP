@@ -13,6 +13,7 @@ require_once("inc/Utility/PDOService.class.php");
 require_once("inc/Utility/LoginManager.php");
 require_once("inc/Utility/UserDAO.class.php");
 require_once("inc/Utility/ClientClassDAO.class.php");
+require_once("inc/Utility/ValidateRegisterForm.php");
 
 //Initialize the DAO
 UserDAO::initialize('User');
@@ -26,8 +27,8 @@ if(!empty($_POST)){
     
     if(isset($_POST['action']) && ($_POST['action']=="register")){
 
-        //$valid_status=ValidateRegisterForm::validateForm();//comment this in
-        $valid_status["status"]=true;//commen this out
+        $valid_status=ValidateRegisterForm::validateForm();//comment this in
+       // $valid_status["status"]=true;//commen this out
         if($valid_status["status"]==false){
             Page::showRegisterFormNotifications($valid_status);
         }else if($valid_status["status"]==true){
