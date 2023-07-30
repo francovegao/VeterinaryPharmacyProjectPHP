@@ -21,7 +21,7 @@ session_destroy();
 Page::displayHeader();
 echo "<p>Thank you for your visit</p>";
 Page::displayFooter();
-header("Location: ProjectMainBackup.php");
+//header("Location: ProjectMainBackup.php");
 
 
 ?>

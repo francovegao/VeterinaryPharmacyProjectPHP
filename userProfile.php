@@ -16,13 +16,14 @@ require_once("inc/Utility/UserDAO.class.php");
 
 session_start();
 if(LoginManager::verifyLogin()){
-UserDAO::init();
+UserDAO::initialize('User');
 
 $user = UserDAO::getUser($_SESSION['loggedin']);
 Page::displayHeader();
 
 
 Page::showUserDetails($user);
+Page::displayOrdersTable($user);
 Page::displayLogoutForm($user);
 Page::displayFooter();
 

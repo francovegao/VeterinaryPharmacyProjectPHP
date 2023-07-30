@@ -32,6 +32,13 @@ class User{
 
     // setter
 
+    function setUsername(string $Username){
+        $this->Username= $Username;
+    }
+    function setPassword(string $Password){
+        $this->Password = $Password;
+    }
+
     function verifyPassword(string $passwordToVerify){
         return password_verify($passwordToVerify, $this->getPassword());
     }

@@ -14,7 +14,7 @@ require_once("inc/Utility/PDOService.class.php");
 require_once("inc/Utility/ReservationDAO.class.php");
 require_once("inc/Utility/UserDAO.class.php");
 
-UserDAO::init();
+UserDAO::initialize("User");
 $medicine = new Medicine();
 MedicineClassDAO::initialize('Medicine');
 
@@ -25,7 +25,7 @@ if(!empty($_POST['username'])){
         session_start();
 
         $_SESSION['loggedin'] = $authUser->getUserName();
-        echo "Login successful!";
+        
     }
 }
 
@@ -44,7 +44,11 @@ elseif (isset($_POST['loginBtn'])) {
     // If the login button is clicked, display the login form
     Page::displayHeader();
     Page::displayLoginForm();
-} else {
+} 
+elseif (isset($_POST['registerBtn'])) {
+    // If the login button is clicked, display the login form
+    header("Location: register.php");
+}else {
     // If login button is not clicked, display the homepage
     Page::displayHeader();
     Page::displayHomePage();

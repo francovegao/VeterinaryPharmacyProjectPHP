@@ -562,3 +562,142 @@ Stack trace:
 #0 C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\userProfile.php(26): Page::displayLogoutForm(Object(User))
 #1 {main}
   thrown in C:\Users\luizf\OneDrive\Documents\WebDevOliover\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php on line 568
+[29-Jul-2023 21:10:15 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:28) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php on line 36
+[29-Jul-2023 21:10:15 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:10:15 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:10:15 Europe/Berlin] PHP   2. header($header = 'Location: userProfile.php') C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:36
+[29-Jul-2023 21:10:46 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:20) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\userLogout.php on line 24
+[29-Jul-2023 21:10:46 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:10:46 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\userLogout.php:0
+[29-Jul-2023 21:10:46 Europe/Berlin] PHP   2. header($header = 'Location: ProjectMainBackup.php') C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\userLogout.php:24
+[29-Jul-2023 21:11:06 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:28) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php on line 36
+[29-Jul-2023 21:11:06 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:11:06 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:11:06 Europe/Berlin] PHP   2. header($header = 'Location: userProfile.php') C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:36
+[29-Jul-2023 21:11:23 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:20) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\userLogout.php on line 24
+[29-Jul-2023 21:11:23 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:11:23 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\userLogout.php:0
+[29-Jul-2023 21:11:23 Europe/Berlin] PHP   2. header($header = 'Location: ProjectMainBackup.php') C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\userLogout.php:24
+[29-Jul-2023 21:12:56 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:28) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php on line 36
+[29-Jul-2023 21:12:56 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:12:56 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:12:56 Europe/Berlin] PHP   2. header($header = 'Location: userProfile.php') C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:36
+[29-Jul-2023 21:13:57 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:28) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php on line 36
+[29-Jul-2023 21:13:57 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:13:57 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:13:57 Europe/Berlin] PHP   2. header($header = 'Location: userProfile.php') C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:36
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php on line 15
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP   2. LoginManager::verifyLogin() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:41
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP   3. session_start() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php:15
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php on line 27
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP   2. LoginManager::verifyLogin() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:41
+[29-Jul-2023 21:17:09 Europe/Berlin] PHP   3. session_destroy() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php:27
+[29-Jul-2023 21:18:12 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:28) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php on line 36
+[29-Jul-2023 21:18:12 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:18:12 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:18:12 Europe/Berlin] PHP   2. header($header = 'Location: userProfile.php') C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:36
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php on line 15
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP   2. LoginManager::verifyLogin() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:37
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP   3. session_start() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php:15
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php on line 27
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP   2. LoginManager::verifyLogin() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:37
+[29-Jul-2023 21:20:58 Europe/Berlin] PHP   3. session_destroy() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php:27
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php on line 15
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP   2. LoginManager::verifyLogin() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:37
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP   3. session_start() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php:15
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php on line 27
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP   2. LoginManager::verifyLogin() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:37
+[29-Jul-2023 21:21:37 Europe/Berlin] PHP   3. session_destroy() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php:27
+[29-Jul-2023 21:22:43 Europe/Berlin] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:28) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php on line 36
+[29-Jul-2023 21:22:43 Europe/Berlin] PHP Stack trace:
+[29-Jul-2023 21:22:43 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:0
+[29-Jul-2023 21:22:43 Europe/Berlin] PHP   2. header($header = 'Location: userProfile.php') C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:36
+[30-Jul-2023 02:18:05 Europe/Berlin] PHP Warning:  require_once(inc/Utility/ClientsClassDAO.class.php): Failed to open stream: No such file or directory in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php on line 14
+[30-Jul-2023 02:18:05 Europe/Berlin] PHP Stack trace:
+[30-Jul-2023 02:18:05 Europe/Berlin] PHP   1. {main}() C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php:0
+[30-Jul-2023 02:18:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'inc/Utility/ClientsClassDAO.class.php' (include_path='C:\xampp\php\PEAR') in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php:14
+Stack trace:
+#0 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php on line 14
+[30-Jul-2023 02:18:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "PDOService" not found in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php:11
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(17): UserDAO::initialize('User')
+#1 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php on line 11
+[30-Jul-2023 02:20:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "PDOService" not found in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php:11
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(17): UserDAO::initialize('User')
+#1 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php on line 11
+[30-Jul-2023 02:21:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "PDOService" not found in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php:13
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(17): UserDAO::initialize('User')
+#1 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php on line 13
+[30-Jul-2023 02:22:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method PDOService::getResultSet() in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php:31
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(21): UserDAO::getMembers()
+#1 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php on line 31
+[30-Jul-2023 02:57:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method UserDAO::init() in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php:17
+Stack trace:
+#0 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\ProjectMainBackup.php on line 17
+[30-Jul-2023 03:00:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ValidateRegisterForm" not found in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php:29
+Stack trace:
+#0 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php on line 29
+[30-Jul-2023 03:02:29 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin' for key 'Username' in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php(45): PDOService->execute()
+#2 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(40): UserDAO::createUser(Object(User))
+#3 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[30-Jul-2023 03:02:58 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin' for key 'Username' in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php(45): PDOService->execute()
+#2 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(40): UserDAO::createUser(Object(User))
+#3 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[30-Jul-2023 03:03:06 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`vetpharmacy`.`clients`, CONSTRAINT `clients_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`UserId`)) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\ClientClassDAO.class.php(34): PDOService->execute()
+#2 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(52): ClientCLassDAO::createClient(Object(Clients))
+#3 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[30-Jul-2023 03:08:05 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin12' for key 'Username' in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php(45): PDOService->execute()
+#2 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(40): UserDAO::createUser(Object(User))
+#3 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[30-Jul-2023 03:08:07 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'admin12' for key 'Username' in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\UserDAO.class.php(45): PDOService->execute()
+#2 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(40): UserDAO::createUser(Object(User))
+#3 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[30-Jul-2023 03:08:16 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`vetpharmacy`.`clients`, CONSTRAINT `clients_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`UserId`)) in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\ClientClassDAO.class.php(34): PDOService->execute()
+#2 C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\register.php(53): ClientCLassDAO::createClient(Object(Clients))
+#3 {main}
+  thrown in C:\Users\300338516\Documents\Project\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85

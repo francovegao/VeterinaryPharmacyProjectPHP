@@ -4,12 +4,14 @@
 
 class UserDAO   {
 
-    private static $db;
+    // Declare Static DB member to store the database 
+    private static $db;  
 
-    static function init()  {
-        //Initialize the internal PDO Agent
-        self::$db = new PDOService("User");    
-    }    
+
+    static function initialize(string $className)    {
+        //Remember to send in the class name for this DAO
+        self::$db = new PDOService($className);
+    }  
 
     static function getUser(string $userName)  {
         
@@ -26,8 +28,22 @@ class UserDAO   {
         $selectSQL = "SELECT * FROM User";
         self::$db->query($selectSQL);
         self::$db->execute();
-        return self::$db->getResultSet();    
+        return self::$db->resultSet();   
 
+    }
+
+    static function createUser(User $newUser) : int {
+        // QUERY BIND EXECUTE 
+        // You may want to return the last inserted id
+        $insertUser = "INSERT INTO `User` (Username,Password)";
+        $insertUser .= "VALUES (:username,:password)";
+        
+        self::$db->query($insertUser);
+        self::$db->bind(":username", $newUser->getUsername());
+        self::$db->bind(":password", $newUser->getPassword());
+   
+        self::$db->execute();
+       return self::$db->lastInsertedId();
     }
     
 

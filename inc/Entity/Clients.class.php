@@ -61,8 +61,40 @@ class Clients{
     function getPhone(): string{
         return $this->Phone;
     }
-    function getUser_Id(): string{
+    function getUser_Id(): int{
         return $this->user_id;
+    }
+
+    //setters 
+    function setClientsId(int $ClientsId) {
+        $this->ClientsId=$ClientsId;
+    }
+    function setFirstName(string $FirstName){
+        $this->FirstName=$FirstName;
+    }
+    function setLastName(string $LastName){
+        $this->LastName=$LastName;
+    }
+    function setAddress(string $Address){
+        $this->Address=$Address;
+    }
+    function setCity(string $City){
+        $this->City=$City;
+    }
+    function setProvince(string $Province){
+        $this->Province=$Province;
+    }
+    function setPostalCode(string $PostalCode){
+        $this->PostalCode=$PostalCode;
+    }
+    function setEmail(string $Email){
+        $this->Email=$Email;
+    }
+    function setPhone(string $Phone){
+        $this->Phone=$Phone;
+    }
+    function setUser_Id(int $user_id){
+        $this->user_id=$user_id;
     }
 }
 

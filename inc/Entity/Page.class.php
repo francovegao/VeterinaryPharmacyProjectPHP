@@ -86,7 +86,7 @@ class Page  {
             <form method="post">
             <p>
             <button type="submit" name="loginBtn" class="btn btn-info btn-lg">Login</button>
-              <a href="#" class="btn btn-outline-info btn-lg">Register</a>
+            <button type="submit" name="registerBtn" class="btn btn-info btn-lg">Register</button>
             </p>
             </form>
           </div>
@@ -398,11 +398,11 @@ class Page  {
 
 
 //Past orders page
-    static function displayOrdersTable(/*Laptop $laptop*/) {
+    static function displayOrdersTable(User $user) {
       ?>
           <!-- Past orders table -->
     <div class="p-5">
-        <h1>[Username] past orders: </h1>
+        <h1><?php echo $user->getUsername();?> past orders: </h1>
         <br>
         <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -595,7 +595,7 @@ static function displayRegisterForm(){?>
               <p class="text-white-50 mb-5">Please enter the information to create an account!</p>
 
 
-
+              <form method="POST">
               <div class="form-outline form-white mb-4">
                 <input type="text" name="firstName" id="firstName" class="form-control form-control-sm" />
                 <label class="form-label" for="firstName">First Name</label>
@@ -662,7 +662,7 @@ static function displayRegisterForm(){?>
               </div>
               <input type="hidden" name="action" value="register">
               <button class="btn btn-outline-light btn-lg px-5" type="submit" value="createAccount">Create Account</button>
-
+              </form>
             </div>
 
             <div>
@@ -678,6 +678,29 @@ static function displayRegisterForm(){?>
 </section>
   
     <?php }
+
+    static function showRegisterFormNotifications(array $notifications){
+      ?>
+              <!-- Mascot Errors -->
+          <div class="p-5">
+            <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Register Failed!</h4>
+            <hr>
+            <p class="mb-0">Please fix the following errors:</p>
+            <ul>
+              <?php
+              foreach($notifications as $key => $val){
+                if($key=="status" || $val=="Correct")
+                    continue;
+                echo "<li>{$val}</li>";
+            }
+              ?>
+          </ul>
+          </div>
+          </div>
+      <?php 
+    }
+
     static function showUserDetails(User $user){
       ?>
       <div>
