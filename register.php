@@ -26,8 +26,8 @@ if(!empty($_POST)){
     
     if(isset($_POST['action']) && ($_POST['action']=="register")){
 
-        //$valid_status=ValidateRegisterForm::validateForm();
-        $valid_status["status"]=true;
+        //$valid_status=ValidateRegisterForm::validateForm();//comment this in
+        $valid_status["status"]=true;//commen this out
         if($valid_status["status"]==false){
             Page::showRegisterFormNotifications($valid_status);
         }else if($valid_status["status"]==true){
