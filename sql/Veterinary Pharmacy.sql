@@ -14,14 +14,14 @@ CREATE TABLE `User` (
 
 CREATE TABLE `Clients` (
   `ClientsId` integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `FirstName` char(50),
-  `LastName` char(50),
-  `Address` char(100),
-  `City` char(30),
-  `Province` char(3),
-  `PostalCode` char(7),
-  `Email` varchar(100),
-  `Phone` char(15),
+  `FirstName` char(50) NOT NULL,
+  `LastName` char(50) NOT NULL,
+  `Address` char(100) NOT NULL,
+  `City` char(30) NOT NULL,
+  `Province` char(3) NOT NULL,
+  `PostalCode` char(7) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Phone` char(15) NOT NULL,
   `user_id` integer NOT NULL,
 
   FOREIGN KEY (`user_id`) REFERENCES `User` (`UserId`)
@@ -29,9 +29,9 @@ CREATE TABLE `Clients` (
 
 CREATE TABLE `Pet` (
   `PetId` integer PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  `Name` char(50),
-  `Type` char(30) COMMENT 'Dog, cat or other',
-  `PetPicture` varchar(100),
+  `Name` char(50) NOT NULL,
+  `Type` char(30) NOT NULL COMMENT 'Dog, cat or other',
+  `PetPicture` varchar(100) NOT NULL,
   `Clients_Id` integer NOT NULL,
 
   FOREIGN KEY (`Clients_Id`) REFERENCES `Clients` (`ClientsId`)
@@ -93,10 +93,12 @@ INSERT INTO `User` VALUES
   (3, 'username', '$2y$10$2sxKf0Pl/oZNPDZgBQofVOHdMD3BCfhUxAJZAGglkpQf2Ghrf.Xwu');
 
   INSERT INTO `Clients` VALUES
-  (1, 'Admin', 'One', '700 Royal Ave', 'New Westminster', 'BC', 'V3M 5Z5', 'admin@douglascollege.ca', '2368335240', 1);
+  (1, 'Admin', 'One', '700 Royal Ave', 'New Westminster', 'BC', 'V3M 5Z5', 'admin@douglascollege.ca', '2368335240', 1),
+  (2, 'John', 'Doe', '1234 Real Street', 'Burnaby', 'BC', 'V3S 2S5', 'doe@douglascollege.ca', '2361234567', 2),
+  (3, 'Will', 'Foe', '2034 Fake Street', 'Richmond', 'BC', 'V4D 7S8', 'wfoe@douglascollege.ca', '2338459654', 3);
 
   INSERT INTO `Pet` VALUES
-  (1, 'Roku', 'Dog', null, 1);
+  (1, 'Roku', 'Dog', 'MyDog.jpg', 1);
 
 -- numero, droga, clasificacion, precio 
     INSERT INTO `Medicine`  VALUES
@@ -188,7 +190,7 @@ INSERT INTO `User` VALUES
   (86, 'Finasteride', 'Reproduction', 12.50);
  
     INSERT INTO `Order` VALUES 
-(10001, CURRENT_TIMESTAMP(), 0.0, 0.0, 0.0, 1);
+(10001, CURRENT_TIMESTAMP(), 0.0, 5.48, 78.35, 1);
 
     INSERT INTO `Ordered_Meds` VALUES
 (10001, 1, '15mg/ml', 'oil suspension','100ml', 'chicken', 1, 50.50),

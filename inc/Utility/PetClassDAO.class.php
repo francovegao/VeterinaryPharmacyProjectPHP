@@ -54,6 +54,15 @@ class PetCLassDAO  {
         return self::$db->resultSet();
     }
 
+    static function getUserPets(string $ClientsId): array {
+        //QUERY, BIND, EXECUTE, RETURN (the single result)
+        $selectPet = "SELECT * FROM pet WHERE Clients_Id = :clientsid";
+        self::$db->query($selectPet);
+        self::$db->bind(":clientsid", $ClientsId);
+        self::$db->execute();
+        return self::$db->resultSet();
+     }
+
     static function getPet(string $PetId): Pet  {
         //QUERY, BIND, EXECUTE, RETURN (the single result)
         $selectPet = "SELECT * FROM pet WHERE PetId = :petid";

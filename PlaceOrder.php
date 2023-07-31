@@ -7,19 +7,26 @@ require_once("inc/Entity/Page.class.php");
 require_once("inc/Entity/Medicine.class.php");
 require_once("inc/Entity/Order.class.php");
 require_once("inc/Entity/Ordered_Meds.class.php");
+require_once("inc/Entity/User.class.php");
 
 //Utility Classes
 require_once("inc/Utility/PDOService.class.php");
 require_once("inc/Utility/MedicineClassDAO.class.php");
 require_once("inc/Utility/OrderClassDAO.class.php");
 require_once("inc/Utility/Ordered_MedsClassDAO.class.php");
+require_once("inc/Utility/UserDAO.class.php");
 
-//Initialize the DAO
+//Verify login
+if(LoginManager::verifyLogin()){
+
+    //Initialize the DAO
 MedicineClassDAO::initialize('Medicine');
 OrderCLassDAO::initialize('Order');
 Ordered_MedsClassDAO::initialize('Ordered_Meds');
+UserDAO::initialize('User');
 
-//Check if theres a GET to perform delete
+//get the user
+$user = UserDAO::getUser($_SESSION['loggedUserName']);
 
 //Process any POST data
 if(!empty($_POST)){
@@ -31,7 +38,7 @@ if(!empty($_POST)){
         $newOrder->setPST(0.0); 
         $newOrder->setGST(0.0);
         $newOrder->setTotalPrice(0.0);
-        $newOrder->setClients_Id(1); //change this later to the userid when is logged in
+        $newOrder->setClients_Id($user->getUserId()); //change this later to the userid when is logged in -------------------------------------
     
         $id=OrderCLassDAO::createOrder($newOrder);//ID of new order created
 
@@ -134,6 +141,9 @@ if(isset($_POST['action']) && ($_POST['action']=="createPreOrder")){
     }
 }
 Page::displayFooter();
+}else{
+    header("Location: ProjectMain.php");
+}
 
 
 ?>

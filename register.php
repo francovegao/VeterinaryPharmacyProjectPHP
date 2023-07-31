@@ -22,7 +22,7 @@ ClientCLassDAO::initialize('Clients');
 $users=UserDAO::getMembers();
 $clients=ClientCLassDAO::getClients();
 
-Page::displayHeader();
+Page::displayHeader("basicStyles.css");
 if(!empty($_POST)){
     
     if(isset($_POST['action']) && ($_POST['action']=="register")){
@@ -39,7 +39,6 @@ if(!empty($_POST)){
             $newUser->setPassword($password_hashed);
           
        $id= UserDAO::createUser($newUser);
-       var_dump($id);
 
         $newClient = new Clients();
         $newClient->setFirstName($_POST['firstName']);
@@ -52,16 +51,14 @@ if(!empty($_POST)){
         $newClient->setPhone($_POST['phone']);
         $newClient->setUser_Id($id);
         ClientCLassDAO::createClient($newClient);
-
-          
-
-           
-          
+        
+        Page::showSuccesfulRegistration();
         }    
     }
+}else{
+    Page::displayRegisterForm();
 }
 
-Page::displayRegisterForm();
 Page::displayFooter();
 
 

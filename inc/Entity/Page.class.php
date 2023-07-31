@@ -1,6 +1,6 @@
 <?php
 
-// MAKE SURE TO MAKE A BACKUP COPY OF THIS FILE BEFORE WORKING ON THE AUTHENTICATION REQUIREMENT
+require_once("inc/Utility/LoginManager.php");
 
 class Page  {
 
@@ -25,17 +25,13 @@ class Page  {
               <title>Pharma-Vet</title>
               <!-- Add Bootstrap CSS -->
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<<<<<<< HEAD
               <link href="css/<?=$currentPageStyles?>" rel="stylesheet">
-=======
-              <link href="css/basicStyles.css" rel="stylesheet">
->>>>>>> login
 
             </head>
             <body>
               <!-- Navbar -->
               <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="ProjectMainBackup.php">
+                <a class="navbar-brand" href="ProjectMain.php">
                   <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                   Pharma-Vet</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
@@ -48,17 +44,13 @@ class Page  {
                       ?>
                       <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Place Order</a>
+                      <a class="nav-link" href="PlaceOrder.php">Place Order</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">My Orders</a>
+                      <a class="nav-link" href="ListOrders.php">My Orders</a>
                     </li>
                     <li class="nav-item">
-<<<<<<< HEAD
-                      <a class="nav-link" href="#">Profile</a>
-=======
                       <a class="nav-link" href="userProfile.php">Profile</a>
->>>>>>> login
                     </li>
                     <li class="nav-item">
                       <a class="btn btn-info" href="userLogout.php">Log Out</a>
@@ -72,11 +64,11 @@ class Page  {
                         <ul class="navbar-nav ml-auto">
                         <form class="navbar-nav ml-auto" method="post">
                   <li class="nav-item">
-                      <a class="nav-link" href="ProjectMainBackup.php">Home</a>
+                      <a class="nav-link" href="ProjectMain.php">Home</a>
                     </li>
                     
                     <li class="nav-item">
-                    <button type="submit" name="loginBtn" class="btn btn-info">Login</button>
+                    <a type="submit" name="loginBtn" class="btn btn-info" href="ProjectMain.php">Login</a>
                     </li>
                     <li class="nav-item">
                     <button type="submit" name="registerBtn" class="btn btn-outline-info">Register</button>
@@ -269,7 +261,7 @@ class Page  {
     </div>
   </div>
       <br>
-        <table class="table table-striped table-bordered table-hover table-responsive-md">
+        <table class="table table-striped table-bordered table-hover table-responsive-lg">
             <thead>
             <tr>
                 <th scope="col">Active Drug</th>
@@ -533,7 +525,7 @@ class Page  {
       ?>
           <!-- Past orders table -->
     <div class="p-5">
-        <h1>[Username] past orders: </h1>   <!-- CHANGE THIS TO THE USERNAME THAT IS LOGGED IN --> 
+        <h1><?php echo "{$ordersList["0"]->LastName}, {$ordersList["0"]->FirstName}";?> past orders: </h1>
         <br>
         <table class="table table-striped table-bordered table-hover">
             <thead>
@@ -587,17 +579,17 @@ class Page  {
         <div class="container">
           <div class="row">
             <div class="col">
-              First Name: <strong>name</strong><br>
-              Last Name: <strong>name</strong><br>
-              Email: <strong>email</strong><br>
-              Phone: <strong>phone</strong><br>
-              Order Date: <strong>date</strong><br>
+              First Name: <strong><?=$orderInfo["0"]->FirstName?></strong><br>
+              Last Name: <strong><?=$orderInfo["0"]->LastName?></strong><br>
+              Email: <strong><?=$orderInfo["0"]->Email?></strong><br>
+              Phone: <strong><?=$orderInfo["0"]->Phone?></strong><br>
+              Order Date: <strong><?=$orderInfo["0"]->getOrderDate()?></strong><br>
             </div>
             <div class="col text-right">
-              Address: <strong>address</strong><br>
-              City: <strong>city</strong><br>
-              Postal Code: <strong>PC</strong><br>
-              Province: <strong>province</strong><br>
+              Address: <strong><?=$orderInfo["0"]->Address?></strong><br>
+              City: <strong><?=$orderInfo["0"]->City?></strong><br>
+              Postal Code: <strong><?=$orderInfo["0"]->PostalCode?></strong><br>
+              Province: <strong><?=$orderInfo["0"]->Province?></strong><br>
             </div>
           </div>
 
@@ -660,6 +652,21 @@ class Page  {
         <?php
       }
 
+      static function displayEmptyOrders() {
+        ?>
+                     <div class="p-5">
+            <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">You don't have any order</h4>
+            <hr>
+            <p class="mb-0">Please place an order and come back.</p>
+            <ul>
+             
+          </ul>
+          </div>
+          </div>
+        <?php
+      }
+
 
 //Login page
 static function displayLoginForm() {
@@ -696,7 +703,7 @@ static function displayLoginForm() {
                           </div>
 
                           <div>
-                              <p class="mb-0 font-weight-bold">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Register</a></p>
+                              <p class="mb-0 font-weight-bold">Don't have an account? <a href="register.php" class="text-white-50 fw-bold">Register</a></p>
                           </div>
                       </div>
                   </div>
@@ -825,7 +832,7 @@ static function displayRegisterForm(){?>
             </div>
 
             <div>
-              <p class="mb-0 font-weight-bold">Already have an account? <a href="#!" class="text-white-50 fw-bold">Log In</a>
+              <p class="mb-0 font-weight-bold">Already have an account? <a href="ProjectMain.php" class="text-white-50 fw-bold">Log In</a>
               </p>
             </div>
 
@@ -860,12 +867,162 @@ static function displayRegisterForm(){?>
       <?php 
     }
 
-    static function showUserDetails(User $user){
+    static function showSuccesfulRegistration(){
       ?>
       <div class="p-5">
-    <h1>Welcome, <?php echo $user->getUsername(); ?>!</h1>
+        <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">User created succesfully!</h4>
+        <hr>
+        <p class="mb-0">Thank you for registering, now you can log in with your username and password</p>
+      </div>
+      </div>
+      <?php
+    }
+
+    static function showUserDetails(Clients $client){
+      ?>
+      <div class="p-5 text-center">
+    <h1>Welcome, <?php echo $client->getFirstName(); ?>!</h1>
+</div>
+<div class="p-5 card">
+  <div class="card-body border border-info rounded">
+<h2>Your Details:</h2>
+<div class="row">
+            <div class="col">
+              First Name: <strong><?=$client->getFirstName()?></strong><br>
+              Last Name: <strong><?=$client->getLastName()?></strong><br>
+              Email: <strong><?=$client->getEmail()?></strong><br>
+              Phone: <strong><?=$client->getPhone()?></strong><br>
+            </div>
+            <div class="col text-right">
+              Address: <strong><?=$client->getAddress()?></strong><br>
+              City: <strong><?=$client->getCity()?></strong><br>
+              Postal Code: <strong><?=$client->getPostalCode()?></strong><br>
+              Province: <strong><?=$client->getProvince()?></strong><br>
+            </div>
+          </div> 
+          </div>
 </div>
 <?php
+    }
+
+    static function showPets(Array $pets){
+      ?>
+      <div class="p-5 card">
+  <div class="card-body border border-info rounded">
+        <h2>Your Pets:</h2>
+        <?php
+          if(empty($pets)){
+            ?>
+            <div class="p-5">
+            <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">You have not added any pet yet</h4>
+            <hr>
+            <p class="mb-0">Add pets to show them here!</p>
+            <ul>
+             
+          </ul>
+          </div>
+          </div>
+          <?php
+          }else{
+        ?>
+            <h3>You have <?=count($pets)?> pet(s)</h3>
+            <table class="table table-striped table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Picture</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  //Display medicines info
+                  $count=1;
+                  foreach($pets as $item){
+                    echo "<tr>";
+                    echo "<th scope=\"row\">{$count}</th>";
+                    echo "<td>{$item->getName()}</td>";
+                    echo "<td>{$item->getType()}</td>";
+                    
+                  echo "<td><img src=\"./petsImages/{$item->getPetPicture()}\" class=\"img-thumbnail img-fluis\" width=\"200px\"></td>";
+                    echo "</tr>";
+                    $count++;
+                  }
+                  ?>
+                </tbody>
+            </table>
+            <?php } ?>
+            <a type="button" class="btn btn-info btn-lg btn-block" href="AddPet.php">Add Pets</a>
+        </div>
+      </div>
+
+      <?php
+    }
+
+    static function showOrdersStatistics(Array $ordersList, Array $details){
+      ?>
+      <div class="p-5 card">
+  <div class="card-body border border-info rounded">
+        <h2>Your Orders Statistics:</h2>
+        <?php
+          if(empty($ordersList)){
+            ?>
+                   <div class="p-5">
+            <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">You don't have any order</h4>
+            <hr>
+            <p class="mb-0">Please place an order and come back.</p>
+          </div>
+          
+          </div>
+          <?php
+          }else{
+            $numberOfOrders=0;
+            $totalPaid=0;
+            $numberOfMedicines=0;
+            $medicines=array();
+            $presentations=array();
+            foreach($ordersList as $item){
+              $numberOfOrders++;
+              $totalPaid+=$item->getTotalPrice();
+            }
+            foreach($details as $item){
+              
+              $numberOfMedicines++;
+              array_push($medicines,$item->ActiveDrug);
+              array_push($presentations,$item->Presentation);
+            }
+        ?>
+                  <div class="row">
+            <div class="col text-left">
+            <?php
+          echo "Total orders placed: <strong>{$numberOfOrders}</strong><br>";
+          $formatPrice="$".number_format($totalPaid,2,".",",");
+          echo "Total Paid: <strong>{$formatPrice}</strong><br>";
+          $average=$totalPaid/$numberOfOrders;
+          $formatPrice="$".number_format($average,2,".",",");
+          echo "Average order price: <strong>{$formatPrice}</strong><br>";
+          ?>
+            </div>
+            <div class="col text-left">
+            <?php
+          echo "Total medicines ordered: <strong>{$numberOfMedicines}</strong><br>";
+          $average=$totalPaid/$numberOfMedicines;
+          $formatPrice="$".number_format($average,2,".",",");
+          echo "Average medicine cost: <strong>{$formatPrice}</strong><br>";
+
+          ?>
+            </div>
+          </div> 
+          <?php } ?>
+          <a type="button" class="btn btn-info btn-lg btn-block" href="PlaceOrder.php">Place an order</a>
+      </div>
+      </div>
+
+      <?php
     }
 
 

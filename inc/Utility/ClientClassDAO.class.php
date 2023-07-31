@@ -45,6 +45,15 @@ class ClientCLassDAO  {
         //Return results
         return self::$db->resultSet();
     }
+
+    static function getClientInfo(string $ClientId): Clients  {
+        //QUERY, BIND, EXECUTE, RETURN (the single result)
+        $selectClient = "SELECT * FROM clients WHERE ClientsId = :userid";
+        self::$db->query($selectClient);
+        self::$db->bind(":userid", $ClientId);
+        self::$db->execute();
+        return self::$db->singleResult();
+     }
     
     // GET = READ = SELECT
     // This is for a single result 

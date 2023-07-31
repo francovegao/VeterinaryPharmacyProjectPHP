@@ -11,7 +11,6 @@ require_once("inc/Entity/User.class.php");
 require_once("inc/Utility/LoginManager.php");
 require_once("inc/Utility/MedicineClassDAO.class.php");
 require_once("inc/Utility/PDOService.class.php");
-require_once("inc/Utility/ReservationDAO.class.php");
 require_once("inc/Utility/UserDAO.class.php");
 
 UserDAO::initialize("User");
@@ -42,26 +41,21 @@ if(LoginManager::verifyLogin()){
     exit;
 }elseif (isset($_POST['loginBtn'])) {
     // If the login button is clicked, display the login form
-    Page::displayHeader();
+    Page::displayHeader("basicStyles.css");
     Page::displayLoginForm();
 } 
 elseif (isset($_POST['registerBtn'])) {
     // If the login button is clicked, display the login form
     header("Location: register.php");
 }else if($login=="failed"){
-    Page::displayHeader();
+    Page::displayHeader("basicStyles.css");
     Page::diplayLoginErrorMessage();
     Page::displayLoginForm();
 }
 else {
     // If login button is not clicked, display the homepage
-    Page::displayHeader();
+    Page::displayHeader("basicStyles.css");
     Page::displayHomePage();
 }
-
-
-
-
-
 
 ?>

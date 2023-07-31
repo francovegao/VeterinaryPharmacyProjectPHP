@@ -5,14 +5,23 @@ require_once('inc/config.inc.php');
 //Entities
 require_once("inc/Entity/Page.class.php");
 require_once("inc/Entity/Pet.class.php");
+require_once("inc/Entity/User.class.php");
 
 //Utility Classes
 require_once("inc/Utility/PDOService.class.php");
 require_once("inc/Utility/PetClassDAO.class.php");
 require_once("inc/Utility/ValidatePetForm.php");
+require_once("inc/Utility/UserDAO.class.php");
+
+//Verify login
+if(LoginManager::verifyLogin()){
 
 //Initialize the DAO
 PetClassDAO::initialize('Pet');
+UserDAO::initialize('User');
+
+//get the user
+$user = UserDAO::getUser($_SESSION['loggedUserName']);
 
 $pets=PetCLassDAO::getPets();
 
@@ -34,7 +43,7 @@ if(!empty($_POST)){
             $newPet->setName($_POST['petName']);
             $newPet->setType($_POST['petType']);
             $newPet->setPetPicture($fileName);
-            $newPet->setClients_Id((int)1);   //CHANGE THIS TO GET THE USER INFO FROM THE SESSION
+            $newPet->setClients_Id($user->getUserId());   //CHANGE THIS TO GET THE USER INFO FROM THE SESSION
             
             $id=PetCLassDAO::createPet($newPet);
 
@@ -51,7 +60,8 @@ Page::addPetForm();
 
 
 Page::displayFooter();
-
-
+}else{
+    header("Location: ProjectMain.php");
+}
 
 ?>

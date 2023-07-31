@@ -1308,3 +1308,342 @@ Stack trace:
 #2 C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\register.php(41): UserDAO::createUser(Object(User))
 #3 {main}
   thrown in C:\Users\luizf\OneDrive\Documents\gitcloneLuiizzzzzzzzzzzzzzzzz\VeterinaryPharmacyProjectPHP\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 06:15:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "LoginManager" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:43
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(25): Page::displayHeader('medsTableStyles...')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 43
+[31-Jul-2023 06:15:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "LoginManager" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:43
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(25): Page::displayHeader('medsTableStyles...')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 43
+[31-Jul-2023 06:15:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "LoginManager" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:43
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\PlaceOrder.php(98): Page::displayHeader('medsTableStyles...')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 43
+[31-Jul-2023 06:28:04 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "UserDAO" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php:19
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 19
+[31-Jul-2023 06:28:24 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "UserDAO" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 21
+[31-Jul-2023 07:10:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot access private property Order::$OrderDate in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:586
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(35): Page::displayOrderDetails(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 586
+[31-Jul-2023 07:10:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Cannot access private property Order::$OrderDate in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:586
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php(35): Page::displayOrderDetails(Array)
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 586
+[31-Jul-2023 07:15:53 Europe/Berlin] PHP Warning:  require_once(inc/Utility/ReservationDAO.class.php): Failed to open stream: No such file or directory in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php on line 14
+[31-Jul-2023 07:15:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'inc/Utility/ReservationDAO.class.php' (include_path='C:\xampp\php\PEAR') in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php:14
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php on line 14
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$ActiveDrug in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 618
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Concentration in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 619
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 620
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Size in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 621
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Flavor in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 622
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Quantity in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 623
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 624
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 628
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$ActiveDrug in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 618
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Concentration in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 619
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 620
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Size in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 621
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Flavor in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 622
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Quantity in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 623
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 624
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 628
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$ActiveDrug in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 618
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Concentration in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 619
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 620
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Size in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 621
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Flavor in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 622
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Quantity in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 623
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 624
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 628
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$ActiveDrug in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 618
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Concentration in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 619
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 620
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Size in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 621
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Flavor in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 622
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Quantity in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 623
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 624
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 628
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$ActiveDrug in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 618
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Concentration in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 619
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 620
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Size in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 621
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Flavor in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 622
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Quantity in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 623
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 624
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 628
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$ActiveDrug in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 618
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Concentration in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 619
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 620
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Size in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 621
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Flavor in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 622
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$Quantity in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 623
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 624
+[31-Jul-2023 07:26:59 Europe/Berlin] PHP Warning:  Undefined property: Order::$SumPrice in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 628
+[31-Jul-2023 07:31:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method OrderCLassDAO::getOrderDetails() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 35
+[31-Jul-2023 07:32:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method OrderCLassDAO::getOrderDetails() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 35
+[31-Jul-2023 07:32:02 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method OrderCLassDAO::getOrderDetails() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 35
+[31-Jul-2023 07:32:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method OrderCLassDAO::getOrderDetails() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 35
+[31-Jul-2023 07:32:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method OrderCLassDAO::getOrderDetails() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ListOrders.php on line 35
+[31-Jul-2023 07:34:41 Europe/Berlin] PHP Warning:  require_once(inc/Utility/ReservationDAO.class.php): Failed to open stream: No such file or directory in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userLogout.php on line 14
+[31-Jul-2023 07:34:41 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'inc/Utility/ReservationDAO.class.php' (include_path='C:\xampp\php\PEAR') in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userLogout.php:14
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userLogout.php on line 14
+[31-Jul-2023 07:35:03 Europe/Berlin] PHP Warning:  require_once(inc/Utility/ReservationDAO.class.php): Failed to open stream: No such file or directory in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 14
+[31-Jul-2023 07:35:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'inc/Utility/ReservationDAO.class.php' (include_path='C:\xampp\php\PEAR') in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php:14
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\ProjectMain.php on line 14
+[31-Jul-2023 07:42:51 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:42:51 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:42:51 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:42:51 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:47:51 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:47:51 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:47:51 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:47:51 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:47:53 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:47:53 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:47:53 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:47:53 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:48:53 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:48:53 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:48:53 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:48:53 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:06 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:06 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:06 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:06 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:07 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:07 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:07 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:07 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:17 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:17 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:17 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:51:17 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:52:11 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:52:11 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:52:11 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:52:11 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:52:55 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:52:55 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:52:55 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:52:55 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:53:11 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:53:11 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:53:11 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:53:11 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:55:59 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:55:59 Europe/Berlin] PHP Warning:  Attempt to read property "LastName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:55:59 Europe/Berlin] PHP Warning:  Undefined array key 0 in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 07:55:59 Europe/Berlin] PHP Warning:  Attempt to read property "FirstName" on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 528
+[31-Jul-2023 08:09:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "UserDAO" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\PlaceOrder.php:26
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\PlaceOrder.php on line 26
+[31-Jul-2023 08:10:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "UserDAO" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\PlaceOrder.php:26
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\PlaceOrder.php on line 26
+[31-Jul-2023 08:11:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\UserDAO.class.php:20
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\PlaceOrder.php(28): UserDAO::getUser('username')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\UserDAO.class.php on line 20
+[31-Jul-2023 08:42:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined method Page::showStatistics() in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php:26
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php on line 26
+[31-Jul-2023 08:42:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "PetCLassDAO" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php:21
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php on line 21
+[31-Jul-2023 08:43:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PetClassDAO.class.php(62): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(25): PetCLassDAO::getUserPets('3')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 08:44:34 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PetClassDAO.class.php(62): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(25): PetCLassDAO::getUserPets('3')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 08:44:36 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PetClassDAO.class.php(62): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(25): PetCLassDAO::getUserPets('3')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 08:45:14 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PetClassDAO.class.php(62): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(25): PetCLassDAO::getUserPets('3')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 08:45:32 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PetClassDAO.class.php(63): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(25): PetCLassDAO::getUserPets('3')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 08:49:44 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: Pet::getPetPicture(): Return value must be of type string, null returned in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Pet.class.php:37
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php(919): Pet->getPetPicture()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(31): Page::showPets(Array)
+#2 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Pet.class.php on line 37
+[31-Jul-2023 09:22:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "OrderCLassDAO" not found in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php:26
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php on line 26
+[31-Jul-2023 09:23:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(27): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:25:18 Europe/Berlin] PHP Warning:  Undefined variable $user in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php on line 25
+[31-Jul-2023 09:25:18 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function getUserId() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php:25
+Stack trace:
+#0 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php on line 25
+[31-Jul-2023 09:25:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(29): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:28:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:28:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:30:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:30:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:31:21 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:31:39 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:169
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 169
+[31-Jul-2023 09:32:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:32:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:32:27 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:32:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:170
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(28): OrderCLassDAO::getLoggedUserOrders('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 170
+[31-Jul-2023 09:33:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php:199
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(29): OrderCLassDAO::getOrderDetails('1')
+#1 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php on line 199
+[31-Jul-2023 09:36:31 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php(202): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(30): OrderCLassDAO::getOrderDetails('1')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 09:36:56 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\OrderClassDAO.class.php(213): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(30): OrderCLassDAO::getLoggedUserOrdersDetails('1')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 09:38:53 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:961
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php(961): array_push(NULL, 'Xylazine')
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(36): Page::showOrdersStatistics(Array, Array)
+#2 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 961
+[31-Jul-2023 09:39:15 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: array_push(): Argument #1 ($array) must be of type array, null given in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php:960
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php(960): array_push(NULL, 'Xylazine')
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(36): Page::showOrdersStatistics(Array, Array)
+#2 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 960
+[31-Jul-2023 09:39:48 Europe/Berlin] PHP Warning:  Undefined property: Order::$presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 961
+[31-Jul-2023 09:39:48 Europe/Berlin] PHP Warning:  Undefined property: Order::$presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 961
+[31-Jul-2023 09:39:48 Europe/Berlin] PHP Warning:  Undefined property: Order::$presentation in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 961
+[31-Jul-2023 09:52:46 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClientId' in 'where clause' in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\ClientClassDAO.class.php(54): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(33): ClientCLassDAO::getClientInfo('1')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[31-Jul-2023 09:54:02 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ClientId' in 'where clause' in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php:85
+Stack trace:
+#0 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php(85): PDOStatement->execute()
+#1 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\ClientClassDAO.class.php(54): PDOService->execute()
+#2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(33): ClientCLassDAO::getClientInfo('1')
+#3 {main}
+  thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
