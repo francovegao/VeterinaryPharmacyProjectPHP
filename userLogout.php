@@ -19,7 +19,9 @@ unset($_SESSION);
 
 session_destroy();
 Page::displayHeader();
-echo "<p>Thank you for your visit</p>";
+echo "<div class=\"p-5 text-center\">";
+echo "<h1>Thank you for your visit</h1>";
+echo "</div>";
 Page::displayFooter();
 //header("Location: ProjectMainBackup.php");
 

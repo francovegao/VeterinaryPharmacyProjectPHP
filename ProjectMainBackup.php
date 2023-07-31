@@ -18,29 +18,29 @@ UserDAO::initialize("User");
 $medicine = new Medicine();
 MedicineClassDAO::initialize('Medicine');
 
+$login="";
+
 if(!empty($_POST['username'])){
     $authUser = UserDAO::getUser($_POST['username']);
 
     if($authUser && $authUser->verifyPassword($_POST['password'])){
         session_start();
-
-        $_SESSION['loggedin'] = $authUser->getUserName();
-        
+        $_SESSION['loggedUserName'] = $authUser->getUserName();
+        $_SESSION['loggedUserId'] = $authUser->getUserId();
+        $login="success";
+    }else{
+        $login="failed";
     }
 }
 
 if(LoginManager::verifyLogin()){
    
-    $user = UserDAO::getUser($_SESSION['loggedin']);
-  
+    $user = UserDAO::getUser($_SESSION['loggedUserName']);
     header("Location: userProfile.php");
    
- 
-
     // after the call to header, make sure to exit
     exit;
-}
-elseif (isset($_POST['loginBtn'])) {
+}elseif (isset($_POST['loginBtn'])) {
     // If the login button is clicked, display the login form
     Page::displayHeader();
     Page::displayLoginForm();
@@ -48,7 +48,12 @@ elseif (isset($_POST['loginBtn'])) {
 elseif (isset($_POST['registerBtn'])) {
     // If the login button is clicked, display the login form
     header("Location: register.php");
-}else {
+}else if($login=="failed"){
+    Page::displayHeader();
+    Page::diplayLoginErrorMessage();
+    Page::displayLoginForm();
+}
+else {
     // If login button is not clicked, display the homepage
     Page::displayHeader();
     Page::displayHomePage();

@@ -25,36 +25,61 @@ class Page  {
               <title>Pharma-Vet</title>
               <!-- Add Bootstrap CSS -->
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-              <link href="css/medsTableStyles.css" rel="stylesheet">
+              <link href="css/basicStyles.css" rel="stylesheet">
 
             </head>
             <body>
               <!-- Navbar -->
               <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="ProjectMainBackup.php">
                   <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                   Pharma-Vet</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+
+                  <?PHP
+                    if(LoginManager::verifyLogin()){
+                      ?>
+                      <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
                       <a class="nav-link" href="#">Place Order</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">How it Works</a>
+                      <a class="nav-link" href="#">My Orders</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">About Us</a>
+                      <a class="nav-link" href="userProfile.php">Profile</a>
                     </li>
                     <li class="nav-item">
-                      <a class="btn btn-info" href="#">Log In</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="btn btn-outline-info" href="#">Register</a>
+                      <a class="btn btn-info" href="userLogout.php">Log Out</a>
                     </li>
                   </ul>
+
+                      <?PHP
+                    }else{
+                      ?>
+                      
+                        <ul class="navbar-nav ml-auto">
+                        <form class="navbar-nav ml-auto" method="post">
+                  <li class="nav-item">
+                      <a class="nav-link" href="ProjectMainBackup.php">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <button type="submit" name="loginBtn" class="btn btn-info">Login</button>
+                    </li>
+                    <li class="nav-item">
+                    <button type="submit" name="registerBtn" class="btn btn-outline-info">Register</button>
+                    </li>
+                    </form>
+                  </ul>
+                      
+
+                      <?php
+                    }
+                  ?>
                 </div>
               </nav>
         <?php
@@ -79,14 +104,14 @@ class Page  {
           <div class="jumbotron text-center">
             <h1 class="display-4">Welcome to Pharma-Vet!</h1>
             <p class="lead">Order your pets medicine and receive it at your house in 3 simple steps:</p>
-            <p>1. Log In</p>
+            <p>1. Log In or Register if you don't have an account</p>
             <p>2. Place your order</p>
             <p>3. Receive your order</p>
             <br>
             <form method="post">
             <p>
             <button type="submit" name="loginBtn" class="btn btn-info btn-lg">Login</button>
-            <button type="submit" name="registerBtn" class="btn btn-info btn-lg">Register</button>
+            <button type="submit" name="registerBtn" class="btn btn-outline-info btn-lg">Register</button>
             </p>
             </form>
           </div>
@@ -565,6 +590,23 @@ static function displayLoginForm() {
   <?php
 }
 
+static function diplayLoginErrorMessage(){
+  ?>
+             <!-- Mascot Errors -->
+             <div class="p-5">
+            <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Login Failed!</h4>
+            <hr>
+            <p class="mb-0">Username and password do not match! Please try again.
+            </p>
+            <ul>
+             
+          </ul>
+          </div>
+          </div>
+  <?php
+}
+
     static function displayLogoutForm(User $m){?>
     <!-- logout section -->
     <section class="logout">
@@ -703,9 +745,8 @@ static function displayRegisterForm(){?>
 
     static function showUserDetails(User $user){
       ?>
-      <div>
+      <div class="p-5">
     <h1>Welcome, <?php echo $user->getUsername(); ?>!</h1>
-<a href="ProjectMainBackup.php">Home</a>
 </div>
 <?php
     }

@@ -15,19 +15,17 @@ require_once("inc/Utility/ReservationDAO.class.php");
 require_once("inc/Utility/UserDAO.class.php");
 
 session_start();
+
 if(LoginManager::verifyLogin()){
 UserDAO::initialize('User');
 
-$user = UserDAO::getUser($_SESSION['loggedin']);
-Page::displayHeader();
+$user = UserDAO::getUser($_SESSION['loggedUserName']);
 
+Page::displayHeader();    //sent the basicStyles.css when merged
 
 Page::showUserDetails($user);
-Page::displayOrdersTable($user);
 Page::displayLogoutForm($user);
 Page::displayFooter();
-
-
 
 }else{
     header("Location: ProjectMainBackup.php");
