@@ -25,36 +25,69 @@ class Page  {
               <title>Pharma-Vet</title>
               <!-- Add Bootstrap CSS -->
               <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<<<<<<< HEAD
               <link href="css/<?=$currentPageStyles?>" rel="stylesheet">
+=======
+              <link href="css/basicStyles.css" rel="stylesheet">
+>>>>>>> login
 
             </head>
             <body>
               <!-- Navbar -->
               <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="ProjectMainBackup.php">
                   <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                   Pharma-Vet</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
-                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+
+                  <?PHP
+                    if(LoginManager::verifyLogin()){
+                      ?>
+                      <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
                       <a class="nav-link" href="#">Place Order</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">My Orders</a>
                     </li>
                     <li class="nav-item">
+<<<<<<< HEAD
                       <a class="nav-link" href="#">Profile</a>
+=======
+                      <a class="nav-link" href="userProfile.php">Profile</a>
+>>>>>>> login
                     </li>
                     <li class="nav-item">
-                      <a class="btn btn-info" href="#">Log In</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="btn btn-outline-info" href="#">Register</a>
+                      <a class="btn btn-info" href="userLogout.php">Log Out</a>
                     </li>
                   </ul>
+
+                      <?PHP
+                    }else{
+                      ?>
+                      
+                        <ul class="navbar-nav ml-auto">
+                        <form class="navbar-nav ml-auto" method="post">
+                  <li class="nav-item">
+                      <a class="nav-link" href="ProjectMainBackup.php">Home</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                    <button type="submit" name="loginBtn" class="btn btn-info">Login</button>
+                    </li>
+                    <li class="nav-item">
+                    <button type="submit" name="registerBtn" class="btn btn-outline-info">Register</button>
+                    </li>
+                    </form>
+                  </ul>
+                      
+
+                      <?php
+                    }
+                  ?>
                 </div>
               </nav>
         <?php
@@ -79,14 +112,16 @@ class Page  {
           <div class="jumbotron text-center">
             <h1 class="display-4">Welcome to Pharma-Vet!</h1>
             <p class="lead">Order your pets medicine and receive it at your house in 3 simple steps:</p>
-            <p>1. Log In</p>
+            <p>1. Log In or Register if you don't have an account</p>
             <p>2. Place your order</p>
             <p>3. Receive your order</p>
             <br>
+            <form method="post">
             <p>
-              <a href="#" class="btn btn-info btn-lg">Login</a>
-              <a href="#" class="btn btn-outline-info btn-lg">Register</a>
+            <button type="submit" name="loginBtn" class="btn btn-info btn-lg">Login</button>
+            <button type="submit" name="registerBtn" class="btn btn-outline-info btn-lg">Register</button>
             </p>
+            </form>
           </div>
           </div>
   
@@ -627,51 +662,69 @@ class Page  {
 
 
 //Login page
-    static function displayLoginForm(){?>
+static function displayLoginForm() {
+  ?>
   <!-- LogIn Form -->
   <section class="vh-100 gradient-custom">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card bg-info text-white" style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center">
-  
-              <div class="mb-md-5 mt-md-4 pb-5">
-  
-                <h2 class="fw-bold mb-2 text-uppercase">Log In</h2>
-                <p class="text-white-50 mb-5">Please enter your username and password!</p>
-  
-                <div class="form-outline form-white mb-4">
-                  <input type="email" name="username" id="username" class="form-control form-control-lg" />
-                  <label class="form-label" for="username">Username</label>
-                </div>
-  
-                <div class="form-outline form-white mb-4">
-                  <input type="password" name="password" id="password" class="form-control form-control-lg" />
-                  <label class="form-label" for="password">Password</label>
-                </div>
-  
-                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-                
-                <input type="hidden" name="action" value="logIn">
-                <button class="btn btn-outline-light btn-lg px-5" type="submit" value="log">Login</button>
-  
-              </div>
-  
-              <div>
-                <p class="mb-0 font-weight-bold">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Register</a>
-                </p>
-              </div>
-  
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-    <?php  }
+      <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                  <div class="card bg-info text-white" style="border-radius: 1rem;">
+                      <div class="card-body p-5 text-center">
+                          <div class="mb-md-5 mt-md-4 pb-5">
+                              <h2 class="fw-bold mb-2 text-uppercase">Log In</h2>
+                              <p class="text-white-50 mb-5">Please enter your username and password!</p>
 
-    static function displayLogoutForm(Member $m){?>
+                              <!-- Add the form element -->
+                              <form method="POST">
+                                  <div class="form-outline form-white mb-4">
+                                      <!-- Use the correct name attributes -->
+                                      <input type="text" name="username" id="username" class="form-control form-control-lg" />
+                                      <label class="form-label" for="username">Username</label>
+                                  </div>
+
+                                  <div class="form-outline form-white mb-4">
+                                      <!-- Use the correct name attributes -->
+                                      <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                                      <label class="form-label" for="password">Password</label>
+                                  </div>
+
+                                  <!-- Use a submit button -->
+                                  <input type="hidden" name="action" value="logIn">
+                                  <button class="btn btn-outline-light btn-lg px-5" type="submit" value="log">Login</button>
+                              </form>
+                          </div>
+
+                          <div>
+                              <p class="mb-0 font-weight-bold">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Register</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <?php
+}
+
+static function diplayLoginErrorMessage(){
+  ?>
+             <!-- Mascot Errors -->
+             <div class="p-5">
+            <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Login Failed!</h4>
+            <hr>
+            <p class="mb-0">Username and password do not match! Please try again.
+            </p>
+            <ul>
+             
+          </ul>
+          </div>
+          </div>
+  <?php
+}
+
+    static function displayLogoutForm(User $m){?>
     <!-- logout section -->
     <section class="logout">
             <h2>Login Details</h2>
@@ -701,7 +754,7 @@ static function displayRegisterForm(){?>
               <p class="text-white-50 mb-5">Please enter the information to create an account!</p>
 
 
-
+              <form method="POST">
               <div class="form-outline form-white mb-4">
                 <input type="text" name="firstName" id="firstName" class="form-control form-control-sm" />
                 <label class="form-label" for="firstName">First Name</label>
@@ -768,7 +821,7 @@ static function displayRegisterForm(){?>
               </div>
               <input type="hidden" name="action" value="register">
               <button class="btn btn-outline-light btn-lg px-5" type="submit" value="createAccount">Create Account</button>
-
+              </form>
             </div>
 
             <div>
@@ -784,5 +837,36 @@ static function displayRegisterForm(){?>
 </section>
   
     <?php }
+
+    static function showRegisterFormNotifications(array $notifications){
+      ?>
+              <!-- Mascot Errors -->
+          <div class="p-5">
+            <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Register Failed!</h4>
+            <hr>
+            <p class="mb-0">Please fix the following errors:</p>
+            <ul>
+              <?php
+              foreach($notifications as $key => $val){
+                if($key=="status" || $val=="Correct")
+                    continue;
+                echo "<li>{$val}</li>";
+            }
+              ?>
+          </ul>
+          </div>
+          </div>
+      <?php 
+    }
+
+    static function showUserDetails(User $user){
+      ?>
+      <div class="p-5">
+    <h1>Welcome, <?php echo $user->getUsername(); ?>!</h1>
+</div>
+<?php
+    }
+
 
 }
