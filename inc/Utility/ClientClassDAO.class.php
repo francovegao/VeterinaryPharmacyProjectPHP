@@ -1,5 +1,22 @@
 <?php
-
+/*
+MariaDB [vetpharmacy]> desc clients;
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| ClientsId  | int(11)      | NO   | PRI | NULL    | auto_increment |
+| FirstName  | char(50)     | YES  |     | NULL    |                |
+| LastName   | char(50)     | YES  |     | NULL    |                |
+| Address    | char(100)    | YES  |     | NULL    |                |
+| City       | char(30)     | YES  |     | NULL    |                |
+| Province   | char(3)      | YES  |     | NULL    |                |
+| PostalCode | char(7)      | YES  |     | NULL    |                |
+| Email      | varchar(100) | YES  |     | NULL    |                |
+| Phone      | char(15)     | YES  |     | NULL    |                |
+| user_id    | int(11)      | NO   | MUL | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+10 rows in set (0.024 sec)
+*/
 
 
 class ClientCLassDAO  {
@@ -54,76 +71,6 @@ class ClientCLassDAO  {
         self::$db->execute();
         return self::$db->singleResult();
      }
-    
-    // GET = READ = SELECT
-    // This is for a single result 
-   /*  static function getOrder(string $OrderId): Order  {
-       //QUERY, BIND, EXECUTE, RETURN (the single result)
-       $selectOrder = "SELECT * FROM `order` WHERE OrderId = :orderid";
-       self::$db->query($selectOrder);
-       self::$db->bind(":orderid", $OrderId);
-       self::$db->execute();
-       return self::$db->singleResult();
-    }
-
-    // GET = READ = SELECT ALLL
-    // This is to get all orders
-    static function getOrders() : array {
-        
-        //Prepare the Query
-        $selectAll = "SELECT * FROM `order`";
-        self::$db->query($selectAll);
-        //execute the query
-        self::$db->execute();
-        //Return results
-        return self::$db->resultSet();
-    }
-
-    // UPDATE means update   
-    static function updateOrder (Order $OrderToUpdate) {
-
-        // QUERY, BIND, EXECUTE
-        // You may want to return the rowCount
-         // You may want to return the last inserted id
-         $updateOrder = "UPDATE `order` SET OrderDate=:orderdate, PST=:pst, GST=:gst, TotalPrice=:totalprice ";
-         $updateOrder .= "WHERE OrderId=:orderid";
-         $OrderId = $OrderToUpdate->getOrderId();
-         
-         self::$db->query($updateOrder);
-         self::$db->bind(":orderid", $OrderToUpdate->getOrderId());
-         self::$db->bind(":orderdate", $OrderToUpdate->getOrderDate());
-         self::$db->bind(":pst", $OrderToUpdate->getPST());
-         self::$db->bind(":gst", $OrderToUpdate->getGST());
-         self::$db->bind(":totalprice", $OrderToUpdate->getTotalPrice());
-
-         self::$db->execute();
-         
-         $rowCount = self::$db->rowCount();
-
-         return array('rowCount' => $rowCount, 'lastInsertedId' => $OrderId);
-
-    }
-    
-    // Sorry, I need to DELETE your record 
-    static function deleteOrder(string $OrderId) {
-
-        $deleteOrder = "DELETE FROM `order` WHERE OrderId = :orderid";
-        try{
-        self::$db->query($deleteOrder);
-        self::$db->bind(":orderid", $OrderId);
-        self::$db->execute();
-
-        if(self::$db->rowCount()!=1){
-        throw new Exception("Problem in deleting the order");
-         }
-
-        }catch(Exception $ex) {
-         return false;
-        }
-        return true;
-
-
-    } */
 
 }
 

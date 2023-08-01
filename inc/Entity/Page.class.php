@@ -4,10 +4,7 @@ require_once("inc/Utility/LoginManager.php");
 
 class Page  {
 
-    public static $heading = "Veterinary ";
-    public static $studentID = "";
     public static $studentName ="Luiz and Oliver";
-    public static $member;
     public static $concentrations=["5 mg/ml","10 mg/ml","15 mg/ml","20 mg/ml", "25 mg/ml", "50 mg/ml", "100 mg/ml"];
     public static $presentations=["Oil suspension","Liquid Aqueous","In Lipoderm Cream","In Versabase Cream", "Ointment", "Injection", "Topic Solution"];
     public static $sizes=["15 ml","30 ml","60 ml","100 ml", "120 ml", "150 ml", "250 ml", "500 ml", "1000 ml"];
