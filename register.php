@@ -23,6 +23,7 @@ $users=UserDAO::getMembers();
 $clients=ClientCLassDAO::getClients();
 
 Page::displayHeader("basicStyles.css");
+$valid_status=array();
 if(!empty($_POST)){
     
     if(isset($_POST['action']) && ($_POST['action']=="register")){
@@ -31,6 +32,7 @@ if(!empty($_POST)){
        // $valid_status["status"]=true;//commen this out
         if($valid_status["status"]==false){
             Page::showRegisterFormNotifications($valid_status);
+            Page::displayRegisterForm($valid_status);
         }else if($valid_status["status"]==true){
             $newUser = new User();
             $newUser->setUsername($_POST['usernameRegister']);
@@ -54,9 +56,14 @@ if(!empty($_POST)){
         
         Page::showSuccesfulRegistration();
         }    
+    }else if(isset($_POST['loginBtn'])){
+        header("Location: TeamNumber11.php");
+    }elseif (isset($_POST['registerBtn'])) {
+        // If the login button is clicked, display the login form
+        header("Location: register.php");
     }
 }else{
-    Page::displayRegisterForm();
+    Page::displayRegisterForm($valid_status);
 }
 
 Page::displayFooter();

@@ -17,7 +17,7 @@ static function validateForm(){
         $filteredNameStatus=true;
     }else{
         $filteredNameStatus=false;
-        $valid_status['fullName']="Please enter a valid name.";
+        $valid_status['petName']="Please enter a valid name.";
     }
 
     //Ensure the select was selected
@@ -30,6 +30,7 @@ static function validateForm(){
 
     //validate the file if it is uploaded
     if(!empty($_FILES["petImage"]["name"])){
+        $valid_status['petImage']=$_FILES["petImage"]["name"];
        $filteredImageStatus=true;
     }else{
         $filteredImageStatus=false;

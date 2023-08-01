@@ -26,7 +26,7 @@ $user = UserDAO::getUser($_SESSION['loggedUserName']);
 $pets=PetCLassDAO::getPets();
 
 Page::displayHeader("petFormStyle.css");
-
+$valid_status=array();
 if(!empty($_POST)){
     
     if(isset($_POST['action']) && ($_POST['action']=="addPet")){
@@ -55,13 +55,13 @@ if(!empty($_POST)){
     }
 }
 
-Page::addPetForm();
+Page::addPetForm($valid_status);
 
 
 
 Page::displayFooter();
 }else{
-    header("Location: ProjectMain.php");
+    header("Location: TeamNumber11.php");
 }
 
 ?>

@@ -25,7 +25,7 @@ Page::displayFooter();
 
 if (isset($_POST['loginBtn'])) {
     // If the login button is clicked, display the login form
-    header("Location: ProjectMain.php");
+    header("Location: TeamNumber11.php");
 } 
 elseif (isset($_POST['registerBtn'])) {
     // If the login button is clicked, display the login form

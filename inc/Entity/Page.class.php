@@ -31,7 +31,7 @@ class Page  {
             <body>
               <!-- Navbar -->
               <nav class="navbar navbar-expand-md">
-                <a class="navbar-brand" href="ProjectMain.php">
+                <a class="navbar-brand" href="TeamNumber11.php">
                   <img src="./images/veterinary-medicine.svg" width="30" height="30" class="d-inline-block align-top" alt="">
                   Pharma-Vet</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
@@ -67,11 +67,11 @@ class Page  {
                         <ul class="navbar-nav ml-auto">
                         <form class="navbar-nav ml-auto" method="post">
                   <li class="nav-item">
-                      <a class="nav-link" href="ProjectMain.php">Home</a>
+                      <a class="nav-link" href="TeamNumber11.php">Home</a>
                     </li>
                     
                     <li class="nav-item">
-                    <a type="submit" name="loginBtn" class="btn btn-info" href="ProjectMain.php">Login</a>
+                    <button type="submit" name="loginBtn" class="btn btn-info">Login</button>
                     </li>
                     <li class="nav-item">
                     <button type="submit" name="registerBtn" class="btn btn-outline-info">Register</button>
@@ -124,7 +124,7 @@ class Page  {
           }
 
           //Add pet
-        static function addPetForm()    {
+        static function addPetForm($valid_status)    {
             ?>
             <!-- Add Pet -->
   <br>
@@ -133,7 +133,13 @@ class Page  {
   <form class="addPetForm" action="" method="post" enctype="multipart/form-data">
   <div class="form-group">
   <label for="petName">Pet's Name</label>
-  <input type="text" class="form-control" name="petName" id="petName" placeholder="Nice Name">
+  <!--<input type="text" class="form-control" name="petName" id="petName" placeholder="Nice Name">-->
+  <?php
+        $formNameTag="<input type=\"text\" class=\"form-control\" name=\"petName\" id=\"petName\" placeholder=\"Nice Name\">";
+          if(!empty($_POST) && $valid_status["status"]==false)
+              $formNameTag="<input type=\"text\" class=\"form-control\" name=\"petName\" id=\"petName\" placeholder=\"Nice Name\" value=\"{$_POST["petName"]}\">";
+          echo $formNameTag;
+       ?>
   </div>
   <div class="form-group">
     <label for="petType">Pet's Type</label>
@@ -157,8 +163,7 @@ class Page  {
   </div> 
   <div class="form-group">
     <label for="petImage">Pet's image</label>
-    <input type="file" class="form-control-file" name="petImage" id="petImage">
-   
+    <input type="file" class="form-control-file" name="petImage" id="petImage"> 
   </div>
   <div class="d-flex justify-content-center">
   <input type="hidden" name="action" value="addPet">
@@ -749,7 +754,7 @@ static function diplayLoginErrorMessage(){
 
 
 
-static function displayRegisterForm(){?>
+static function displayRegisterForm($valid_status){?>
       <!--Register form-->
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
@@ -766,23 +771,47 @@ static function displayRegisterForm(){?>
 
               <form method="POST">
               <div class="form-outline form-white mb-4">
-                <input type="text" name="firstName" id="firstName" class="form-control form-control-sm" />
+                <!--<input type="text" name="firstName" id="firstName" class="form-control form-control-sm" />-->
+                <?php
+                    $formNameTag="<input type=\"text\" name=\"firstName\" id=\"firstName\" class=\"form-control form-control-sm\" >";
+                    if(!empty($_POST) && $valid_status["status"]==false)
+                      $formNameTag="<input type=\"text\" name=\"firstName\" id=\"firstName\" class=\"form-control form-control-sm\" value=\"{$_POST["firstName"]}\">";
+                    echo $formNameTag;
+                  ?>
                 <label class="form-label" for="firstName">First Name</label>
               </div>
 
               
               <div class="form-outline form-white mb-4">
-                <input type="text" name="lastName" id="lastName" class="form-control form-control-sm" />
+                <!--<input type="text" name="lastName" id="lastName" class="form-control form-control-sm" />-->
+                <?php
+                    $formNameTag="<input type=\"text\" name=\"lastName\" id=\"lastName\" class=\"form-control form-control-sm\" >";
+                    if(!empty($_POST) && $valid_status["status"]==false)
+                      $formNameTag="<input type=\"text\" name=\"lastName\" id=\"lastName\" class=\"form-control form-control-sm\" value=\"{$_POST["lastName"]}\">";
+                    echo $formNameTag;
+                  ?>
                 <label class="form-label" for="lastName">Last Name</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="text" name="address" id="address" class="form-control form-control-sm" />
+                <!--<input type="text" name="address" id="address" class="form-control form-control-sm" />-->
+                <?php
+                    $formNameTag="<input type=\"text\" name=\"address\" id=\"address\" class=\"form-control form-control-sm\" >";
+                    if(!empty($_POST) && $valid_status["status"]==false)
+                      $formNameTag="<input type=\"text\" name=\"address\" id=\"address\" class=\"form-control form-control-sm\" value=\"{$_POST["address"]}\">";
+                    echo $formNameTag;
+                  ?>
                 <label class="form-label" for="address">Address</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="text" name="city" id="city" class="form-control form-control-sm" />
+                <!--<input type="text" name="city" id="city" class="form-control form-control-sm" />-->
+                <?php
+                    $formNameTag="<input type=\"text\" name=\"city\" id=\"city\" class=\"form-control form-control-sm\" >";
+                    if(!empty($_POST) && $valid_status["status"]==false)
+                      $formNameTag="<input type=\"text\" name=\"city\" id=\"city\" class=\"form-control form-control-sm\" value=\"{$_POST["city"]}\">";
+                    echo $formNameTag;
+                  ?>
                 <label class="form-label" for="city">City</label>
               </div>
 
@@ -806,22 +835,46 @@ static function displayRegisterForm(){?>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="text" name="postalCode" id="postalCode" class="form-control form-control-sm" />
+                <!--<input type="text" name="postalCode" id="postalCode" class="form-control form-control-sm" />-->
+                <?php
+                    $formNameTag="<input type=\"text\" name=\"postalCode\" id=\"postalCode\" class=\"form-control form-control-sm\" >";
+                    if(!empty($_POST) && $valid_status["status"]==false)
+                      $formNameTag="<input type=\"text\" name=\"postalCode\" id=\"postalCode\" class=\"form-control form-control-sm\" value=\"{$_POST["postalCode"]}\">";
+                    echo $formNameTag;
+                  ?>
                 <label class="form-label" for="postalCode">Postal Code</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="email" name="email" id="email" class="form-control form-control-sm" />
+                <!--<input type="email" name="email" id="email" class="form-control form-control-sm" />-->
+                <?php
+                    $formNameTag="<input type=\"email\" name=\"email\" id=\"email\" class=\"form-control form-control-sm\" >";
+                    if(!empty($_POST) && $valid_status["status"]==false)
+                      $formNameTag="<input type=\"email\" name=\"email\" id=\"email\" class=\"form-control form-control-sm\" value=\"{$_POST["email"]}\">";
+                    echo $formNameTag;
+                  ?>
                 <label class="form-label" for="email">Email</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="text" name="phone" id="phone" class="form-control form-control-sm" />
+                <!--<input type="text" name="phone" id="phone" class="form-control form-control-sm" />-->
+                <?php
+                    $formNameTag="<input type=\"text\" name=\"phone\" id=\"phone\" class=\"form-control form-control-sm\" >";
+                    if(!empty($_POST) && $valid_status["status"]==false)
+                      $formNameTag="<input type=\"text\" name=\"phone\" id=\"phone\" class=\"form-control form-control-sm\" value=\"{$_POST["phone"]}\">";
+                    echo $formNameTag;
+                  ?>
                 <label class="form-label" for="phone">Phone Number</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="text" name="usernameRegister" id="usernameRegister" class="form-control form-control-sm" />
+                <!--<input type="text" name="usernameRegister" id="usernameRegister" class="form-control form-control-sm" />-->
+                <?php
+                    $formNameTag="<input type=\"text\" name=\"usernameRegister\" id=\"usernameRegister\" class=\"form-control form-control-sm\" >";
+                    if(!empty($_POST) && $valid_status["status"]==false)
+                      $formNameTag="<input type=\"text\" name=\"usernameRegister\" id=\"usernameRegister\" class=\"form-control form-control-sm\" value=\"{$_POST["usernameRegister"]}\">";
+                    echo $formNameTag;
+                  ?>
                 <label class="form-label" for="usernameRegister">Username</label>
               </div>
 
@@ -835,7 +888,7 @@ static function displayRegisterForm(){?>
             </div>
 
             <div>
-              <p class="mb-0 font-weight-bold">Already have an account? <a href="ProjectMain.php" class="text-white-50 fw-bold">Log In</a>
+              <p class="mb-0 font-weight-bold">Already have an account? <a href="TeamNumber11.php" class="text-white-50 fw-bold">Log In</a>
               </p>
             </div>
 

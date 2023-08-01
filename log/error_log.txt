@@ -1647,3 +1647,4 @@ Stack trace:
 #2 C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\userProfile.php(33): ClientCLassDAO::getClientInfo('1')
 #3 {main}
   thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
+[01-Aug-2023 06:39:46 Europe/Berlin] PHP Warning:  Undefined array key "fullName" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 140

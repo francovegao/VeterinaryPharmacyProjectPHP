@@ -46,7 +46,7 @@ if(empty($ordersList)){
     Page::displayFooter();
 }
 }else{
-    header("Location: ProjectMain.php");
+    header("Location: TeamNumber11.php");
 }
 
 ?>
