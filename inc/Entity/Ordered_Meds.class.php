@@ -29,6 +29,49 @@ class Ordered_Meds{
     private $Quantity= "";
     private $SumPrice= "";
 
+    //price modifiers
+    private $arrayConcentration=array(
+        "5 mg/ml"=> 1,
+        "10 mg/ml"=> 1,
+        "15 mg/ml"=> 1,
+        "20 mg/ml"=> 1,
+        "25 mg/ml"=> 1,
+        "50 mg/ml"=> 1,
+        "100 mg/ml"=> 1,
+    );
+
+    private $arrayPresentation=array(
+        "Oil suspension"=> 1,
+        "Liquid Aqueous"=> 1,
+        "In Lipoderm Cream"=> 1,
+        "In Versabase Cream"=> 1,
+        "Ointment"=> 1,
+        "Injection"=> 1,
+        "Topic Solution"=> 1,
+    );
+
+    private $arraySize=array(
+        "15 ml"=> 1,
+        "30 ml"=> 1,
+        "60 ml"=> 1,
+        "100 ml"=> 1,
+        "120 ml"=> 1,
+        "150 ml"=> 1,
+        "250 ml"=> 1,
+        "500 ml"=> 1,
+        "1000 ml"=>1,
+    );
+
+    private $arrayFlavor=array(
+        "no flavor"=> 1,
+        "chicken"=> 1,
+        "bacon"=> 1,
+        "beef"=> 1,
+        "fish"=> 1,
+        "salmon"=> 1,
+        "liver"=> 1,
+    );
+
     // getter
     function getOrder_Id() : int{
         return $this->Order_Id;
@@ -80,6 +123,11 @@ class Ordered_Meds{
     function setSumPrice(float $SumPrice){
         $this->SumPrice=$SumPrice;
     }
+
+    function getPriceFactor():float{
+            return 0.0;
+    }
+
 }
 
 ?>

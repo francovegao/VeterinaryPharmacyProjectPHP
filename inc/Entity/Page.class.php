@@ -50,6 +50,9 @@ class Page  {
                       <a class="nav-link" href="ListOrders.php">My Orders</a>
                     </li>
                     <li class="nav-item">
+                      <a class="nav-link" href="AddPet.php">Add Pets</a>
+                    </li>
+                    <li class="nav-item">
                       <a class="nav-link" href="userProfile.php">Profile</a>
                     </li>
                     <li class="nav-item">
@@ -271,7 +274,7 @@ class Page  {
                 <th scope="col">Size</th>
                 <th scope="col">Flavor</th>
                 <th scope="col">Quantity</th>
-                <th scope="col">Price per unit</th>
+                <th scope="col">Base Price</th>
                 <th scope="col">Add to order</th>
             </tr>
             </thead>
@@ -475,7 +478,7 @@ class Page  {
       <div class="row">
         <div class="col">
         <input type="hidden" name="action" value="confirmOrder">
-        <input class="btn-success btn-lg btn-block" type="submit" value="ConfirmOrder">
+        <input class="btn-success btn-lg btn-block" type="submit" value="Confirm Order">
           </form>
         </div>
         <div class="col text-center">
@@ -485,7 +488,7 @@ class Page  {
         echo "<input type=\"hidden\" name=\"clientsId\" value=\"{$preOrder["0"]->getClients_Id()}\">";
         echo "<input type=\"hidden\" name=\"orderId\" value=\"{$preOrder["0"]->getOrderId()}\">";
         ?>
-          <input class="btn-danger btn-lg btn-block" type="submit" value="cancelOrder">
+          <input class="btn-danger btn-lg btn-block" type="submit" value="Cancel Order">
         </form>
         </div>
       </div>

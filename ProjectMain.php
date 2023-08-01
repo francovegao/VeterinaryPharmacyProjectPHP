@@ -41,20 +41,20 @@ if(LoginManager::verifyLogin()){
     exit;
 }elseif (isset($_POST['loginBtn'])) {
     // If the login button is clicked, display the login form
-    Page::displayHeader("basicStyles.css");
+    Page::displayHeader("mainPageStyles.css");
     Page::displayLoginForm();
 } 
 elseif (isset($_POST['registerBtn'])) {
     // If the login button is clicked, display the login form
     header("Location: register.php");
 }else if($login=="failed"){
-    Page::displayHeader("basicStyles.css");
+    Page::displayHeader("mainPageStyles.css");
     Page::diplayLoginErrorMessage();
     Page::displayLoginForm();
 }
 else {
     // If login button is not clicked, display the homepage
-    Page::displayHeader("basicStyles.css");
+    Page::displayHeader("mainPageStyles.css");
     Page::displayHomePage();
 }
 
