@@ -37,7 +37,7 @@ class Page  {
                 <div class="collapse navbar-collapse" id="navbarCollapse">
 
                   <?PHP
-                    if(LoginManager::verifyLogin()){
+                    if(isset($_SESSION['loggedUserName'])){
                       ?>
                       <ul class="navbar-nav ml-auto">
                   <li class="nav-item">

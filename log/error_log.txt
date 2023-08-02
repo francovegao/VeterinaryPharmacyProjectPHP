@@ -1648,3 +1648,15 @@ Stack trace:
 #3 {main}
   thrown in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Utility\PDOService.class.php on line 85
 [01-Aug-2023 06:39:46 Europe/Berlin] PHP Warning:  Undefined array key "fullName" in C:\Users\favo05\Documents\Douglas College\Backend Web Dev\Project\inc\Entity\Page.class.php on line 140
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php on line 15
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP Stack trace:
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\TeamNumber11.php:0
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP   2. Page::displayHeader($currentPageStyles = 'mainPageStyles.css') C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\TeamNumber11.php:57
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP   3. LoginManager::verifyLogin() C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:40
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP   4. session_start() C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php:15
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php on line 25
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP Stack trace:
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP   1. {main}() C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\TeamNumber11.php:0
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP   2. Page::displayHeader($currentPageStyles = 'mainPageStyles.css') C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\TeamNumber11.php:57
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP   3. LoginManager::verifyLogin() C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\inc\Entity\Page.class.php:40
+[02-Aug-2023 04:33:02 Europe/Berlin] PHP   4. session_destroy() C:\Users\300365472\Documents\backend\VeterinaryPharmacyProjectPHP\inc\Utility\LoginManager.php:25
